@@ -7,5 +7,6 @@
   * [符号表](fu-hao-biao.md)
 * 监督式学习
   * [线性回归](xian-xing-hui-gui.md)
-  * [感知机](gan-zhi-xue-xi-ji.md)
+  * [感知机](gan-zhi-ji.md)
+    * [感知机模型](gan-zhi-xue-xi-ji.md)
 
