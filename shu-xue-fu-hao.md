@@ -1,8 +1,4 @@
-
-
 大括号函数：
-
-
 $$
 f(x) = \begin{cases}
    a &\text{if } x >= 0  \\
@@ -10,8 +6,4 @@ f(x) = \begin{cases}
 \end{cases}
 $$
 
-
-$$\in$$
-
-$$    \subseteq$$
 
