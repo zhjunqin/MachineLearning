@@ -6,13 +6,13 @@ $$
 $$
 
 
-求和：
-$$
-\displaystyle\sum_{i=1}^m w_ix_i = w_1x_1 + w_2x_2 + ... + w_nx_n
-$$
+\displaystyle\sum\_{i=1}^m w\_ix\_i = w\_1x\_1 + w\_2x\_2 + ... + w\_nx\_n
 
 
-$$Y = \{1, -1\}$$
+$$
+$$Y = \{1, -1\}
+$$
+
 
 $$X$$
 
