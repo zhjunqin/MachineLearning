@@ -1,2 +1,6 @@
-$$∑i=1mwixi=w1x1+w2x2+...+wnxn$$
+
+$$
+∑^{i=1}mwixi=w1x^1+w^2x^2+...+w^nxn
+$$
+$$x = y$$
 
