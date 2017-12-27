@@ -10,17 +10,23 @@
 $$
 \min_{w,b}L(w,b)=-\displaystyle\sum_{x_i\in M}y_i(w\cdot x_i+b)
 $$
+
+
 其中$$M$$为**误分类点**的集合。
 
-假设误分类点集合$$M$$M时固定的，那么损失函数$$L(w,b)$$的梯度由
+假设误分类点集合$$M$$是固定的，那么损失函数$$L(w,b)$$的梯度由
 
 
 $$
 \nabla_w L(w,b)=-\displaystyle\sum_{x_i\in M}y_i x_i
 $$
 
+
+
 $$
 \nabla_b L(w,b)=-\displaystyle\sum_{x_i\in M}y_i
 $$
+
+
 给出。
 
