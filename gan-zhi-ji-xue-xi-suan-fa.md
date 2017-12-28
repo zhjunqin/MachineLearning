@@ -73,11 +73,20 @@ $$
 
 **输入**：线性可分的数据集$$T=\{(x_1,y_1),(x_2,y_2),...,(x_n,y_n)\}$$，其中$$x_i\in X= R^n$$，$$y_i\in Y=\lbrace+1,-1\rbrace$$，$$i=1,2,...,n$$，学习率$$    \eta(0<\eta\leqslant1)$$
 
-**输出**：$$\alpha,b$$；感知机模型$$f(x)=sign(\displaystyle\sum_{j=1}^m\alpha_jy_jx_j\cdot x+b)$$，其中$$\alpha=(\alpha_1,\alpha_2,...\alpha_m)^T$$
+**输出**：$$\alpha,b$$；感知机模型$$f(x)=sign(\displaystyle\sum_{j=1}^n\alpha_jy_jx_j\cdot x+b)$$，其中$$\alpha=(\alpha_1,\alpha_2,...\alpha_n)^T$$
 
 1. 选取初始值$$\alpha=(0,0,...0)， b=0$$
 2. 在训练集中选取数据$$(x_i,y_i)$$
-3. 如果$$y_i(\displaystyle\sum_{j=1}^m\alpha_jy_jx_j\cdot x+b)\leqslant0$$，则$$\alpha_i \gets \alpha_i+\eta $$，$$b \gets b+\eta y_i$$，也就是每次只更新向量$$\alpha$$的第$$i$$个分量
+3. 如果$$y_i(\displaystyle\sum_{j=1}^m\alpha_jy_jx_j\cdot x_i+b)\leqslant0$$，则$$\alpha_i \gets \alpha_i+\eta $$，$$b \gets b+\eta y_i$$，也就是每次只更新向量$$\alpha$$的第$$i$$个分量
+4. 转至步骤\(2\)，直到没有误分类点为止。
+
+观察可以看到步骤3中每次更新的$$x_j\cdot x_i$$可以事先计算好并以矩阵的形式存储，那么就不需要每次都计算，这样的矩阵称为Gram矩阵\(Gram matrix\)
+
+
+$$
+G=[x_i,x_j]_{n\times n}
+$$
+
 
 > 参考：林轩田，机器学习基石
 
