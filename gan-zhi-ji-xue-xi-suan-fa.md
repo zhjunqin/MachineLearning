@@ -55,17 +55,17 @@ $$
 
 对偶形式的基本想法是，将$$w$$和$$b$$表示为实例向量$$x_i$$和标记$$y_i$$的线性组合的形式，通过求解其系数而求得$$w$$和$$b$$。
 
-从上面的算法中可假设初始值$$w_0,b_0$$均为0。对某个误分类点$$(x_i,y_i)$$经过$$w \gets w+\eta y_i x_i$$和$$b    \gets b+\eta y_i$$迭代修改，假设修改了$$k$$次后，$$w,b$$ 关于该误分类点的最后的总增量为$$\alpha_i y_ix_i$$和$$\alpha_iy_i$$，这里$$\alpha_i=k_i\eta$$。假设总共有$$m$$个不同的误分类点，这样最后得到的$$w,b$$可以分别表示为：
+从上面的算法中可假设初始值$$w_0,b_0$$均为0。对某个误分类点$$(x_i,y_i)$$经过$$w \gets w+\eta y_i x_i$$和$$b    \gets b+\eta y_i$$迭代修改，假设修改了$$k$$次后，$$w,b$$ 关于该误分类点的最后的总增量为$$\alpha_i y_ix_i$$和$$\alpha_iy_i$$，这里$$\alpha_i=k_i\eta$$。对于训练集中的每一个点都有$$\alpha_i$$，这样最后得到的$$w,b$$可以分别表示为（有的$$\alpha_i$$可能为0）：
 
 
 $$
-w = \displaystyle\sum_{i=1}^m\alpha_iy_ix_i=\displaystyle\sum_{i=1}^mk_i\eta y_ix_i
+w = \displaystyle\sum_{i=1}^n\alpha_iy_ix_i=\displaystyle\sum_{i=1}^nk_i\eta y_ix_i
 $$
 
 
 
 $$
-b = \displaystyle\sum_{i=1}^m\alpha_iy_i = \displaystyle\sum_{i=1}^mk_i\eta y_i
+b = \displaystyle\sum_{i=1}^n\alpha_iy_i = \displaystyle\sum_{i=1}^nk_i\eta y_i
 $$
 
 
@@ -77,7 +77,7 @@ $$
 
 1. 选取初始值$$\alpha=(0,0,...0)， b=0$$
 2. 在训练集中选取数据$$(x_i,y_i)$$
-3. 如果$$y_i(\displaystyle\sum_{j=1}^m\alpha_jy_jx_j\cdot x+b)\leqslant0$$，则$$\alpha_i \gets \alpha_i+\eta $$，$$b \gets b+\eta y_i$$
+3. 如果$$y_i(\displaystyle\sum_{j=1}^m\alpha_jy_jx_j\cdot x+b)\leqslant0$$，则$$\alpha_i \gets \alpha_i+\eta $$，$$b \gets b+\eta y_i$$，也就是每次只更新向量$$\alpha$$的第$$i$$个分量
 
 > 参考：林轩田，机器学习基石
 
