@@ -84,7 +84,7 @@ $$
 
 
 $$
-G=[x_i,x_j]_{n\times n}
+G=[x_i\cdot x_j]_{n\times n}
 $$
 
 
