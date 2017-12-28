@@ -53,7 +53,7 @@ $$
 
 ### 2.学习算法的对偶形式
 
-对偶形式的基本想法是，将$$w$$和$$b$$表示为实例$$x_i$$和标记$$y_i$$的线性组合的形式，通过求解其系数而求得$$w$$和$$b$$。
+对偶形式的基本想法是，将$$w$$和$$b$$表示为实例向量$$x_i$$和标记$$y_i$$的线性组合的形式，通过求解其系数而求得$$w$$和$$b$$。
 
 从上面的算法中可假设初始值$$w_0,b_0$$均为0。对某个误分类点$$(x_i,y_i)$$经过$$w \gets w+\eta y_i x_i$$和$$b    \gets b+\eta y_i$$迭代修改，假设修改了$$k$$次后，$$w,b$$ 关于该误分类点的最后的总增量为$$\alpha_i y_ix_i$$和$$\alpha_iy_i$$，这里$$\alpha_i=k_i\eta$$。假设总共有$$m$$个不同的误分类点，这样最后得到的$$w,b$$可以分别表示为：
 
@@ -66,6 +66,16 @@ $$
 b = \displaystyle\sum_{i=1}^m\alpha_iy_i
 $$
 
+
+#### 2.1 算法的对偶形式
+
+**输入**：线性可分的数据集$$T=\{(x_1,y_1),(x_2,y_2),...,(x_n,y_n)\}$$，其中$$x_i\in X= R^n$$，$$y_i\in Y=\lbrace+1,-1\rbrace$$，$$i=1,2,...,n$$，学习率$$    \eta(0<\eta\leqslant1)$$
+
+**输出**：$$\alpha,b$$；感知机模型$$f(x)=sign(\displaystyle\sum_{j=1}^m\alpha_jy_jx_j\cdot x+b)$$，其中$$\alpha=(\alpha_1,\alpha_2,...\alpha_m)^T$$
+
+1. 选取初始值$$\alpha=(0,0,...0)， b=0$$
+2. 在训练集中选取数据$$(x_i,y_i)$$
+3. 如果$$y_i(\displaystyle\sum_{j=1}^m\alpha_jy_jx_j\cdot x+b)\leqslant0$$，则$$\alpha_i \gets \alpha_i+\eta $$，$$b \gets b+\eta $$
 
 > 参考：林轩田，机器学习基石
 
