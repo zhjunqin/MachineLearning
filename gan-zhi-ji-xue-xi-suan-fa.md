@@ -59,11 +59,13 @@ $$
 
 
 $$
-w = \displaystyle\sum_{i=1}^m\alpha_iy_ix_i
+w = \displaystyle\sum_{i=1}^m\alpha_iy_ix_i=\displaystyle\sum_{i=1}^mk_i\eta y_ix_i
 $$
 
+
+
 $$
-b = \displaystyle\sum_{i=1}^m\alpha_iy_i
+b = \displaystyle\sum_{i=1}^m\alpha_iy_i = \displaystyle\sum_{i=1}^mk_i\eta y_i
 $$
 
 
@@ -75,7 +77,7 @@ $$
 
 1. 选取初始值$$\alpha=(0,0,...0)， b=0$$
 2. 在训练集中选取数据$$(x_i,y_i)$$
-3. 如果$$y_i(\displaystyle\sum_{j=1}^m\alpha_jy_jx_j\cdot x+b)\leqslant0$$，则$$\alpha_i \gets \alpha_i+\eta $$，$$b \gets b+\eta $$
+3. 如果$$y_i(\displaystyle\sum_{j=1}^m\alpha_jy_jx_j\cdot x+b)\leqslant0$$，则$$\alpha_i \gets \alpha_i+\eta $$，$$b \gets b+\eta y_i$$
 
 > 参考：林轩田，机器学习基石
 
