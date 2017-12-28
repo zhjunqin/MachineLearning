@@ -75,6 +75,8 @@ $$
 
 不考虑$$-\dfrac{1}{||w||}$$，则我们得到感知机的损失函数：$$-\displaystyle\sum_{x_i\in M}y_i(w\cdot x_i+b)$$。
 
+（这里个人理解为任意一个超平面的$$w$$都可以经过缩放成为单位向量）
+
 给定训练数据集合$$T=\{(x_1,y_1),(x_2,y_2),...,(x_n,y_n)\}$$，其中$$x_i\in X= R^n$$，$$y_i\in Y=\lbrace+1,-1\rbrace$$，$$i=1,2,...,n$$。感知学习机$$sign(w\cdot x+b)$$的损失函数定义为
 
 
@@ -90,4 +92,6 @@ $$
 > 统计学习方法，李航
 >
 > [http://blog.csdn.net/wangxin1982314/article/details/73529499](http://blog.csdn.net/wangxin1982314/article/details/73529499)
+
+
 
