@@ -80,7 +80,9 @@ $$
 3. 如果$$y_i(\displaystyle\sum_{j=1}^n\alpha_jy_jx_j\cdot x_i+b)\leqslant0$$，则$$\alpha_i \gets \alpha_i+\eta $$，$$b \gets b+\eta y_i$$，也就是每次只更新向量$$\alpha$$的第$$i$$个分量
 4. 转至步骤\(2\)，直到没有误分类点为止。
 
-观察可以看到步骤3中每次更新的$$x_j\cdot x_i$$可以事先计算好并以矩阵的形式存储，那么就不需要每次都计算，这样的矩阵称为Gram矩阵\(Gram matrix\)
+观察可以看到步骤3中每次更新的$$x_j\cdot x_i$$可以事先计算好并以矩阵的形式存储，那么就不需要每次都计算，
+
+这样的矩阵称为Gram矩阵\(Gram matrix\)
 
 
 $$
