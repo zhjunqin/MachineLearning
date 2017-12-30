@@ -11,4 +11,7 @@
     * [感知机模型](gan-zhi-xue-xi-ji.md)
     * [感知机学习算法](gan-zhi-ji-xue-xi-suan-fa.md)
     * [算法python实现](suan-fa-python-shi-xian.md)
+* [数学基础](shu-xue-ji-chu.md)
+  * 线性代数
+  * 概率统计
 
