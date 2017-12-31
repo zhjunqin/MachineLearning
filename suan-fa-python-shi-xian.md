@@ -1,6 +1,6 @@
 # 感知机算法python实现
 
-算法的原始形式
+### 1.算法的原始形式
 
 ```
 import matplotlib.pyplot as plt
@@ -38,7 +38,7 @@ class Perceptron(object):
         plt.title('Perceptron')
         plt.legend()
         plt.show()
-        
+
 input_x = [[3,5], [4,4], [4,5], [5,3.5], [5,2.5], [1.5,2.5], [2,3], [2,2], [3,2.5], [3,1]]
 input_y = [1,1,1,1,1,-1,-1,-1,-1,-1]
 
