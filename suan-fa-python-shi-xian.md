@@ -46,7 +46,7 @@ pla = Perceptron(input_x, input_y)
 pla.draw_input_data()
 ```
 
-算法的对偶形式
+
 
 训练数据集
 
