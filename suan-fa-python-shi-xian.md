@@ -38,6 +38,12 @@ class Perceptron(object):
         plt.title('Perceptron')
         plt.legend()
         plt.show()
+        
+input_x = [[3,5], [4,4], [4,5], [5,3.5], [5,2.5], [1.5,2.5], [2,3], [2,2], [3,2.5], [3,1]]
+input_y = [1,1,1,1,1,-1,-1,-1,-1,-1]
+
+pla = Perceptron(input_x, input_y)
+pla.draw_input_data()
 ```
 
 算法的对偶形式
