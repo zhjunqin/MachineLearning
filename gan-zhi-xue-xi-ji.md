@@ -69,7 +69,7 @@ $$
 
 
 $$
-   -\dfrac{1}{||w||}\displaystyle\sum_{x_i\in M}y_i(w\cdot x_i+b)
+   -\dfrac{1}{||w||}\displaystyle\sum_{x^{(i)}\in M}y_i(w\cdot x_i+b)
 $$
 
 
