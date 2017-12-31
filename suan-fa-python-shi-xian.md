@@ -1,6 +1,6 @@
 # 感知机算法python实现
 
-### 1.算法的原始形式
+### 1.python代码实现
 
 ```
 import matplotlib.pyplot as plt
