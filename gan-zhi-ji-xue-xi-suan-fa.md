@@ -102,7 +102,7 @@ G= \begin{bmatrix}
 $$
 
 
-则关于$$\displaystyle\sum_{j=1}^N\alpha_jy^{(j)}x^{(j)}\cdot x^{(i)}$$的计算，$$\displaystyle\sum_{j=1}^N\alpha_jy^{(j)}x^{(j)}\cdot x^{(i)} = \displaystyle\sum_{j=1}^N\alpha_jy^{(j)}G[i,j]$$
+则关于$$\displaystyle\sum_{j=1}^N\alpha_jy^{(j)}x^{(j)}\cdot x^{(i)}$$的计算，$$\displaystyle\sum_{j=1}^N\alpha_jy^{(j)}x^{(j)}\cdot x^{(i)} = \displaystyle\sum_{j=1}^N\alpha_jy^{(j)}G[i,j]= \sum \alpha 	\circ y 	\circ G[i]$$
 
 > 参考：林轩田，机器学习基石
 
