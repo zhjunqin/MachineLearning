@@ -17,5 +17,6 @@
 * [python数值计算](pythonshu-zhi-ji-suan.md)
   * [numpy](numpy.md)
     * [numpy生成随机数组](numpy/numpysheng-cheng-sui-ji-shu-zu.md)
+    * [Numpy 简介](numpy/numpy-jian-jie.md)
   * matplotlib.pyplot
 
