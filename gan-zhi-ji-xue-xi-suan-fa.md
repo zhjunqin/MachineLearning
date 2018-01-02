@@ -89,6 +89,8 @@ $$
 G=[x^{(i)}\cdot x^{(j)}]_{n\times n}
 $$
 
+
+
 $$
 G= \begin{bmatrix}
    x^{(1)}\cdot x^{(1)} & x^{(1)}\cdot x^{(2)} & x^{(1)}\cdot x^{(3)} & ... & x^{(1)}\cdot x^{(n)}\\
@@ -100,7 +102,7 @@ G= \begin{bmatrix}
 $$
 
 
-另外，关于$$\displaystyle\sum_{j=1}^N\alpha_jy^{(j)}x^{(j)}\cdot x^{(i)}$$的计算，
+则关于$$\displaystyle\sum_{j=1}^N\alpha_jy^{(j)}x^{(j)}\cdot x^{(i)}$$的计算，$$\displaystyle\sum_{j=1}^N\alpha_jy^{(j)}x^{(j)}\cdot x^{(i)} = \displaystyle\sum_{j=1}^N\alpha_jy^{(j)}G[i,j]$$
 
 > 参考：林轩田，机器学习基石
 

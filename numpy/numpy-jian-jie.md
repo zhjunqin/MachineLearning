@@ -86,7 +86,56 @@ array([[11, 13],
        [10,  9]])
 ```
 
-## 
+#### 数值计算
+
+下面是一些单目运算函数.
+
+* `np.max`: 返回 ndarray 中的最大值.
+* `np.argmax`: 返回 ndarray 中最大的值的序号.
+* `np.min`: 返回 ndarray 中的最小值.
+* `np.argmin`: 返回 ndarray 中最小的值的序号.
+* `np.absolute`: 计算绝对值.`np.absolute(a)`或者`np.abs(a)`, 对于非复数的数组,`np.fabs`速度更快.
+* `np.exp`: 计算 e 的指数,`e ** x`.
+* `np.sqrt`: 计算平方根,`x ** 0.5`.
+* `np.square`: 计算平方,`x ** 2`.
+* `np.log`,`np.log10`,`np.log2`,`np.log1p`: 分别为以 e, 10, 2 为底取 log, 和`log(1 + x)`.
+* `np.sign`: 取数值的正负号.
+* `np.ceil`: 计算比每一个元素大或相等的最小的整数.
+* `np.floor`: 计算比每一个元素小或相等的最大的整数.
+* `np.rint`: 近似到最近的整数.
+* `np.clip`: 返回一个 ndarray, 其元素的值限制在给定的最大最小值之间. 如果原 ndarray 的值在给定的范围之外, 则替换成最大或最小值.
+* `np.modf`: 返回一个 tuple, 包含两个数组, 一个是小数部分, 一个是整数部分.
+* `np.cos`,`np.cosh`,`np.sin`,`np.sinh`,`np.tan`,`np.tanh`,`np.arccos`,`np.arccosh`,`np.arcsin`,`np.arcsinh`,`np.arctan`,`np.arctanh`: 三角函数和反三角函数.
+
+```
+nd = np.random.randn(10)
+# array([-1.38153059, -0.66621482, -0.58001284, -0.81628342,  0.0656215 ,
+#        -0.01538155, -0.77812592,  0.94664076,  0.85143997, -0.68542156])
+np.absolute(nd)
+# array([ 1.38153059,  0.66621482,  0.58001284,  0.81628342,  0.0656215 ,
+#         0.01538155,  0.77812592,  0.94664076,  0.85143997,  0.68542156])
+```
+
+还有一些双目运算函数.
+
+* `np.add`,`+`: 两个数组元素一一对应相加.
+* `np.substract`,`-`: 两个数组元素一一对应相减.
+* `np.multiply`,`*`: 两个数组元素一一对应相乘.
+* `np.devide`,`/`: 两个数组元素一一对应相除.
+* `np.floor_divide`,`np.remainder`,`np.mod`,`np.fmod`:`np.floor_divide`返回一一对应相除的最大整数商, 即 floor, 而`np.remainder`或`np.mod`则返回余数. 同时,`np.fmod`返回的余数则根据被除数和除数的符号可能是负数.
+* `np.power`: 计算幂, 以第一个数组中元素为底, 以第二个数组中元素为指数.
+* `np.maximum`,`np.fmax`: 一一比较两个数组中元素大小, 返回相应位置最大的.`np.fmax`会忽略 np.NAN, 而`np.maximum`
+  则返回 np.NAN.
+* `np.minimum`,`np.fmin`: 一一比较两个数组中元素大小, 返回相应位置最小的.`np.fmin`会忽略 np.NAN, 而`np.minimum`
+  则返回 np.NAN.
+* `np.copysign`: 把第二个数组中的元素的符号复制给第一个数组中的相应元素.
+
+```
+>>> a = np.array([1,2,3,4])
+>>> b = np.array([1,0,-1,1])
+>>> a*b
+array([ 1,  0, -3,  4])
+```
 
 
 
