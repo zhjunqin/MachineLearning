@@ -52,7 +52,21 @@ nd.cumsum()
 #        -13.96853959, -13.59106636, -14.16799745, -13.30054014])
 ```
 
+#### 线性代数
 
+NumPy 中提供了一些线性代数运算的函数, 在 linalg 中有更全的线性代数的计算函数. 更多的线性代数相关函数包含在 scipy.linalg 包中.
+
+* `np.dot`: 矩阵乘法.
+* `np.transpose`: 返回转置, 也可以使用一个 ndarray 的 nd.T 属性.
+* `np.diagonal`: 返回矩阵的对角元素.
+* `np.trace`: 返回矩阵的迹.
+* `np.linalg.eig`: 返回方阵的特征值和特征向量.
+* `np.linalg.inv`: 返回方阵的逆矩阵.
+* `np.linalg.pinv`: 返回方阵的 Moore-Penrose 伪逆矩阵.
+* `np.linalg.solve`: 解线性方程组, 输入值是系数矩阵和线性方程组的常数项.
+* `np.linalg.det`: 求方阵的行列式.
+* `np.linalg.matrix_rank`: 求一个矩阵的秩.
+* `np.linalg.svd`: 奇异值分解.
 
 
 
