@@ -2,7 +2,7 @@
 
 ### 1.python代码实现
 
-包含算法的原始形式和对偶模式
+包含算法的原始形式和对偶形式
 
 ```
 # -*- coding: utf-8 -*-
@@ -19,7 +19,7 @@ class Perceptron(object):
         self._final_w = 0                 # 最后学习到的w
         self._final_b = 0                 # 最后学习到的b
 
-    def sgd_train(self):
+    def sgd_train(self): #算法原始形式
         total = len(self._input_y)
         feature_num = range(self._feature_num)
         data_num = range(total)
@@ -30,7 +30,7 @@ class Perceptron(object):
             separted = True
             for i in data_num:           # 遍历数据集，查找误分类点
                 inner = np.inner(w, self._input_x[i])
-                if self._input_y[i] * (inner+b) <= 0:
+                if self._input_y[i] * (inner+b) <= 0: # 误分类点
                     separted = False
                     w = w + self._rate * self._input_y[i] * self._input_x[i]
                     b = b + self._rate * self._input_y[i]
@@ -42,7 +42,7 @@ class Perceptron(object):
         self._final_b = b
         print(self._final_w, self._final_b)
 
-    def pair_sgd_train(self):
+    def pair_sgd_train(self): #对偶形式
         self._history = []
         total = len(self._input_y)
         feature_num = range(self._feature_num)
