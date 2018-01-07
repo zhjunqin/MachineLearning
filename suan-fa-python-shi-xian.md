@@ -42,7 +42,7 @@ class Perceptron(object):
         self._final_b = b
         print(self._final_w, self._final_b)
 
-    def pair_sgd_train(self): #对偶形式
+    def pair_sgd_train(self): # 对偶形式
         total = len(self._input_y)
         feature_num = range(self._feature_num)
         data_num = range(total)
