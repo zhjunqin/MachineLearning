@@ -58,8 +58,6 @@ class Perceptron(object):
                     separted = False
                     alpha[i] = alpha[i] + self._rate
                     b = b + self._rate * self._input_y[i]
-                    w = (alpha * self._input_y.T).dot(self._input_x)
-                    self._history.append([w, b])
             if separted:
                 break
             else:
