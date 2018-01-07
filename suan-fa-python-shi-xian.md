@@ -119,7 +119,7 @@ pla.draw_result()
 input_x = [[3,3], [4,3], [1,1], [2,3]]
 input_y = [1,1,-1,-1]
 
-pla = Perceptron(input_x, 2, input_y, 1)
+pla = Perceptron(input_x, 2, input_y, 1) # 2个特征，学习速率为1
 pla.pair_sgd_train()
 pla.draw_result()
 ```
