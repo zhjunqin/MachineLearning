@@ -103,7 +103,7 @@ pla.pair_sgd_train()
         def f(x):
             return -(self._final_b + self._final_w[0]*x)/self._final_w[1]
         x = np.array([0,1,2,3,4,5])
-        plt.plot(x, f(x), 'b-', lw=2)
+        plt.plot(x, f(x), 'b-', lw=2)  # 将最后的直线画出
         plt.title('Perceptron')
         plt.legend()
         plt.show()
