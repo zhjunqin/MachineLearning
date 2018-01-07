@@ -70,7 +70,9 @@ input_x = [[3,3], [4,3], [1,1], [2,3]]
 input_y = [1,1,-1,-1]
 
 pla = Perceptron(input_x, 2, input_y, 1)
+pla.sgd_train()
 pla.pair_sgd_train()
+
 ```
 
 ### 2. 图形显示
