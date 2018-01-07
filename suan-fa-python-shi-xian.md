@@ -12,19 +12,18 @@ import numpy as np
 class Perceptron(object):
 
     def __init__(self, input_x, feature_num, input_y, learn_rate=1):
-        self._input_x = np.array(input_x)
-        self._input_y = np.array(input_y)
-        self._feature_num = feature_num
-        self._rate = learn_rate
-        self._final_w = 0
-        self._final_b = 0
+        self._input_x = np.array(input_x) # 输入数据集中的X
+        self._input_y = np.array(input_y) # 输入数据集中的Y
+        self._feature_num = feature_num   # 总共有多少个特征
+        self._rate = learn_rate           # 学习速率
+        self._final_w = 0                 # 最后学习到的w
+        self._final_b = 0                 # 最后学习到的b
 
     def sgd_train(self):
-        self._history = []
         total = len(self._input_y)
         feature_num = range(self._feature_num)
         data_num = range(total)
-        w = np.zeros(self._feature_num)
+        w = np.zeros(self._feature_num)   #初始化向量w
         b = 0
 
         while True:
@@ -81,6 +80,4 @@ pla.pair_sgd_train()
 ### 2. 图形显示
 
 用matplotlib将图形画出来
-
-
 
