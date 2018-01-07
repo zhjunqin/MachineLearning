@@ -2,51 +2,82 @@
 
 ### 1.python代码实现
 
+包含算法的原始形式和对偶模式
+
 ```
+# -*- coding: utf-8 -*-
+
 import matplotlib.pyplot as plt
+import numpy as np
 
 class Perceptron(object):
 
-    def __init__(self, input_x, input_y, learn_rate=1, algorithm='sgd'):
-        self._input_x = input_x
-        self._input_y = input_y
+    def __init__(self, input_x, feature_num, input_y, learn_rate=1):
+        self._input_x = np.array(input_x)
+        self._input_y = np.array(input_y)
+        self._feature_num = feature_num
         self._rate = learn_rate
-        self._algorithm = algorithm
-        self._speparte_input()
+        self._final_w = 0
+        self._final_b = 0
 
-    def _speparte_input(self):
+    def sgd_train(self):
+        self._history = []
         total = len(self._input_y)
-        self._positive_x = []
-        self._nagtive_x = []
-
-        for i in range(total):
-            if self._input_y[i] >= 0:
-                self._positive_x.append(self._input_x[i])
+        feature_num = range(self._feature_num)
+        data_num = range(total)
+        w = np.zeros(self._feature_num)
+        b = 0
+ 
+        while True:
+            separted = True
+            for i in data_num:
+                inner = np.inner(w, self._input_x[i])
+                if self._input_y[i] * (inner+b) <= 0:
+                    separted = False
+                    w = w + self._rate * self._input_y[i] * self._input_x[i]
+                    b = b + self._rate * self._input_y[i]
+                    self._history.append([w, b])
+            if separted:
+                break
             else:
-                self._nagtive_x.append(self._input_x[i])
+                continue
+        self._final_w = w
+        self._final_b = b
+        print(self._final_w, self._final_b)
 
-    def draw_input_data(self):
-        x1 = [x[0] for x in self._positive_x]
-        x2 = [x[1] for x in self._positive_x]
-        plt.scatter(x1, x2, label='positive', color='g', s=30, marker="o")
-        x1 = [x[0] for x in self._nagtive_x]
-        x2 = [x[1] for x in self._nagtive_x]
-        plt.scatter(x1, x2, label='nagtive', color='r', s=30, marker="x")
-        #plt.grid(True)
-        plt.xlabel('x1')
-        plt.ylabel('x2')
-        plt.title('Perceptron')
-        plt.legend()
-        plt.show()
+    def pair_sgd_train(self):
+        self._history = []
+        total = len(self._input_y)
+        feature_num = range(self._feature_num)
+        data_num = range(total)
+        gram_matrix = self._input_x.dot(self._input_x.T) 
+        alpha = np.random.random(size=total)
+        b = 0
 
-input_x = [[3,5], [4,4], [4,5], [5,3.5], [5,2.5], [1.5,2.5], [2,3], [2,2], [3,2.5], [3,1]]
-input_y = [1,1,1,1,1,-1,-1,-1,-1,-1]
+        while True:
+            separted = True
+            for i in data_num:
+                inner = np.sum(alpha * self._input_y * gram_matrix[i])
+                if self._input_y[i] * (inner+b) <= 0:
+                    separted = False
+                    alpha[i] = alpha[i] + self._rate
+                    b = b + self._rate * self._input_y[i]
+                    w = (alpha * self._input_y.T).dot(self._input_x)
+                    self._history.append([w, b])
+            if separted:
+                break
+            else:
+                continue
+        self._final_w = (alpha * self._input_y.T).dot(self._input_x)
+        self._final_b = b
+        print(self._final_w, self._final_b)
 
-pla = Perceptron(input_x, input_y)
-pla.draw_input_data()
+input_x = [[3,3], [4,3], [1,1], [2,3]]
+input_y = [1,1,-1,-1]
+
+pla = Perceptron(input_x, 2, input_y, 1)
+pla.pair_sgd_train()
 ```
-
-
 
 训练数据集
 
