@@ -126,9 +126,9 @@ pla.draw_result()
 
 ![](/assets/pla-figure.png)
 
-> 参考
+> 参考文献：
 >
-> http://blog.csdn.net/wangxin1982314/article/details/73529499
+> [http://blog.csdn.net/wangxin1982314/article/details/73529499](http://blog.csdn.net/wangxin1982314/article/details/73529499)
 
 
 
