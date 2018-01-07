@@ -56,7 +56,7 @@ class Perceptron(object):
                 inner = np.sum(alpha * self._input_y * gram_matrix[i])
                 if self._input_y[i] * (inner+b) <= 0:  # 误分类点
                     separted = False
-                    alpha[i] = alpha[i] + self._rate
+                    alpha[i] = alpha[i] + self._rate   # 对偶形式只更新alpha向量中的一个分量
                     b = b + self._rate * self._input_y[i]
             if separted:
                 break
