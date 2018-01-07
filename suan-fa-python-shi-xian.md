@@ -54,7 +54,7 @@ class Perceptron(object):
             separted = True
             for i in data_num:
                 inner = np.sum(alpha * self._input_y * gram_matrix[i])
-                if self._input_y[i] * (inner+b) <= 0:
+                if self._input_y[i] * (inner+b) <= 0:  # 误分类点
                     separted = False
                     alpha[i] = alpha[i] + self._rate
                     b = b + self._rate * self._input_y[i]
@@ -72,7 +72,6 @@ input_y = [1,1,-1,-1]
 pla = Perceptron(input_x, 2, input_y, 1)
 pla.sgd_train()
 pla.pair_sgd_train()
-
 ```
 
 ### 2. 图形显示
