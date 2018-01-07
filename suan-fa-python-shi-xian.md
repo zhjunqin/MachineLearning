@@ -28,7 +28,7 @@ class Perceptron(object):
 
         while True:
             separted = True
-            for i in data_num:         # 遍历数据集，查找误分类点
+            for i in data_num:       # 遍历数据集，查找误分类点
                 inner = np.inner(w, self._input_x[i])
                 if self._input_y[i] * (inner+b) <= 0:
                     separted = False
