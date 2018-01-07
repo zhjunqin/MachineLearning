@@ -76,5 +76,53 @@ pla.pair_sgd_train()
 
 ### 2. 图形显示
 
-用matplotlib将结果用图形画出来
+用matplotlib将结果用图形画出来，在类中添加如下函数
+
+```
+    def draw_result(self):
+        total = len(self._input_y)
+        self._positive_x = []
+        self._nagtive_x = []
+
+        for i in range(total):
+            if self._input_y[i] >= 0:
+                self._positive_x.append(self._input_x[i])
+            else:
+                self._nagtive_x.append(self._input_x[i])
+
+        plt.figure(1)
+        x1 = [x[0] for x in self._positive_x]
+        x2 = [x[1] for x in self._positive_x]
+        plt.scatter(x1, x2, label='positive', color='g', s=30, marker="o")
+        x1 = [x[0] for x in self._nagtive_x]
+        x2 = [x[1] for x in self._nagtive_x]
+        plt.scatter(x1, x2, label='nagtive', color='r', s=30, marker="x")
+        plt.xlabel('x1')
+        plt.ylabel('x2')
+        plt.axis([0, 5, 0, 5])
+        def f(x):
+            return -(self._final_b + self._final_w[0]*x)/self._final_w[1]
+        x = np.array([0,1,2,3,4,5])
+        plt.plot(x, f(x), 'b-', lw=2)
+        plt.title('Perceptron')
+        plt.legend()
+        plt.show()
+        
+pla = Perceptron(input_x, 2, input_y, 1)
+pla.pair_sgd_train()
+pla.draw_result()
+```
+
+测试
+
+```
+input_x = [[3,3], [4,3], [1,1], [2,3]]
+input_y = [1,1,-1,-1]
+
+pla = Perceptron(input_x, 2, input_y, 1)
+pla.pair_sgd_train()
+pla.draw_result()
+```
+
+![](/assets/pla-figure.png)
 
