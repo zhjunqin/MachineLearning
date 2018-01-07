@@ -34,7 +34,6 @@ class Perceptron(object):
                     separted = False
                     w = w + self._rate * self._input_y[i] * self._input_x[i]
                     b = b + self._rate * self._input_y[i]
-                    self._history.append([w, b])
             if separted:
                 break
             else:
