@@ -93,10 +93,10 @@ pla.pair_sgd_train()
         plt.figure(1)
         x1 = [x[0] for x in self._positive_x]
         x2 = [x[1] for x in self._positive_x]
-        plt.scatter(x1, x2, label='positive', color='g', s=30, marker="o")
+        plt.scatter(x1, x2, label='positive', color='g', s=30, marker="o") # 正数据集
         x1 = [x[0] for x in self._nagtive_x]
         x2 = [x[1] for x in self._nagtive_x]
-        plt.scatter(x1, x2, label='nagtive', color='r', s=30, marker="x")
+        plt.scatter(x1, x2, label='nagtive', color='r', s=30, marker="x") # 负数据集
         plt.xlabel('x1')
         plt.ylabel('x2')
         plt.axis([0, 5, 0, 5])
