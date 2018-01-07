@@ -47,7 +47,7 @@ class Perceptron(object):
         feature_num = range(self._feature_num)
         data_num = range(total)
         gram_matrix = self._input_x.dot(self._input_x.T) # Gram 矩阵
-        alpha = np.random.random(size=total) # 初始化alph向量为随机值
+        alpha = np.random.random(size=total) # 这里初始化alph向量为随机值
         b = 0
 
         while True:
