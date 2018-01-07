@@ -75,5 +75,5 @@ pla.pair_sgd_train()
 
 ### 2. 图形显示
 
-用matplotlib将图形画出来
+用matplotlib将结果用图形画出来
 
