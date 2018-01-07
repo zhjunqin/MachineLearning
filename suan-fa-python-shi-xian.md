@@ -46,7 +46,7 @@ class Perceptron(object):
         total = len(self._input_y)
         feature_num = range(self._feature_num)
         data_num = range(total)
-        gram_matrix = self._input_x.dot(self._input_x.T) 
+        gram_matrix = self._input_x.dot(self._input_x.T) # Gram 矩阵
         alpha = np.random.random(size=total)
         b = 0
 
