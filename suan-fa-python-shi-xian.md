@@ -7,7 +7,6 @@
 ```
 # -*- coding: utf-8 -*-
 
-import matplotlib.pyplot as plt
 import numpy as np
 
 class Perceptron(object):
@@ -27,7 +26,7 @@ class Perceptron(object):
         data_num = range(total)
         w = np.zeros(self._feature_num)
         b = 0
- 
+
         while True:
             separted = True
             for i in data_num:
@@ -79,5 +78,9 @@ pla = Perceptron(input_x, 2, input_y, 1)
 pla.pair_sgd_train()
 ```
 
-训练数据集
+### 2. 图形显示
+
+用matplotlib将图形画出来
+
+
 
