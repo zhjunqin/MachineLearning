@@ -107,7 +107,7 @@ pla.pair_sgd_train()
         plt.title('Perceptron')
         plt.legend()
         plt.show()
-        
+
 pla = Perceptron(input_x, 2, input_y, 1)
 pla.pair_sgd_train()
 pla.draw_result()
@@ -125,4 +125,10 @@ pla.draw_result()
 ```
 
 ![](/assets/pla-figure.png)
+
+> 参考
+>
+> http://blog.csdn.net/wangxin1982314/article/details/73529499
+
+
 
