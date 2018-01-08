@@ -22,13 +22,13 @@ $$
 
 ![](/assets/logistic_1.png)
 
-分布函数属于Logistic函数，是一条S形曲线（sigmoid curve）。该曲线以点$$(\mu, 	\dfrac{1}{2})$$为中心对称，即满足
+分布函数属于Logistic函数，是一条S形曲线（sigmoid curve）。该曲线以点$$(\mu,     \dfrac{1}{2})$$为中心对称，即满足
 
 
 $$
-F(-x+\mu)-	\dfrac{1}{2} = -F(x+\mu) +	\dfrac{1}{2}
+F(-x+\mu)-    \dfrac{1}{2} = -F(x+\mu) +    \dfrac{1}{2}
 $$
-
+曲线在中心附近增长速度比较快，两端增长速度比较慢。形状参数$$\gamma$$的值越小，曲线在中心附近增长的越快。
 
 概率密度函数：
 
