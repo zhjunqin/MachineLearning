@@ -167,20 +167,32 @@ $$
 \dfrac{\partial L(w)}{\partial w_j}=\dfrac{\partial \displaystyle\sum_{i=1}^Nln(1+e^{-y^{(i)}w\cdot x^{(i)}})}{\partial w_j}
 $$
 
+
+
 $$
 =\displaystyle\sum_{i=1}^N\dfrac{\partial ln(1+e^{-y^{(i)}w\cdot x^{(i)}})}{\partial w_j}
 $$
 
+
+
 $$
-=\displaystyle\sum_{i=1}^N\big(\dfrac{1}{1+e^{-y^{(i)}w\cdot x^{(i)}}}\big) \big( e^{-y^{(i)}w\cdot x^{(i)}} 	\big) \big(\dfrac{\partial -y^{(i)}w\cdot x^{(i)}}{\partial w_j}\big)
+=\displaystyle\sum_{i=1}^N\big(\dfrac{1}{1+e^{-y^{(i)}w\cdot x^{(i)}}}\big) \big( e^{-y^{(i)}w\cdot x^{(i)}}     \big) \big(\dfrac{\partial -y^{(i)}w\cdot x^{(i)}}{\partial w_j}\big)
 $$
+
+
 
 $$
 =\displaystyle\sum_{i=1}^N\big(\dfrac{e^{-y^{(i)}w\cdot x^{(i)}}}{1+e^{-y^{(i)}w\cdot x^{(i)}}}\big) \big(\dfrac{\partial -y^{(i)}w\cdot x^{(i)}}{\partial w_j}\big)
 $$
 
+
+
 $$
 =\displaystyle\sum_{i=1}^N\big(\dfrac{e^{-y^{(i)}w\cdot x^{(i)}}}{1+e^{-y^{(i)}w\cdot x^{(i)}}}\big) \big(-y^{(i)}x^{(i)}_j\big)
+$$
+
+$$
+=\displaystyle\sum_{i=1}^N\theta(-y^{(i)}w\cdot x^{(i)})(-y^{(i)}x^{(i)}_j)
 $$
 
 
