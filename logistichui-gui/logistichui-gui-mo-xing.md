@@ -210,7 +210,13 @@ $$
 
 ### 六、梯度下降
 
-asdf
+取$$\nabla L(w)=0$$没有有效的办法。
+
+![](/assets/logistic_tidu.PNG)
+
+梯度下降算法：
+
+![](/assets/logistic_gd.PNG)
 
 > 参考：
 >
