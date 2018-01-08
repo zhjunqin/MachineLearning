@@ -15,6 +15,6 @@
     * [Logistic分布](logistichui-gui/logisticfen-bu.md)
     * [Logistic回归模型](logistichui-gui/logistichui-gui-mo-xing.md)
 * [数学基础](shu-xue-ji-chu.md)
-  * 线性代数
+  * [线性代数](shu-xue-ji-chu/xian-xing-dai-shu.md)
   * [概率统计](shu-xue-ji-chu/gai-lv-tong-ji.md)
 
