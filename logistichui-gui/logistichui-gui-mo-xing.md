@@ -97,16 +97,40 @@ $$
 =\displaystyle\sum_{i=1}^N[y^{(i)}log\dfrac{\pi(x^{(i)})}{1-\pi(x^{(i)})}+log(1-\pi(x^{(i)}))]
 $$
 
+
+
 $$
 =\displaystyle\sum_{i=1}^N[y^{(i)}(w\cdot x^{(i)})-log(1+e^{w\cdot x^{(i)}})]
 $$
+
+
 该函数是高阶可导函数，对$$L(w)$$求极大值，即令每个样本的概率越大越好，得到$$w$$的估计值。
 
 这样问题就变成了以对数似然函数为目标函数的最优化问题，Logistic回归学习中通常采用的方法是梯度下降和拟牛顿法。
 
+### 四、交叉商错误
+
+模型中的概率，也可以表示成：
+
+
+$$
+P(Y=1|X)=\dfrac{e^{w\cdot x}}{1+e^{w\cdot x}}=\theta(w\cdot x)
+$$
+其中
+$$
+\theta(x)=\dfrac{e^{x}}{1+e^{x}}=\dfrac{1}{1+e^{-x}}
+$$
+于是极大似然函数可以写成：
+
+
+$$
+L(w)=ln\displaystyle\prod_{i=1}^N\theta(y^{(i)}w\cdot x^{(i)})
+$$
 
 
 > 参考：
+>
+> 林轩田：机器学习基石
 >
 > [https://zh.wikipedia.org/wiki/发生比](https://zh.wikipedia.org/wiki/发生比)
 >
