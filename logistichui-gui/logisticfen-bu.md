@@ -22,7 +22,17 @@ $$
 
 ![](/assets/logistic_1.png)
 
+分布函数属于Logistic函数，是一条S形曲线（sigmoid curve）。该曲线以点$$(\mu, 	\dfrac{1}{2})$$为中心对称，即满足
+
+
+$$
+F(-x+\mu)-	\dfrac{1}{2} = -F(x+\mu) +	\dfrac{1}{2}
+$$
+
+
 概率密度函数：
 
 ![](/assets/logistic_2.png)
+
+分布函数属于Logistic函数，是
 
