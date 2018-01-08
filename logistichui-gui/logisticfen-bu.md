@@ -6,15 +6,21 @@ Logistic分布的定义：
 
 
 $$
-F(x)=P(X\leqslant x)=	\dfrac{1}{1+e^{-(x-\mu)/\gamma}}
+F(x)=P(X\leqslant x)=    \dfrac{1}{1+e^{-(x-\mu)/\gamma}}
 $$
 
+
+
 $$
-f(x)=F'(X\leqslant x)=	\dfrac{e^{-(x-\mu)/\gamma}}{\gamma(1+e^{-(x-\mu)/\gamma})^2}
+f(x)=F'(X\leqslant x)=    \dfrac{e^{-(x-\mu)/\gamma}}{\gamma(1+e^{-(x-\mu)/\gamma})^2}
 $$
+
+
 其中，$$\mu$$为位置参数，$$\gamma \gt0$$为形状参数。
 
 概率分布函数如下（$$\mu$$是位置函数，改变它可以平移图形）：
 
-![](/assets/logistic_1.png)
+
+
+概率密度函数
 
