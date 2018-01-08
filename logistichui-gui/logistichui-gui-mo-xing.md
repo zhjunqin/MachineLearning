@@ -34,15 +34,17 @@ $$
 $$
 P(Y=0|X)=\dfrac{1}{1+e^{w\cdot x}}
 $$
+二、发生比
 
+在统计和概率理论中，一个事件或者一个陈述的发生比（英语：Odds）是该事件发生和不发生的比率，公式为： 
 
-
-
-
+（$$p$$是该事件或陈述的概率）。
 
 > 参考：
 >
-> http://vividfree.github.io/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/2015/12/13/understanding-logistic-regression-using-odds
+> https://zh.wikipedia.org/wiki/%E5%8F%91%E7%94%9F%E6%AF%94
+>
+> [http://vividfree.github.io/机器学习/2015/12/13/understanding-logistic-regression-using-odds](http://vividfree.github.io/机器学习/2015/12/13/understanding-logistic-regression-using-odds)
 
 
 
