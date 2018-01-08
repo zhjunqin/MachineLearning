@@ -14,10 +14,4 @@
 * [数学基础](shu-xue-ji-chu.md)
   * 线性代数
   * 概率统计
-* [python数值计算](pythonshu-zhi-ji-suan.md)
-  * [numpy](numpy.md)
-    * [numpy生成随机数组](numpy/numpysheng-cheng-sui-ji-shu-zu.md)
-    * [Numpy 简介](numpy/numpy-jian-jie.md)
-  * [matplotlib](matplotlibpyplot.md)
-    * [pyplot](matplotlibpyplot/pyplot.md)
 
