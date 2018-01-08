@@ -201,12 +201,16 @@ $$
 于是
 
 ### 
+
+
 $$
     \nabla L(w)=\displaystyle\sum_{i=1}^N\theta(-y^{(i)}w\cdot x^{(i)})(-y^{(i)}x^{(i)})
 $$
-六、梯度下降
 
 
+### 六、梯度下降
+
+asdf
 
 > 参考：
 >
