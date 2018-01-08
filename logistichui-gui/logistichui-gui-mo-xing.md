@@ -132,19 +132,37 @@ $$
 $$
 \max_{w}L(w)=ln\displaystyle\prod_{i=1}^N\theta(y^{(i)}w\cdot x^{(i)})
 $$
+
+
 改成取极小值：
+
+
 $$
 \min_{w}L(w)=-ln\displaystyle\sum_{i=1}^N\theta(y^{(i)}w\cdot x^{(i)})
 $$
 
+
+
 $$
 =\displaystyle\sum_{i=1}^Nln(1+e^{-y^{(i)}w\cdot x^{(i)}})
 $$
+
+
 其中
+
+
 $$
-error(w,x,y)=ln(1+e^{-y^{(i)}w\cdot x^{(i)}})
+error(w,x,y)=ln(1+e^{-yw\cdot x})
 $$
+
+
 称为交叉熵错误。
+
+### 五、似然函数的梯度
+
+对极大似然函数计算梯度：
+
+
 
 > 参考：
 >
