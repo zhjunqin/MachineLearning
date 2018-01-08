@@ -158,10 +158,14 @@ $$
 
 称为交叉熵错误。
 
-### 五、似然函数的梯度
+### 五、极大似然函数的梯度
 
-对极大似然函数计算梯度：
+然后极大似然函数计算梯度：
 
+
+$$
+\dfrac{\partial L(w)}{\partial w_i}=\dfrac{\partial \displaystyle\sum_{i=1}^Nln(1+e^{-y^{(i)}w\cdot x^{(i)}})}{\partial w_i}
+$$
 
 
 > 参考：
