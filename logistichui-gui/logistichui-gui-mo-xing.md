@@ -40,6 +40,14 @@ $$
 
 在统计和概率理论中，一个事件或者一个陈述的发生比（英语：Odds）是该事件发生和不发生的比率，公式为：
 
+
+$$
+\dfrac{p}{1-p}
+$$
+其中$$p$$是该事件发生的概率。
+
+
+
 > 参考：
 >
 > [https://zh.wikipedia.org/wiki/发生比](https://zh.wikipedia.org/wiki/发生比)
