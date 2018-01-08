@@ -191,9 +191,21 @@ $$
 =\displaystyle\sum_{i=1}^N\big(\dfrac{e^{-y^{(i)}w\cdot x^{(i)}}}{1+e^{-y^{(i)}w\cdot x^{(i)}}}\big) \big(-y^{(i)}x^{(i)}_j\big)
 $$
 
+
+
 $$
 =\displaystyle\sum_{i=1}^N\theta(-y^{(i)}w\cdot x^{(i)})(-y^{(i)}x^{(i)}_j)
 $$
+
+
+于是
+
+### 
+$$
+    \nabla L(w)=\displaystyle\sum_{i=1}^N\theta(-y^{(i)}w\cdot x^{(i)})(-y^{(i)}x^{(i)})
+$$
+六、梯度下降
+
 
 
 > 参考：
