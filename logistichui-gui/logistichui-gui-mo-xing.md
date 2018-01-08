@@ -36,3 +36,13 @@ P(Y=0|X)=\dfrac{1}{1+e^{w\cdot x}}
 $$
 
 
+
+
+
+
+> 参考：
+>
+> http://vividfree.github.io/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/2015/12/13/understanding-logistic-regression-using-odds
+
+
+
