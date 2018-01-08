@@ -74,7 +74,7 @@ $$
 
 给定训练数据集$$T=\{(x^{(1)},y^{(1)}),(x^{(2)},y^{(2)}),...,(x^{(N)},y^{(N)})\}$$，其中，$$x^{(i)}\in X= R^n$$，$$y^{(i)}\in Y=\{0, 1\}$$，应用极大似然估计发估计模型参数，从而得到Logistic回归模型。
 
-设：$$P(Y=1|x)=\pi(x)$$，$$P(Y=0|x)=1-\pi(x)$$
+设：$$P(Y=1|x)=\pi(x)=\dfrac{e^{w\cdot x}}{1+e^{w\cdot x}}$$，$$P(Y=0|x)=1-\pi(x)=\dfrac{1}{1+e^{w\cdot x}}$$
 
 则似然函数为：
 
@@ -82,16 +82,28 @@ $$
 $$
 \displaystyle\prod_{i=1}^N[\pi(x^{(i)})]^{y^{(i)}}[1-\pi(x^{(i)})]^{1-y^{(i)}}
 $$
+
+
 对数似然函数为：
 
 
 $$
-L(x)=\displaystyle\sum_{i=1}^N[y^{(i)}log\pi(x^{(i)})+(1-y^{(i)})log(1-\pi(x^{(i)}))]
+L(w)=\displaystyle\sum_{i=1}^N[y^{(i)}log\pi(x^{(i)})+(1-y^{(i)})log(1-\pi(x^{(i)}))]
 $$
+
+
 
 $$
 =\displaystyle\sum_{i=1}^N[y^{(i)}log\dfrac{\pi(x^{(i)})}{1-\pi(x^{(i)})}+log(1-\pi(x^{(i)}))]
 $$
+
+$$
+=\displaystyle\sum_{i=1}^N[y^{(i)}(w\cdot x^{(i)})-log(1+e^{w\cdot x^{(i)}})]
+$$
+该函数是高阶可导函数，对$$L(w)$$求极大值，即令每个样本的概率越大越好，得到$$w$$的估计值。
+
+这样问题就变成了以对数似然函数为目标函数的最优化问题，Logistic回归学习中通常采用的方法是梯度下降和拟牛顿法。
+
 
 
 > 参考：
