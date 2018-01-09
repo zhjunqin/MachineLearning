@@ -152,19 +152,19 @@ $$
 
 
 $$
-= \displaystyle-\sum_{i=1}^Ny^{(i)}x^{(i)}_j+\displaystyle\sum_{i=1}^N\dfrac{e^{w\cdot x^{(i)}}}{1+e^{w\cdot x^{(i)}}}x^{(i)}_j
+= \displaystyle-\sum_{i=1}^my^{(i)}x^{(i)}_j+\displaystyle\sum_{i=1}^m\dfrac{e^{w\cdot x^{(i)}}}{1+e^{w\cdot x^{(i)}}}x^{(i)}_j
 $$
 
 
 
 $$
-= \displaystyle\sum_{i=1}^N\big(\dfrac{e^{w\cdot x^{(i)}}}{1+e^{w\cdot x^{(i)}}}-y^{(i)}\big)x^{(i)}_j
+= \displaystyle\sum_{i=1}^m\big(\dfrac{e^{w\cdot x^{(i)}}}{1+e^{w\cdot x^{(i)}}}-y^{(i)}\big)x^{(i)}_j
 $$
 
 
 
 $$
-= \displaystyle\sum_{i=1}^N\big(\theta(w\cdot x^{(i)})-y^{(i)}\big)x^{(i)}_j
+= \displaystyle\sum_{i=1}^m\big(\theta(w\cdot x^{(i)})-y^{(i)}\big)x^{(i)}_j
 $$
 
 
@@ -172,7 +172,7 @@ $$
 
 
 $$
-\nabla L(w)= \displaystyle\sum_{i=1}^N\big(\theta(w\cdot x^{(i)})-y^{(i)}\big)x^{(i)}
+\nabla L(w)= \displaystyle\sum_{i=1}^m\big(\theta(w\cdot x^{(i)})-y^{(i)}\big)x^{(i)}
 $$
 
 
@@ -181,11 +181,11 @@ $$
 
 $$
 X= \begin{bmatrix}
-   x^{(1)}_0 & x^{(1)}_1 & x^{(1)}_2 & ... & x^{(1)}_n \\
-   x^{(2)}_0 & x^{(2)}_1 & x^{(2)}_2 & ... & x^{(2)}_n \\
-   x^{(3)}_0 & x^{(3)}_1 & x^{(3)}_2 & ... & x^{(3)}_n \\
-                               ... \\
-   x^{(n)}_0 & x^{(n)}_1 & x^{(n)}_2 & ... & x^{(n)}_n 
+   1 & x^{(1)}_1 & x^{(1)}_2 & ... & x^{(1)}_n \\
+   1 & x^{(2)}_1 & x^{(2)}_2 & ... & x^{(2)}_n \\
+   1 & x^{(3)}_1 & x^{(3)}_2 & ... & x^{(3)}_n \\
+                                 \dots \\
+   1 & x^{(m)}_1 & x^{(m)}_2 & ... & x^{(m)}_n 
 \end{bmatrix}
 $$
 
