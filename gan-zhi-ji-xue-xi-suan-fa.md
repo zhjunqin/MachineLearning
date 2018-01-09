@@ -86,23 +86,23 @@ $$
 
 
 $$
-G=[x^{(i)}\cdot x^{(j)}]_{n\times n}
+G=[x^{(i)}\cdot x^{(j)}]_{m\times m}
 $$
 
 
 
 $$
 G= \begin{bmatrix}
-   x^{(1)}\cdot x^{(1)} & x^{(1)}\cdot x^{(2)} & x^{(1)}\cdot x^{(3)} & ... & x^{(1)}\cdot x^{(n)}\\
-   x^{(2)}\cdot x^{(1)} & x^{(2)}\cdot x^{(2)} & x^{(2)}\cdot x^{(3)} & ... & x^{(2)}\cdot x^{(n)} \\
-   x^{(3)}\cdot x^{(1)} & x^{(3)}\cdot x^{(2)} & x^{(3)}\cdot x^{(3)} & ... & x^{(3)}\cdot x^{(n)} \\
+   x^{(1)}\cdot x^{(1)} & x^{(1)}\cdot x^{(2)} & x^{(1)}\cdot x^{(3)} & ... & x^{(1)}\cdot x^{(m)}\\
+   x^{(2)}\cdot x^{(1)} & x^{(2)}\cdot x^{(2)} & x^{(2)}\cdot x^{(3)} & ... & x^{(2)}\cdot x^{(m)} \\
+   x^{(3)}\cdot x^{(1)} & x^{(3)}\cdot x^{(2)} & x^{(3)}\cdot x^{(3)} & ... & x^{(3)}\cdot x^{(m)} \\
                                ... \\
-   x^{(n)}\cdot x^{(1)} & x^{(n)}\cdot x^{(2)} & x^{(n)}\cdot x^{(3)} & ... & x^{(n)}\cdot x^{(n)}
+   x^{(m)}\cdot x^{(1)} & x^{(m)}\cdot x^{(2)} & x^{(m)}\cdot x^{(3)} & ... & x^{(n)}\cdot x^{(m)}
 \end{bmatrix}
 $$
 
 
-则关于$$\displaystyle\sum_{j=1}^N\alpha_jy^{(j)}x^{(j)}\cdot x^{(i)}$$的计算，$$\displaystyle\sum_{j=1}^N\alpha_jy^{(j)}x^{(j)}\cdot x^{(i)} = \displaystyle\sum_{j=1}^N\alpha_jy^{(j)}G[i,j]= \sum \alpha     \circ y     \circ G[i]$$，即三个向量中每个元素相乘再做和运算。
+则关于$$\displaystyle\sum_{j=1}^m\alpha_jy^{(j)}x^{(j)}\cdot x^{(i)}$$的计算，$$\displaystyle\sum_{j=1}^m\alpha_jy^{(j)}x^{(j)}\cdot x^{(i)} = \displaystyle\sum_{j=1}^m\alpha_jy^{(j)}G[i,j]= \sum \alpha     \circ y     \circ G[i]$$，即三个向量中每个元素相乘再做和运算。
 
 > 参考：林轩田，机器学习基石
 
