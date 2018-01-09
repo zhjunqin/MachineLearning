@@ -106,31 +106,55 @@ $$
 
 该函数是高阶可导函数，对$$L(w)$$求极大值，即令每个样本的概率越大越好，得到$$w$$的估计值。
 
+变换成求极小值：
+
+
+$$
+\min_{w}L(w)=-\displaystyle\sum_{i=1}^N[y^{(i)}(w\cdot x^{(i)})-ln(1+e^{w\cdot x^{(i)}})]
+$$
+
+
 这样问题就变成了以对数似然函数为目标函数的最优化问题，Logistic回归学习中通常采用的方法是梯度下降和拟牛顿法。
 
 计算梯度：
 
 
 $$
-\dfrac{\partial L(w)}{\partial w_j}=\dfrac{\partial \displaystyle\sum_{i=1}^N[y^{(i)}(w\cdot x^{(i)})-ln(1+e^{w\cdot x^{(i)}})]}{\partial w_j}
+\dfrac{\partial L(w)}{\partial w_j}=-\dfrac{\partial \displaystyle\sum_{i=1}^N[y^{(i)}(w\cdot x^{(i)})-ln(1+e^{w\cdot x^{(i)}})]}{\partial w_j}
 $$
 
 
 
 $$
-= \displaystyle\sum_{i=1}^N(y^{(i)}x^{(i)}_j)-\displaystyle\sum_{i=1}^N\dfrac{\partial ln(1+e^{w\cdot x^{(i)}})}{\partial w_j}
+= \displaystyle-\sum_{i=1}^N(y^{(i)}x^{(i)}_j)+\displaystyle\sum_{i=1}^N\dfrac{\partial ln(1+e^{w\cdot x^{(i)}})}{\partial w_j}
 $$
 
 
 
 $$
-= \displaystyle\sum_{i=1}^N(y^{(i)}x^{(i)}_j)-\displaystyle\sum_{i=1}^N\dfrac{1}{1+e^{w\cdot x^{(i)}}}\dfrac{\partial e^{w\cdot x^{(i)}}}{\partial w_j}
+= \displaystyle-\sum_{i=1}^N(y^{(i)}x^{(i)}_j)+\displaystyle\sum_{i=1}^N\dfrac{1}{1+e^{w\cdot x^{(i)}}}\dfrac{\partial e^{w\cdot x^{(i)}}}{\partial w_j}
 $$
 
 
 
 $$
-= \displaystyle\sum_{i=1}^Ny^{(i)}x^{(i)}_j-\displaystyle\sum_{i=1}^N\dfrac{e^{w\cdot x^{(i)}}}{1+e^{w\cdot x^{(i)}}}x^{(i)}_j
+= \displaystyle-\sum_{i=1}^Ny^{(i)}x^{(i)}_j+\displaystyle\sum_{i=1}^N\dfrac{e^{w\cdot x^{(i)}}}{1+e^{w\cdot x^{(i)}}}x^{(i)}_j
+$$
+
+
+
+$$
+= \displaystyle\sum_{i=1}^N\big(\dfrac{e^{w\cdot x^{(i)}}}{1+e^{w\cdot x^{(i)}}}-y^{(i)}\big)x^{(i)}_j
+$$
+
+$$
+= \displaystyle\sum_{i=1}^N\big(\theta(w\cdot x^{(i)})-y^{(i)}\big)x^{(i)}_j
+$$
+其中
+
+
+$$
+\theta(x)=\dfrac{e^{x}}{1+e^{x}}=\dfrac{1}{1+e^{-x}}
 $$
 
 
@@ -138,10 +162,8 @@ $$
 
 
 $$
-    \nabla L(w)=\displaystyle\sum_{i=1}^N\theta(-y^{(i)}w\cdot x^{(i)})(-y^{(i)}x^{(i)})
+    \nabla L(w)= \displaystyle\sum_{i=1}^N\big(\theta(w\cdot x^{(i)})-y^{(i)}\big)x^{(i)}
 $$
-
-
 
 
 ### 四、极大似然估计方法2
