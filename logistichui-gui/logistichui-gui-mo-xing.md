@@ -119,108 +119,20 @@ $$
 计算梯度：
 
 
-$$
-\dfrac{\partial L(w)}{\partial w_j}=-\dfrac{\partial \displaystyle\sum_{i=1}^N[y^{(i)}(w\cdot x^{(i)})-ln(1+e^{w\cdot x^{(i)}})]}{\partial w_j}
-$$
-
-
-
-$$
-= \displaystyle-\sum_{i=1}^N(y^{(i)}x^{(i)}_j)+\displaystyle\sum_{i=1}^N\dfrac{\partial ln(1+e^{w\cdot x^{(i)}})}{\partial w_j}
-$$
-
-
-
-$$
-= \displaystyle-\sum_{i=1}^N(y^{(i)}x^{(i)}_j)+\displaystyle\sum_{i=1}^N\dfrac{1}{1+e^{w\cdot x^{(i)}}}\dfrac{\partial e^{w\cdot x^{(i)}}}{\partial w_j}
-$$
-
-
-
-$$
-= \displaystyle-\sum_{i=1}^Ny^{(i)}x^{(i)}_j+\displaystyle\sum_{i=1}^N\dfrac{e^{w\cdot x^{(i)}}}{1+e^{w\cdot x^{(i)}}}x^{(i)}_j
-$$
-
-
-
-$$
-= \displaystyle\sum_{i=1}^N\big(\dfrac{e^{w\cdot x^{(i)}}}{1+e^{w\cdot x^{(i)}}}-y^{(i)}\big)x^{(i)}_j
-$$
-
-
-
-$$
-= \displaystyle\sum_{i=1}^N\big(\theta(w\cdot x^{(i)})-y^{(i)}\big)x^{(i)}_j
-$$
-
 
 其中
-
-
-$$
-\theta(x)=\dfrac{e^{x}}{1+e^{x}}=\dfrac{1}{1+e^{-x}}
-$$
-
 
 于是：
 
 
-$$
-    \nabla L(w)= \displaystyle\sum_{i=1}^N\big(\theta(w\cdot x^{(i)})-y^{(i)}\big)x^{(i)}
-$$
+
 假定：
 
+将输入数据集中的Y改成
 
-
-
-$$
-
-
-
-$$
-
-
-### 四、极大似然估计方法2
-
-模型中的概率，也可以表示成：
-
-
-$$
-P(Y=1|X)=\dfrac{e^{w\cdot x}}{1+e^{w\cdot x}}=\theta(w\cdot x)
-$$
-
-
-其中
-
-
-$$
-\theta(x)=\dfrac{e^{x}}{1+e^{x}}=\dfrac{1}{1+e^{-x}}
-$$
-
-
-将输入数据集中的$$Y$$改成$$Y\in \{1, -1\}$$，并根据$$\theta(-x)=1-\theta(x)$$的性质，
-
-于是极大似然函数可以写成：
-
-
-$$
-\max_{w}L(w)=ln\displaystyle\prod_{i=1}^N\theta(y^{(i)}w\cdot x^{(i)})
-$$
-
+于是极大似然函数可以写成：
 
 改成取极小值：
-
-
-$$
-\min_{w}L(w)=-ln\displaystyle\sum_{i=1}^N\theta(y^{(i)}w\cdot x^{(i)})
-$$
-
-
-
-$$
-=\displaystyle\sum_{i=1}^Nln(1+e^{-y^{(i)}w\cdot x^{(i)}})
-$$
-
 
 其中
 
