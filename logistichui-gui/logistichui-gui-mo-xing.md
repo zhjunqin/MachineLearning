@@ -115,16 +115,32 @@ $$
 \dfrac{\partial L(w)}{\partial w_j}=\dfrac{\partial \displaystyle\sum_{i=1}^N[y^{(i)}(w\cdot x^{(i)})-ln(1+e^{w\cdot x^{(i)}})]}{\partial w_j}
 $$
 
+
+
 $$
 = \displaystyle\sum_{i=1}^N(y^{(i)}x^{(i)}_j)-\displaystyle\sum_{i=1}^N\dfrac{\partial ln(1+e^{w\cdot x^{(i)}})}{\partial w_j}
 $$
+
+
 
 $$
 = \displaystyle\sum_{i=1}^N(y^{(i)}x^{(i)}_j)-\displaystyle\sum_{i=1}^N\dfrac{1}{1+e^{w\cdot x^{(i)}}}\dfrac{\partial e^{w\cdot x^{(i)}}}{\partial w_j}
 $$
 
+
+
 $$
 = \displaystyle\sum_{i=1}^Ny^{(i)}x^{(i)}_j-\displaystyle\sum_{i=1}^N\dfrac{e^{w\cdot x^{(i)}}}{1+e^{w\cdot x^{(i)}}}x^{(i)}_j
+$$
+于是：
+$$
+    \nabla L(w)=\displaystyle\sum_{i=1}^N\theta(-y^{(i)}w\cdot x^{(i)})(-y^{(i)}x^{(i)})
+$$
+
+
+
+$$
+    \nabla L(w)=\displaystyle\sum_{i=1}^N\theta(-y^{(i)}w\cdot x^{(i)})(-y^{(i)}x^{(i)})
 $$
 
 
