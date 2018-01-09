@@ -185,12 +185,14 @@ X= \begin{bmatrix}
    (x^{(2)})^T \\
    (x^{(3)})^T \\
      ... \\
-   ( x^{(4)} )^T \end{bmatrix} = \begin{bmatrix}
+   ( x^{(4)} )^T 
+\end{bmatrix} = \begin{bmatrix}
    1 & x^{(1)}_1 & x^{(1)}_2 & ... & x^{(1)}_n \\
    1 & x^{(2)}_1 & x^{(2)}_2 & ... & x^{(2)}_n \\
    1 & x^{(3)}_1 & x^{(3)}_2 & ... & x^{(3)}_n \\
                                  ... \\
-   1 & x^{(4)}_1 & x^{(4)}_2 & ... & x^{(4)}_n \end{bmatrix}
+   1 & x^{(4)}_1 & x^{(4)}_2 & ... & x^{(4)}_n 
+\end{bmatrix}
 $$
 
 
@@ -212,7 +214,7 @@ w=\begin{bmatrix}
    w_0 \\
    w_1 \\
    w_2 \\
-        \dots \\
+        ... \\
    w_n 
 \end{bmatrix}
 $$
@@ -226,25 +228,25 @@ X\cdot w= \begin{bmatrix}
    1 & x^{(1)}_1 & x^{(1)}_2 & ... & x^{(1)}_n \\
    1 & x^{(2)}_1 & x^{(2)}_2 & ... & x^{(2)}_n \\
    1 & x^{(3)}_1 & x^{(3)}_2 & ... & x^{(3)}_n \\
-                                 \dots \\
+                                 ... \\
    1 & x^{(m)}_1 & x^{(m)}_2 & ... & x^{(m)}_n 
 \end{bmatrix}\cdot \begin{bmatrix}
    w_0 \\
    w_1 \\
    w_2 \\
-        \dots \\
+        ... \\
    w_n 
 \end{bmatrix}=\begin{bmatrix}
    (x^{(1)})^T\cdot w \\
    (x^{(2)})^T\cdot w \\
    (x^{(3)})^T\cdot w \\
-                                 \dots \\
+                                 ... \\
    (x^{(m)})^T\cdot w 
 \end{bmatrix}=\begin{bmatrix}
    w^T \cdot x^{(1)} \\
    w^T \cdot x^{(2)} \\
    w^T \cdot x^{(3)} \\
-                                 \dots \\
+                                 ... \\
    w^T \cdot x^{(m)} 
 \end{bmatrix}
 $$
