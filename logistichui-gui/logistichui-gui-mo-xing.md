@@ -186,8 +186,38 @@ X= \begin{bmatrix}
    1 & x^{(3)}_1 & x^{(3)}_2 & ... & x^{(3)}_n \\
                                  \dots \\
    1 & x^{(m)}_1 & x^{(m)}_2 & ... & x^{(m)}_n 
+\end{bmatrix}=\begin{bmatrix}
+   1 & (x^{(1)})^T \\
+   1 & (x^{(2)})^T \\
+   1 & (x^{(3)})^T \\
+        \dots \\
+   1 & (x^{(m)})^T 
 \end{bmatrix}
 $$
+
+
+
+$$
+Y=\begin{bmatrix}
+   y_1 \\
+   y_2 \\
+   y_3 \\
+        \dots \\
+   y_m 
+\end{bmatrix}
+$$
+
+$$
+w=\begin{bmatrix}
+   w_0 \\
+   w_1 \\
+   w_2 \\
+        \dots \\
+   w_n 
+\end{bmatrix}
+$$
+
+
 
 
 将输入数据集中的Y改成
