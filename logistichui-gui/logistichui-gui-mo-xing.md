@@ -185,7 +185,7 @@ X= \begin{bmatrix}
    (x^{(2)})^T \\
    (x^{(3)})^T \\
                                  \dots \\
-   (x^{(m)})^T 
+   ( x^{(m)} )^T 
 \end{bmatrix}=\begin{bmatrix}
    1 & x^{(1)}_1 & x^{(1)}_2 & ... & x^{(1)}_n \\
    1 & x^{(2)}_1 & x^{(2)}_2 & ... & x^{(2)}_n \\
@@ -276,6 +276,8 @@ $$
 $$
 X^T\cdot \big(\theta(X\cdot w)-Y\big) = \displaystyle\sum_{i=1}^m\big(\theta(w\cdot x^{(i)})-y^{(i)}\big)x^{(i)}
 $$
+
+
 最终得到：
 
 
