@@ -119,18 +119,32 @@ $$
 计算梯度：
 
 
+$$
+\dfrac{\partial L(w)}{\partial w_j}=-\dfrac{\partial \displaystyle\sum_{i=1}^N[y^{(i)}(w\cdot x^{(i)})-ln(1+e^{w\cdot x^{(i)}})]}{\partial w_j}
+$$
+
+$$
+= \displaystyle-\sum_{i=1}^N(y^{(i)}x^{(i)}_j)+\displaystyle\sum_{i=1}^N\dfrac{\partial ln(1+e^{w\cdot x^{(i)}})}{\partial w_j}
+$$
+
+
+
+$$
+= \displaystyle-\sum_{i=1}^N(y^{(i)}x^{(i)}_j)+\displaystyle\sum_{i=1}^N\dfrac{1}{1+e^{w\cdot x^{(i)}}}\dfrac{\partial e^{w\cdot x^{(i)}}}{\partial w_j}
+$$
+
+
+
 
 其中
 
 于是：
 
-
-
 假定：
 
 将输入数据集中的Y改成
 
-于是极大似然函数可以写成：
+于是极大似然函数可以写成：
 
 改成取极小值：
 
