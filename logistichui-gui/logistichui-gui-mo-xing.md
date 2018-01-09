@@ -152,19 +152,17 @@ $$
 $$
 = \displaystyle\sum_{i=1}^N\big(\theta(w\cdot x^{(i)})-y^{(i)}\big)x^{(i)}_j
 $$
+
+
 得到：
 
 
 $$
 \nabla L(w)= \displaystyle\sum_{i=1}^N\big(\theta(w\cdot x^{(i)})-y^{(i)}\big)x^{(i)}
 $$
-
-
-其中
-
-于是：
-
 假定：
+
+
 
 将输入数据集中的Y改成
 
