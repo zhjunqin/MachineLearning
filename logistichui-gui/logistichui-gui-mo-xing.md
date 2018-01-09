@@ -199,11 +199,11 @@ $$
 
 $$
 Y=\begin{bmatrix}
-   y_1 \\
-   y_2 \\
-   y_3 \\
+   y^{(1)} \\
+   y^{(2)} \\
+   y^{(3)} \\
         \dots \\
-   y_m 
+   y^{(m)} 
 \end{bmatrix}
 $$
 
@@ -218,6 +218,8 @@ w=\begin{bmatrix}
    w_n 
 \end{bmatrix}
 $$
+
+
 则：
 
 
@@ -249,15 +251,19 @@ X\cdot w= \begin{bmatrix}
 \end{bmatrix}
 $$
 
+
+
 $$
 \theta(X\cdot w)-Y=\begin{bmatrix}
-   \theta(w^T \cdot x^{(1)})-y_1 \\
-   \theta(w^T \cdot x^{(2)})-y_2 \\
-   \theta(w^T \cdot x^{(3)})-y_3 \\
+   \theta(w^T \cdot x^{(1)})-y^{(1)} \\
+   \theta(w^T \cdot x^{(2)})-y^{(2)} \\
+   \theta(w^T \cdot x^{(3)})-y^{(3)} \\
                                  \dots \\
-   \theta(w^T \cdot x^{(m)})-y_m 
+   \theta(w^T \cdot x^{(m)})-y^{(m)} 
 \end{bmatrix}
 $$
+
+
 
 $$
 X^T= \begin{bmatrix}
@@ -265,8 +271,10 @@ X^T= \begin{bmatrix}
 \end{bmatrix}
 $$
 
+
+
 $$
-X^T\cdot (\theta(X\cdot w)-Y) = \displaystyle\sum_{i=1}^m\big(\theta(w\cdot x^{(i)})-y^{(i)}\big)x^{(i)}
+X^T\cdot \big(\theta(X\cdot w)-Y\big) = \displaystyle\sum_{i=1}^m\big(\theta(w\cdot x^{(i)})-y^{(i)}\big)x^{(i)}
 $$
 
 
