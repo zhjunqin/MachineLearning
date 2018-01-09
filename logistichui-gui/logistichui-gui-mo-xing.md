@@ -132,16 +132,16 @@ $$
 $$
 = \displaystyle\sum_{i=1}^Ny^{(i)}x^{(i)}_j-\displaystyle\sum_{i=1}^N\dfrac{e^{w\cdot x^{(i)}}}{1+e^{w\cdot x^{(i)}}}x^{(i)}_j
 $$
+
+
 于是：
-$$
-    \nabla L(w)=\displaystyle\sum_{i=1}^N\theta(-y^{(i)}w\cdot x^{(i)})(-y^{(i)}x^{(i)})
-$$
-
 
 
 $$
     \nabla L(w)=\displaystyle\sum_{i=1}^N\theta(-y^{(i)}w\cdot x^{(i)})(-y^{(i)}x^{(i)})
 $$
+
+
 
 
 ### 四、极大似然估计方法2
