@@ -135,6 +135,8 @@ $$
 = \displaystyle-\sum_{i=1}^N(y^{(i)}x^{(i)}_j)+\displaystyle\sum_{i=1}^N\dfrac{1}{1+e^{w\cdot x^{(i)}}}\dfrac{\partial e^{w\cdot x^{(i)}}}{\partial w_j}
 $$
 
+
+
 $$
 = \displaystyle-\sum_{i=1}^Ny^{(i)}x^{(i)}_j+\displaystyle\sum_{i=1}^N\dfrac{e^{w\cdot x^{(i)}}}{1+e^{w\cdot x^{(i)}}}x^{(i)}_j
 $$
@@ -145,10 +147,18 @@ $$
 = \displaystyle\sum_{i=1}^N\big(\dfrac{e^{w\cdot x^{(i)}}}{1+e^{w\cdot x^{(i)}}}-y^{(i)}\big)x^{(i)}_j
 $$
 
+
+
 $$
 = \displaystyle\sum_{i=1}^N\big(\theta(w\cdot x^{(i)})-y^{(i)}\big)x^{(i)}_j
 $$
-$$\nabla L(w)= \displaystyle\sum_{i=1}^N\big(\theta(w\cdot x^{(i)})-y^{(i)}\big)x^{(i)}$$
+得到：
+
+
+$$
+\nabla L(w)= \displaystyle\sum_{i=1}^N\big(\theta(w\cdot x^{(i)})-y^{(i)}\big)x^{(i)}
+$$
+
 
 其中
 
