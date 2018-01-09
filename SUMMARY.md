@@ -3,7 +3,6 @@
 ## 机器学习
 
 * [前言](README.md)
-  * [数学符号](shu-xue-fu-hao.md)
   * [符号表](fu-hao-biao.md)
 * 监督式学习
   * [感知机](gan-zhi-ji.md)
