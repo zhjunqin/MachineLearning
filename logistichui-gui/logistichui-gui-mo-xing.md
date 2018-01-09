@@ -86,7 +86,7 @@ $$
 
 ### 三、极大似然估计方法1
 
-给定训练数据集$$T=\{(x^{(1)},y^{(1)}),(x^{(2)},y^{(2)}),...,(x^{(N)},y^{(N)})\}$$，其中，$$x^{(i)}=(x_1, x_2, ..., x_n, 1)^T\in X= R^{n+1}$$，$$y^{(i)}\in Y=\{0, 1\}$$，应用极大似然估计发估计模型参数，从而得到Logistic回归模型。
+给定训练数据集$$T=\{(x^{(1)},y^{(1)}),(x^{(2)},y^{(2)}),...,(x^{(m)},y^{(m)})\}$$，其中，$$x^{(i)}=(1, x_1, x_2, ..., x_n)^T\in X= R^{n+1}$$，$$y^{(i)}\in Y=\{0, 1\}$$，应用极大似然估计发估计模型参数，从而得到Logistic回归模型。
 
 设：$$P(Y=1|x)=\pi(x)=\dfrac{e^{w\cdot x}}{1+e^{w\cdot x}}$$，$$P(Y=0|x)=1-\pi(x)=\dfrac{1}{1+e^{w\cdot x}}$$
 
@@ -94,7 +94,7 @@ $$
 
 
 $$
-\displaystyle\prod_{i=1}^N[\pi(x^{(i)})]^{y^{(i)}}[1-\pi(x^{(i)})]^{1-y^{(i)}}
+\displaystyle\prod_{i=1}^m[\pi(x^{(i)})]^{y^{(i)}}[1-\pi(x^{(i)})]^{1-y^{(i)}}
 $$
 
 
@@ -102,19 +102,19 @@ $$
 
 
 $$
-L(w)=\displaystyle\sum_{i=1}^N[y^{(i)}ln\pi(x^{(i)})+(1-y^{(i)})ln(1-\pi(x^{(i)}))]
+L(w)=\displaystyle\sum_{i=1}^m[y^{(i)}ln\pi(x^{(i)})+(1-y^{(i)})ln(1-\pi(x^{(i)}))]
 $$
 
 
 
 $$
-=\displaystyle\sum_{i=1}^N[y^{(i)}ln\dfrac{\pi(x^{(i)})}{1-\pi(x^{(i)})}+ln(1-\pi(x^{(i)}))]
+=\displaystyle\sum_{i=1}^m[y^{(i)}ln\dfrac{\pi(x^{(i)})}{1-\pi(x^{(i)})}+ln(1-\pi(x^{(i)}))]
 $$
 
 
 
 $$
-=\displaystyle\sum_{i=1}^N[y^{(i)}(w\cdot x^{(i)})-ln(1+e^{w\cdot x^{(i)}})]
+=\displaystyle\sum_{i=1}^m[y^{(i)}(w\cdot x^{(i)})-ln(1+e^{w\cdot x^{(i)}})]
 $$
 
 
@@ -124,7 +124,7 @@ $$
 
 
 $$
-\min_{w}L(w)=-\displaystyle\sum_{i=1}^N[y^{(i)}(w\cdot x^{(i)})-ln(1+e^{w\cdot x^{(i)}})]
+\min_{w}L(w)=-\displaystyle\sum_{i=1}^m[y^{(i)}(w\cdot x^{(i)})-ln(1+e^{w\cdot x^{(i)}})]
 $$
 
 
@@ -134,19 +134,19 @@ $$
 
 
 $$
-\dfrac{\partial L(w)}{\partial w_j}=-\dfrac{\partial \displaystyle\sum_{i=1}^N[y^{(i)}(w\cdot x^{(i)})-ln(1+e^{w\cdot x^{(i)}})]}{\partial w_j}
+\dfrac{\partial L(w)}{\partial w_j}=-\dfrac{\partial \displaystyle\sum_{i=1}^m[y^{(i)}(w\cdot x^{(i)})-ln(1+e^{w\cdot x^{(i)}})]}{\partial w_j}
 $$
 
 
 
 $$
-= \displaystyle-\sum_{i=1}^N(y^{(i)}x^{(i)}_j)+\displaystyle\sum_{i=1}^N\dfrac{\partial ln(1+e^{w\cdot x^{(i)}})}{\partial w_j}
+= \displaystyle-\sum_{i=1}^m(y^{(i)}x^{(i)}_j)+\displaystyle\sum_{i=1}^m\dfrac{\partial ln(1+e^{w\cdot x^{(i)}})}{\partial w_j}
 $$
 
 
 
 $$
-= \displaystyle-\sum_{i=1}^N(y^{(i)}x^{(i)}_j)+\displaystyle\sum_{i=1}^N\dfrac{1}{1+e^{w\cdot x^{(i)}}}\dfrac{\partial e^{w\cdot x^{(i)}}}{\partial w_j}
+= \displaystyle-\sum_{i=1}^m(y^{(i)}x^{(i)}_j)+\displaystyle\sum_{i=1}^m\dfrac{1}{1+e^{w\cdot x^{(i)}}}\dfrac{\partial e^{w\cdot x^{(i)}}}{\partial w_j}
 $$
 
 
