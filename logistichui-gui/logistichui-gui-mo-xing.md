@@ -276,11 +276,11 @@ $$
 $$
 X^T\cdot \big(\theta(X\cdot w)-Y\big) = \displaystyle\sum_{i=1}^m\big(\theta(w\cdot x^{(i)})-y^{(i)}\big)x^{(i)}
 $$
-
+最终得到：
 
 
 $$
-\min_{w}\nabla L(w)= \displaystyle\sum_{i=1}^m\big(\theta(w\cdot x^{(i)})-y^{(i)}\big)x^{(i)}
+\min_{w}\nabla L(w)= X^T\cdot \big(\theta(X\cdot w)-Y\big)
 $$
 
 
