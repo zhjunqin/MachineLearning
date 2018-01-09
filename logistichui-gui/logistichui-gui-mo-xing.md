@@ -172,7 +172,7 @@ $$
 
 
 $$
-\nabla L(w)= \displaystyle\sum_{i=1}^m\big(\theta(w\cdot x^{(i)})-y^{(i)}\big)x^{(i)}
+\min_{w}\nabla L(w)= \displaystyle\sum_{i=1}^m\big(\theta(w\cdot x^{(i)})-y^{(i)}\big)x^{(i)}
 $$
 
 
@@ -181,17 +181,17 @@ $$
 
 $$
 X= \begin{bmatrix}
+   (x^{(1)})^T \\
+   (x^{(2)})^T \\
+   (x^{(3)})^T \\
+                                 \dots \\
+   (x^{(m)})^T 
+\end{bmatrix}=\begin{bmatrix}
    1 & x^{(1)}_1 & x^{(1)}_2 & ... & x^{(1)}_n \\
    1 & x^{(2)}_1 & x^{(2)}_2 & ... & x^{(2)}_n \\
    1 & x^{(3)}_1 & x^{(3)}_2 & ... & x^{(3)}_n \\
                                  \dots \\
    1 & x^{(m)}_1 & x^{(m)}_2 & ... & x^{(m)}_n 
-\end{bmatrix}=\begin{bmatrix}
-   1 & (x^{(1)})^T \\
-   1 & (x^{(2)})^T \\
-   1 & (x^{(3)})^T \\
-        \dots \\
-   1 & (x^{(m)})^T 
 \end{bmatrix}
 $$
 
@@ -207,6 +207,8 @@ Y=\begin{bmatrix}
 \end{bmatrix}
 $$
 
+
+
 $$
 w=\begin{bmatrix}
    w_0 \\
@@ -216,8 +218,62 @@ w=\begin{bmatrix}
    w_n 
 \end{bmatrix}
 $$
+则：
 
 
+$$
+X\cdot w= \begin{bmatrix}
+   1 & x^{(1)}_1 & x^{(1)}_2 & ... & x^{(1)}_n \\
+   1 & x^{(2)}_1 & x^{(2)}_2 & ... & x^{(2)}_n \\
+   1 & x^{(3)}_1 & x^{(3)}_2 & ... & x^{(3)}_n \\
+                                 \dots \\
+   1 & x^{(m)}_1 & x^{(m)}_2 & ... & x^{(m)}_n 
+\end{bmatrix}\cdot \begin{bmatrix}
+   w_0 \\
+   w_1 \\
+   w_2 \\
+        \dots \\
+   w_n 
+\end{bmatrix}=\begin{bmatrix}
+   (x^{(1)})^T\cdot w \\
+   (x^{(2)})^T\cdot w \\
+   (x^{(3)})^T\cdot w \\
+                                 \dots \\
+   (x^{(m)})^T\cdot w 
+\end{bmatrix}=\begin{bmatrix}
+   w^T \cdot x^{(1)} \\
+   w^T \cdot x^{(2)} \\
+   w^T \cdot x^{(3)} \\
+                                 \dots \\
+   w^T \cdot x^{(m)} 
+\end{bmatrix}
+$$
+
+$$
+\theta(X\cdot w)-Y=\begin{bmatrix}
+   \theta(w^T \cdot x^{(1)})-y_1 \\
+   \theta(w^T \cdot x^{(2)})-y_2 \\
+   \theta(w^T \cdot x^{(3)})-y_3 \\
+                                 \dots \\
+   \theta(w^T \cdot x^{(m)})-y_m 
+\end{bmatrix}
+$$
+
+$$
+X^T= \begin{bmatrix}
+   x^{(1)} & x^{(2)} & x^{(3)} & ... & x^{(m)} 
+\end{bmatrix}
+$$
+
+$$
+X^T\cdot (\theta(X\cdot w)-Y) = \displaystyle\sum_{i=1}^m\big(\theta(w\cdot x^{(i)})-y^{(i)}\big)x^{(i)}
+$$
+
+
+
+$$
+\min_{w}\nabla L(w)= \displaystyle\sum_{i=1}^m\big(\theta(w\cdot x^{(i)})-y^{(i)}\big)x^{(i)}
+$$
 
 
 将输入数据集中的Y改成
