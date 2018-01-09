@@ -255,11 +255,11 @@ $$
 
 $$
 \theta(X\cdot w)-Y=\begin{bmatrix}
-   \theta(w^T \cdot x^{(1)})-y^{(1)} \\
-   \theta(w^T \cdot x^{(2)})-y^{(2)} \\
-   \theta(w^T \cdot x^{(3)})-y^{(3)} \\
+   {\theta}(w^T \cdot x^{(1)})-y^{(1)} \\
+   {\theta}(w^T \cdot x^{(2)})-y^{(2)} \\
+   {\theta}(w^T \cdot x^{(3)})-y^{(3)} \\
                                  \dots \\
-   \theta(w^T \cdot x^{(m)})-y^{(m)} 
+   {\theta}(w^T \cdot x^{(m)})-y^{(m)} 
 \end{bmatrix}
 $$
 
