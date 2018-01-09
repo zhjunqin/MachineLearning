@@ -97,7 +97,7 @@ G= \begin{bmatrix}
    x^{(2)}\cdot x^{(1)} & x^{(2)}\cdot x^{(2)} & x^{(2)}\cdot x^{(3)} & ... & x^{(2)}\cdot x^{(m)} \\
    x^{(3)}\cdot x^{(1)} & x^{(3)}\cdot x^{(2)} & x^{(3)}\cdot x^{(3)} & ... & x^{(3)}\cdot x^{(m)} \\
                                ... \\
-   x^{(m)}\cdot x^{(1)} & x^{(m)}\cdot x^{(2)} & x^{(m)}\cdot x^{(3)} & ... & x^{(n)}\cdot x^{(m)}
+   x^{(m)}\cdot x^{(1)} & x^{(m)}\cdot x^{(2)} & x^{(m)}\cdot x^{(3)} & ... & x^{(m)}\cdot x^{(m)}
 \end{bmatrix}
 $$
 
