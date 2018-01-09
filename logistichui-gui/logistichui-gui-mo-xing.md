@@ -70,7 +70,7 @@ $$
 
 也就是实例$$x $$输出$$Y=1$$的对数几率是$$x $$的线性函数。
 
-### 三、极大似然估计
+### 三、极大似然估计方法1
 
 给定训练数据集$$T=\{(x^{(1)},y^{(1)}),(x^{(2)},y^{(2)}),...,(x^{(N)},y^{(N)})\}$$，其中，$$x^{(i)}\in X= R^n$$，$$y^{(i)}\in Y=\{0, 1\}$$，应用极大似然估计发估计模型参数，从而得到Logistic回归模型。
 
@@ -88,19 +88,19 @@ $$
 
 
 $$
-L(w)=\displaystyle\sum_{i=1}^N[y^{(i)}log\pi(x^{(i)})+(1-y^{(i)})log(1-\pi(x^{(i)}))]
+L(w)=\displaystyle\sum_{i=1}^N[y^{(i)}ln\pi(x^{(i)})+(1-y^{(i)})ln(1-\pi(x^{(i)}))]
 $$
 
 
 
 $$
-=\displaystyle\sum_{i=1}^N[y^{(i)}log\dfrac{\pi(x^{(i)})}{1-\pi(x^{(i)})}+log(1-\pi(x^{(i)}))]
+=\displaystyle\sum_{i=1}^N[y^{(i)}ln\dfrac{\pi(x^{(i)})}{1-\pi(x^{(i)})}+ln(1-\pi(x^{(i)}))]
 $$
 
 
 
 $$
-=\displaystyle\sum_{i=1}^N[y^{(i)}(w\cdot x^{(i)})-log(1+e^{w\cdot x^{(i)}})]
+=\displaystyle\sum_{i=1}^N[y^{(i)}(w\cdot x^{(i)})-ln(1+e^{w\cdot x^{(i)}})]
 $$
 
 
@@ -108,7 +108,27 @@ $$
 
 这样问题就变成了以对数似然函数为目标函数的最优化问题，Logistic回归学习中通常采用的方法是梯度下降和拟牛顿法。
 
-### 四、交叉熵错误
+计算梯度：
+
+
+$$
+\dfrac{\partial L(w)}{\partial w_j}=\dfrac{\partial \displaystyle\sum_{i=1}^N[y^{(i)}(w\cdot x^{(i)})-ln(1+e^{w\cdot x^{(i)}})]}{\partial w_j}
+$$
+
+$$
+= \displaystyle\sum_{i=1}^N(y^{(i)}x^{(i)}_j)-\displaystyle\sum_{i=1}^N\dfrac{\partial ln(1+e^{w\cdot x^{(i)}})}{\partial w_j}
+$$
+
+$$
+= \displaystyle\sum_{i=1}^N(y^{(i)}x^{(i)}_j)-\displaystyle\sum_{i=1}^N\dfrac{1}{1+e^{w\cdot x^{(i)}}}\dfrac{\partial e^{w\cdot x^{(i)}}}{\partial w_j}
+$$
+
+$$
+= \displaystyle\sum_{i=1}^Ny^{(i)}x^{(i)}_j-\displaystyle\sum_{i=1}^N\dfrac{e^{w\cdot x^{(i)}}}{1+e^{w\cdot x^{(i)}}}x^{(i)}_j
+$$
+
+
+### 四、极大似然估计方法2
 
 模型中的概率，也可以表示成：
 
@@ -159,8 +179,6 @@ $$
 
 
 称为交叉熵错误。
-
-### 五、极大似然函数的梯度
 
 然后极大似然函数计算梯度：
 
