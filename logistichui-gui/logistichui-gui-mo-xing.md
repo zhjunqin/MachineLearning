@@ -168,6 +168,16 @@ $$
 $$
     \nabla L(w)= \displaystyle\sum_{i=1}^N\big(\theta(w\cdot x^{(i)})-y^{(i)}\big)x^{(i)}
 $$
+假定：
+
+
+
+
+$$
+
+
+
+$$
 
 
 ### 四、极大似然估计方法2
