@@ -43,16 +43,158 @@ $$
 f(x)=w^T\cdot x
 $$
 
+
+
 $$
 \min_{w}  L(w)=\displaystyle\sum_{i=1}^m(w^T\cdot x^{(i)}-y^{(i)})^2
 $$
+
+
 对其求导，可得：
 
 
 $$
-\dfrac{\partial L(w,b)}{\partial w_j}=\dfrac{\partial \displaystyle\sum_{i=1}^m(w^T\cdot x^{(i)}-y^{(i)})^2}{\partial w_j}=\displaystyle\sum_{i=1}^m2(w^T\cdot x^{(i)}-y^{(i)})x^{(i)}_j
+\dfrac{\partial L(w,b)}{\partial w_j}=\dfrac{\partial \displaystyle\sum_{i=1}^m(w^T\cdot x^{(i)}-y^{(i)})^2}{\partial w_j}
 $$
 
 
+
+$$
+=\displaystyle\sum_{i=1}^m2(w^T\cdot x^{(i)}-y^{(i)})x^{(i)}_j
+$$
+
+
+得到梯度向量：
+
+
+$$
+\nabla L(w)= \displaystyle\sum_{i=1}^m(w^T\cdot x^{(i)}-y^{(i)})x^{(i)}
+$$
+
+
+假定：
+
+$$X= \begin{bmatrix}
+   (x^{(1)})^T \\
+   (x^{(2)})^T \\
+   (x^{(3)})^T \\
+     ... \\
+   ( x^{(m)} )^T 
+\end{bmatrix} = \begin{bmatrix}
+   1 & x^{(1)}_1 & x^{(1)}_2 & ... & x^{(1)}_n \\
+   1 & x^{(2)}_1 & x^{(2)}_2 & ... & x^{(2)}_n \\
+   1 & x^{(3)}_1 & x^{(3)}_2 & ... & x^{(3)}_n \\
+                                 ... \\
+   1 & x^{(m)}_1 & x^{(m)}_2 & ... & x^{(m)}_n 
+\end{bmatrix}$$，$$Y=\begin{bmatrix}
+   y^{(1)} \\
+   y^{(2)} \\
+   y^{(3)} \\
+        ... \\
+   y^{(m)} 
+\end{bmatrix}$$，$$w=\begin{bmatrix}
+   w_0 \\
+   w_1 \\
+   w_2 \\
+        ... \\
+   w_n 
+\end{bmatrix}$$
+
+则：
+
+
+$$
+X\cdot w= \begin{bmatrix}
+   1 & x^{(1)}_1 & x^{(1)}_2 & ... & x^{(1)}_n \\
+   1 & x^{(2)}_1 & x^{(2)}_2 & ... & x^{(2)}_n \\
+   1 & x^{(3)}_1 & x^{(3)}_2 & ... & x^{(3)}_n \\
+                                 ... \\
+   1 & x^{(m)}_1 & x^{(m)}_2 & ... & x^{(m)}_n 
+\end{bmatrix}\cdot \begin{bmatrix}
+   w_0 \\
+   w_1 \\
+   w_2 \\
+        ... \\
+   w_n 
+\end{bmatrix}=\begin{bmatrix}
+   (x^{(1)})^T\cdot w \\
+   (x^{(2)})^T\cdot w \\
+   (x^{(3)})^T\cdot w \\
+                                 ... \\
+   (x^{(m)})^T\cdot w 
+\end{bmatrix}=\begin{bmatrix}
+   w^T \cdot x^{(1)} \\
+   w^T \cdot x^{(2)} \\
+   w^T \cdot x^{(3)} \\
+                                 ... \\
+   w^T \cdot x^{(m)} 
+\end{bmatrix}
+$$
+
+
+
+$$
+X\cdot w-Y =\begin{bmatrix}
+   w^T \cdot x^{(1)}-y^{(1)} \\
+   w^T \cdot x^{(2)}-y^{(2)} \\
+   w^T \cdot x^{(3)}-y^{(3)} \\
+                                 ... \\
+   w^T \cdot x^{(m)}-y^{(m)} 
+\end{bmatrix}
+$$
+
+
+
+$$
+X^T\cdot (X\cdot w-Y )=\begin{bmatrix}
+   x^{(1)} & x^{(2)} & x^{(3)} & ... & x^{(m)} 
+\end{bmatrix}\cdot \begin{bmatrix}
+   w^T \cdot x^{(1)}-y^{(1)} \\
+   w^T \cdot x^{(2)}-y^{(2)} \\
+   w^T \cdot x^{(3)}-y^{(3)} \\
+                                 ... \\
+   w^T \cdot x^{(m)}-y^{(m)} 
+\end{bmatrix}
+$$
+
+
+于是得到：
+
+
+$$
+\nabla L(w)=2 X^T\cdot (X\cdot w-Y )
+$$
+
+
+欲求的最优解，令上式为0，
+
+
+$$
+\nabla L(w)=2 X^T\cdot X\cdot w-2 X^T\cdot Y =0
+$$
+
+
+则得到：
+
+
+$$
+w=(X^T\cdot X)^{-1}\cdot X^T\cdot Y
+$$
+
+
+于是最终得到线性模型：
+
+
+$$
+f(x)=w^T\cdot x=x^T\cdot (X^T\cdot X)^{-1}\cdot X^T\cdot Y
+$$
+
+
+令$$X^\dagger =(X^T\cdot X)^{-1}\cdot X^T$$，称为**伪逆\(**seudo-inverse\)，代入，得到。
+
+
+$$
+f(x) = x^T\cdot X^\dagger\cdot Y
+$$
 
 
