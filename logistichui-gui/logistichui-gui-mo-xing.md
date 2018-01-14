@@ -124,7 +124,7 @@ $$
 
 
 $$
-\nabla L(w)=-\displaystyle\sum_{i=1}^m[y^{(i)}(w\cdot x^{(i)})-ln(1+e^{w\cdot x^{(i)}})]
+\min_{w} L(w)=-\displaystyle\sum_{i=1}^m[y^{(i)}(w\cdot x^{(i)})-ln(1+e^{w\cdot x^{(i)}})]
 $$
 
 
