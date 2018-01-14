@@ -296,7 +296,7 @@ $$
 
 
 $$
-w^{(j+1)} \gets w^{(j)}+\eta X^T\cdot \big(\theta(X\cdot w^{(j)})-Y\big)
+w^{(j+1)} \gets w^{(j)} - \eta X^T\cdot \big(\theta(X\cdot w^{(j)})-Y\big)
 $$
 
 
@@ -312,7 +312,7 @@ $$
 
 
 $$
-w^{(j+1)} \gets w^{(j)}+\eta \big(\theta(w^{(j)}\cdot x^{(i)})-y^{(i)}\big)x^{(i)}
+w^{(j+1)} \gets w^{(j)}-\eta \big(\theta(w^{(j)}\cdot x^{(i)})-y^{(i)}\big)x^{(i)}
 $$
 
 
