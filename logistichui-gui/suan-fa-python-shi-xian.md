@@ -77,19 +77,19 @@ class Logistic(object):
                 self._positive_x.append(self._input_x[i])
             else:
                 self._nagtive_x.append(self._input_x[i])
-    
+
         plt.figure(1)
         x1 = [x[1] for x in self._positive_x]
         x2 = [x[2] for x in self._positive_x]
-        plt.scatter(x1, x2, label='positive', color='g', s=20, marker="o")
+        plt.scatter(x1, x2, label='positive', color='g', s=20, marker="o") # 显示值为1的数据
         x1 = [x[1] for x in self._nagtive_x]
         x2 = [x[2] for x in self._nagtive_x]
-        plt.scatter(x1, x2, label='nagtive', color='r', s=20, marker="x")
+        plt.scatter(x1, x2, label='nagtive', color='r', s=20, marker="x") # 显示值为0的数据
         plt.xlabel('x1')
         plt.ylabel('x2')
         def f(x):
             return -(self._final_w[0] + self._final_w[1]*x)/self._final_w[2]
-        x = np.linspace(-4, 4, 10, endpoint=True)
+        x = np.linspace(-4, 4, 10, endpoint=True)  # 显示学习到的直线
         plt.plot(x, f(x), 'b-', lw=1)
         plt.title('Logistic')
         plt.legend()
