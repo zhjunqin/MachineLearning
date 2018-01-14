@@ -39,4 +39,12 @@ $$
 求解$$w$$和$$b$$使$$ L(w,b)=\displaystyle\sum_{i=1}^m(f(x^{(i)})-y^{(i)})^2$$最小化的过程，称为线性回归模型的最小二乘“参数估计”（parameter estimation）。对其求导，可得：
 
 
+$$
+\dfrac{\partial L(w,b)}{\partial w_j}=\dfrac{\partial \displaystyle\sum_{i=1}^m(w^T\cdot x^{(i)}+b-y^{(i)})^2}{\partial w_j}
+$$
+
+$$
+=\dfrac{\partial \displaystyle\sum_{i=1}^m2(w^T\cdot x^{(i)}+b-y^{(i)})x^{(i)}_j}{\partial w_j}
+$$
+
 
