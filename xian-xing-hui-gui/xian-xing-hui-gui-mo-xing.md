@@ -36,15 +36,23 @@ $$
 
 均方误差有非常好的几何意义，它对应了常用的欧几里得距离或简称“**欧氏距离**”（Euclidean distance）。基于均方误差最小化来进行模型求解的方法称为“**最小二乘法**”（least square method）。在线性回归中，最小二乘法是试图找到一条直线，使得所有样本到直线上的欧氏距离之和最小。
 
-求解$$w$$和$$b$$使$$ L(w,b)=\displaystyle\sum_{i=1}^m(f(x^{(i)})-y^{(i)})^2$$最小化的过程，称为线性回归模型的最小二乘“参数估计”（parameter estimation）。对其求导，可得：
+求解$$w$$和$$b$$使$$ L(w,b)=\displaystyle\sum_{i=1}^m(f(x^{(i)})-y^{(i)})^2$$最小化的过程，称为线性回归模型的最小二乘“参数估计”（parameter estimation）。令$$w_0=b$$，$$x_0=1$$，则$$w=(w_0,w_1, w_2, ..., w_n)^T$$，$$x=(x_0, x_1, x_2, ..., x_n)^T$$，原式转换为：
 
 
 $$
-\dfrac{\partial L(w,b)}{\partial w_j}=\dfrac{\partial \displaystyle\sum_{i=1}^m(w^T\cdot x^{(i)}+b-y^{(i)})^2}{\partial w_j}
+f(x)=w^T\cdot x
 $$
 
 $$
-=\dfrac{\partial \displaystyle\sum_{i=1}^m2(w^T\cdot x^{(i)}+b-y^{(i)})x^{(i)}_j}{\partial w_j}
+\min_{w}  L(w)=\displaystyle\sum_{i=1}^m(w^T\cdot x^{(i)}-y^{(i)})^2
 $$
+对其求导，可得：
+
+
+$$
+\dfrac{\partial L(w,b)}{\partial w_j}=\dfrac{\partial \displaystyle\sum_{i=1}^m(w^T\cdot x^{(i)}-y^{(i)})^2}{\partial w_j}=\displaystyle\sum_{i=1}^m2(w^T\cdot x^{(i)}-y^{(i)})x^{(i)}_j
+$$
+
+
 
 
