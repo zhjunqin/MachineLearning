@@ -63,5 +63,63 @@ class Logistic(object):
         return w
 ```
 
+#### 2. python数据显示
+
+在类中添加如下函数：
+
+```
+    def draw_result(self, w=None):
+        total_data = np.shape(self._input_y)[0]
+        self._nagtive_x = []
+        self._positive_x = []
+        for i in range(total_data):
+            if self._input_y[i] > 0:
+                self._positive_x.append(self._input_x[i])
+            else:
+                self._nagtive_x.append(self._input_x[i])
+    
+        plt.figure(1)
+        x1 = [x[1] for x in self._positive_x]
+        x2 = [x[2] for x in self._positive_x]
+        plt.scatter(x1, x2, label='positive', color='g', s=20, marker="o")
+        x1 = [x[1] for x in self._nagtive_x]
+        x2 = [x[2] for x in self._nagtive_x]
+        plt.scatter(x1, x2, label='nagtive', color='r', s=20, marker="x")
+        plt.xlabel('x1')
+        plt.ylabel('x2')
+        def f(x):
+            return -(self._final_w[0] + self._final_w[1]*x)/self._final_w[2]
+        x = np.linspace(-4, 4, 10, endpoint=True)
+        plt.plot(x, f(x), 'b-', lw=1)
+        plt.title('Logistic')
+        plt.legend()
+        plt.show()
+
+    def draw_w_history(self):
+        f, (ax1, ax2, ax3) = plt.subplots(3, 1, sharex=True)
+        x = np.arange(len(self._history_w))
+        w0 = [w[0] for w in self._history_w]
+        w1 = [w[1] for w in self._history_w]
+        w2 = [w[2] for w in self._history_w]
+        ax1.set_title('Logistic w trend')
+        ax1.set_ylabel('w[0]')
+        ax1.scatter(x, w0, label='w[0]', color='b', s=10, marker=".")
+        ax2.set_ylabel('w[1]')
+        ax2.scatter(x, w1, label='w[1]', color='g', s=10, marker=".")
+        ax3.set_ylabel('w[2]')
+        ax3.scatter(x, w2, label='w[2]', color='r', s=10, marker=".")
+        plt.show()
+
+    def draw_lost_function_history(self):
+        plt.figure(1)
+        x = np.arange(len(self._likelihood))
+        plt.scatter(x, self._likelihood, label='Likelihood', color='g', s=10, marker=".")
+        plt.xlabel('x')
+        plt.ylabel('Likelihood function')
+        plt.title('Likelihood function trend')
+        plt.legend()
+        plt.show()
+```
+
 
 
