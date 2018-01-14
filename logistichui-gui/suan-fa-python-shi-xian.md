@@ -68,7 +68,7 @@ class Logistic(object):
 在类中添加如下函数：
 
 ```
-    def draw_result(self, w=None):
+    def draw_result(self, title):
         total_data = np.shape(self._input_y)[0]
         self._nagtive_x = []
         self._positive_x = []
@@ -91,17 +91,17 @@ class Logistic(object):
             return -(self._final_w[0] + self._final_w[1]*x)/self._final_w[2]
         x = np.linspace(-4, 4, 10, endpoint=True)  # 显示学习到的直线
         plt.plot(x, f(x), 'b-', lw=1)
-        plt.title('Logistic')
+        plt.title(title)
         plt.legend()
         plt.show()
 
-    def draw_w_history(self):
+    def draw_w_history(self, title):
         f, (ax1, ax2, ax3) = plt.subplots(3, 1, sharex=True)
         x = np.arange(len(self._history_w))
         w0 = [w[0] for w in self._history_w]
         w1 = [w[1] for w in self._history_w]
         w2 = [w[2] for w in self._history_w]
-        ax1.set_title('Logistic w trend')
+        ax1.set_title(title+ ' w trend')
         ax1.set_ylabel('w[0]')
         ax1.scatter(x, w0, label='w[0]', color='b', s=10, marker=".")
         ax2.set_ylabel('w[1]')
@@ -110,16 +110,50 @@ class Logistic(object):
         ax3.scatter(x, w2, label='w[2]', color='r', s=10, marker=".")
         plt.show()
 
-    def draw_likelihood_function(self): 
+    def draw_likelihood_function(self, title):
         plt.figure(1)
         x = np.arange(len(self._likelihood))
         plt.scatter(x, self._likelihood, label='Likelihood', color='g', s=10, marker=".")
         plt.xlabel('x')
         plt.ylabel('Likelihood function')
-        plt.title('Likelihood function trend')
+        plt.title(title + ' Likelihood trend')
         plt.legend()
         plt.show()
 ```
+
+#### 3.数据集测试
+
+> 数据集来自《机器学习实战》
+>
+> https://github.com/apachecn/MachineLearning/blob/python-2.7/input/5.Logistic/TestSet.txt
+
+##### 3.1批量梯度下降
+
+```
+log = Logistic()
+log.load_input_data("test.txt")
+log.batch_gradient_descent(iter_num=300, iter_rate=0.001)
+log.draw_result()
+log.draw_w_history()
+log.draw_likelihood_function()
+```
+
+
+
+3.2随机梯度下降
+
+```
+log = Logistic()
+log.load_input_data("test.txt")
+log.stochastic_gradient_descent(iter_num=100, iter_rate=0.001)
+log.draw_result()
+log.draw_w_history()
+log.draw_likelihood_function()
+```
+
+> 参考：
+>
+> 《机器学习实战》第五章
 
 
 
