@@ -53,7 +53,7 @@ class Logistic(object):
         data_range = range(data_num)
         for i in range(iter_num):
             for j in data_range:
-                iter_rate = 4/(1.0+j+i) + 0.01
+                iter_rate = 4/(1.0+j+i) + 0.01         # 学习率随着迭代的次数而不断变小
                 theta = self.sigmoid(self._input_x[j], w)
                 delta = theta - self._input_y[j]
                 w = w - iter_rate * delta* self._input_x[j]
