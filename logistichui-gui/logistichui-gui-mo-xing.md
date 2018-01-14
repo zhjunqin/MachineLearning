@@ -178,9 +178,7 @@ $$
 
 假定：
 
-
-$$
-X= \begin{bmatrix}
+$$X= \begin{bmatrix}
    (x^{(1)})^T \\
    (x^{(2)})^T \\
    (x^{(3)})^T \\
@@ -192,33 +190,19 @@ X= \begin{bmatrix}
    1 & x^{(3)}_1 & x^{(3)}_2 & ... & x^{(3)}_n \\
                                  ... \\
    1 & x^{(m)}_1 & x^{(m)}_2 & ... & x^{(m)}_n 
-\end{bmatrix}
-$$
-
-
-
-$$
-Y=\begin{bmatrix}
+\end{bmatrix}$$，$$Y=\begin{bmatrix}
    y^{(1)} \\
    y^{(2)} \\
    y^{(3)} \\
         ... \\
    y^{(m)} 
-\end{bmatrix}
-$$
-
-
-
-$$
-w=\begin{bmatrix}
+\end{bmatrix}$$，$$w=\begin{bmatrix}
    w_0 \\
    w_1 \\
    w_2 \\
         ... \\
    w_n 
-\end{bmatrix}
-$$
-
+\end{bmatrix}$$
 
 则：
 
