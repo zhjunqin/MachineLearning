@@ -268,7 +268,15 @@ $$
 $$
 \nabla L(w)= X^T\cdot \big(\theta(X\cdot w)-Y\big)
 $$
+同时也可以得到：
 
+
+$$
+\min_{w} L(w)=-\displaystyle\sum_{i=1}^m[y^{(i)}(w\cdot x^{(i)})-ln(1+e^{w\cdot x^{(i)}})]=-(X\cdot w)^T\cdot Y+ln(1+e^{X\cdot w })\cdot I
+$$
+
+
+其中$$I$$为全$$1$$向量。
 
 ### 四、梯度下降法
 
