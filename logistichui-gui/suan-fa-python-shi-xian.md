@@ -125,7 +125,7 @@ class Logistic(object):
 
 > 数据集来自《机器学习实战》
 >
-> https://github.com/apachecn/MachineLearning/blob/python-2.7/input/5.Logistic/TestSet.txt
+> [https://github.com/apachecn/MachineLearning/blob/python-2.7/input/5.Logistic/TestSet.txt](https://github.com/apachecn/MachineLearning/blob/python-2.7/input/5.Logistic/TestSet.txt)
 
 ##### 3.1批量梯度下降
 
@@ -133,12 +133,17 @@ class Logistic(object):
 log = Logistic()
 log.load_input_data("test.txt")
 log.batch_gradient_descent(iter_num=300, iter_rate=0.001)
-log.draw_result()
-log.draw_w_history()
-log.draw_likelihood_function()
+title = "Batch Gradient Descent"
+log.draw_result(title)
+log.draw_w_history(title)
+log.draw_likelihood_function(title)
 ```
 
+![](/assets/logistic_bgd_1.png)
 
+![](/assets/logistic_bgd_2.png)
+
+![](/assets/logistic_bgd_3.png)
 
 3.2随机梯度下降
 
@@ -146,10 +151,15 @@ log.draw_likelihood_function()
 log = Logistic()
 log.load_input_data("test.txt")
 log.stochastic_gradient_descent(iter_num=100, iter_rate=0.001)
-log.draw_result()
-log.draw_w_history()
-log.draw_likelihood_function()
+title = "Stochastic Gradient Descent"
+log.draw_result(title)
+log.draw_w_history(title)
+log.draw_likelihood_function(title)
 ```
+
+![](/assets/logistic_sgd_1.png)![](/assets/logistic_sgd_2.png)
+
+![](/assets/logistic_sgd_3.png)
 
 > 参考：
 >
