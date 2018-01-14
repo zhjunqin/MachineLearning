@@ -190,7 +190,7 @@ f(x)=w^T\cdot x=x^T\cdot (X^T\cdot X)^{-1}\cdot X^T\cdot Y
 $$
 
 
-令$$X^\dagger =(X^T\cdot X)^{-1}\cdot X^T$$，称为**伪逆\(**seudo-inverse\)，代入，得到。
+令$$X^\dagger =(X^T\cdot X)^{-1}\cdot X^T$$，称为**伪逆\(**seudo-inverse\)，代入得到。
 
 
 $$
