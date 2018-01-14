@@ -166,9 +166,7 @@ $$
 $$
 = \displaystyle\sum_{i=1}^m\big(\theta(w\cdot x^{(i)})-y^{(i)}\big)x^{(i)}_j
 $$
-
-
-得到：
+其中$$\theta(x)=\dfrac{e^{x}}{1+e^{x}}=\dfrac{1}{1+e^{-x}}$$，得到：
 
 
 $$
