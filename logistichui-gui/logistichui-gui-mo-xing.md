@@ -314,6 +314,8 @@ $$
 $$
 w^{(j+1)} \gets w^{(j)}+\eta \big(\theta(w\cdot x^{(i)})-y^{(i)}\big)x^{(i)}
 $$
+
+
 一直到迭代到足够的次数。
 
 > 参考：
@@ -323,6 +325,10 @@ $$
 > [https://zh.wikipedia.org/wiki/发生比](https://zh.wikipedia.org/wiki/发生比)
 >
 > [http://vividfree.github.io/机器学习/2015/12/13/understanding-logistic-regression-using-odds](http://vividfree.github.io/机器学习/2015/12/13/understanding-logistic-regression-using-odds)
+>
+> http://blog.csdn.net/bitcarmanlee/article/details/51473567
+
+
 
 
 
