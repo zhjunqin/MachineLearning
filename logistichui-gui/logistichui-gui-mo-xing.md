@@ -124,7 +124,7 @@ $$
 
 
 $$
-\min_{w}L(w)=-\displaystyle\sum_{i=1}^m[y^{(i)}(w\cdot x^{(i)})-ln(1+e^{w\cdot x^{(i)}})]
+\nabla L(w)=-\displaystyle\sum_{i=1}^m[y^{(i)}(w\cdot x^{(i)})-ln(1+e^{w\cdot x^{(i)}})]
 $$
 
 
@@ -168,11 +168,11 @@ $$
 $$
 
 
-其中$$\theta(x)=\dfrac{e^{x}}{1+e^{x}}=\dfrac{1}{1+e^{-x}}$$，得到：
+其中$$\theta(x)=\dfrac{e^{x}}{1+e^{x}}=\dfrac{1}{1+e^{-x}}$$，也称为$$sigmoid$$函数，然后得到：
 
 
 $$
-\min_{w}\nabla L(w)= \displaystyle\sum_{i=1}^m\big(\theta(w\cdot x^{(i)})-y^{(i)}\big)x^{(i)}
+\nabla L(w)= \displaystyle\sum_{i=1}^m\big(\theta(w\cdot x^{(i)})-y^{(i)}\big)x^{(i)}
 $$
 
 
@@ -276,9 +276,19 @@ $$
 
 输入：训练数据集$$T=\{(x^{(1)},y^{(1)}),(x^{(2)},y^{(2)}),...,(x^{(m)},y^{(m)})\}$$，其中$$x^{(i)}\in X= R^n$$，$$y^{(i)}\in Y=\lbrace0,1\rbrace$$，$$i=1,2,...,m$$，学习率$$\eta(0<\eta\leqslant1)$$；
 
-输出：$$w$$，$$b$$，其中$$w=(w_1, w_2, ..., w_n)^T$$，模型$$f(x)=\theta ( w\cdot x+b)$$
+输出：$$w$$，$$b$$，其中$$w=(w_1, w_2, ..., w_n)^T$$，模型$$f(x)=sigmoid ( w\cdot x+b)$$
 
-1）将输入
+1）将输入的每个$$x$$转换成$$x_i=(1, x_1, x_2,...x_n)$$，令$$w_0 =b$$，输出定为$$w=(w_0, w_1, w_2, ..., w_n)^T$$
+
+2）选取初始$$w^{(0)}=(w_0, w_1, w_2, ..., w_n)^T$$
+
+3）计算梯度$$X^T\cdot \big(\theta(X\cdot w^{(j)})-Y\big)$$，其中$$w^{(j)}$$为第$$j$$次迭代的结果，则第$$j+1$$次为：
+
+
+$$
+w^{(j+1)} \gets w^{(j)}+\eta X^T\cdot \big(\theta(X\cdot w^{(j)})-Y\big)
+$$
+
 
 #### 2.随机梯度下降
 
