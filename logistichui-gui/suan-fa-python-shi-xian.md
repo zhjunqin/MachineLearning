@@ -139,13 +139,15 @@ log.draw_w_history(title)
 log.draw_likelihood_function(title)
 ```
 
+总计算时间复杂度为300\*100\*3
+
 ![](/assets/logistic_bgd_1.png)
 
 ![](/assets/logistic_bgd_2.png)
 
 ![](/assets/logistic_bgd_3.png)
 
-3.2随机梯度下降
+##### 3.2随机梯度下降
 
 ```
 log = Logistic()
@@ -156,6 +158,8 @@ log.draw_result(title)
 log.draw_w_history(title)
 log.draw_likelihood_function(title)
 ```
+
+总计算时间复杂度为100（外循环）\*100（内循环）\*3
 
 ![](/assets/logistic_sgd_1.png)![](/assets/logistic_sgd_2.png)
 
