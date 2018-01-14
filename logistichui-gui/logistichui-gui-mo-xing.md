@@ -1,4 +1,4 @@
-## 二项Logistic回归模型
+## Logistic回归模型
 
 二项Logistic回归模型（binomial logistic regression model）是一种分类模型，由条件概率分布$$P(Y|X)$$表示，形式为参数化的logistic分布。
 
