@@ -110,7 +110,7 @@ class Logistic(object):
         ax3.scatter(x, w2, label='w[2]', color='r', s=10, marker=".")
         plt.show()
 
-    def draw_lost_function_history(self):
+    def draw_likelihood_function(self): 
         plt.figure(1)
         x = np.arange(len(self._likelihood))
         plt.scatter(x, self._likelihood, label='Likelihood', color='g', s=10, marker=".")
