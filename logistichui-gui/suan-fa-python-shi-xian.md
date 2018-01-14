@@ -40,7 +40,7 @@ class Logistic(object):
         for i in range(iter_num):
             theta = self.sigmoid(self._input_x, w)
             delta = theta - self._input_y
-            w = w - iter_rate * np.inner(self._input_x.T, delta)
+            w = w - iter_rate * np.inner(self._input_x.T, delta)  # 迭代更新w
             self._history_w.append(w)
             self._likelihood.append(self.likelihood_function(w))
         self._final_w = w
@@ -56,7 +56,7 @@ class Logistic(object):
                 iter_rate = 4/(1.0+j+i) + 0.01         # 学习率随着迭代的次数而不断变小
                 theta = self.sigmoid(self._input_x[j], w)
                 delta = theta - self._input_y[j]
-                w = w - iter_rate * delta* self._input_x[j]
+                w = w - iter_rate * delta* self._input_x[j] # 迭代更新w
                 self._history_w.append(w)
                 self._likelihood.append(self.likelihood_function(w))
         self._final_w = w
