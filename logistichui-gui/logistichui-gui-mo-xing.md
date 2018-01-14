@@ -268,9 +268,7 @@ $$
 $$
 \nabla L(w)= X^T\cdot \big(\theta(X\cdot w)-Y\big)
 $$
-
-
-
+梯度下降法
 
 将输入数据集中的Y改成
 
@@ -281,70 +279,22 @@ $$
 其中
 
 
-$$
-error(w,x,y)=ln(1+e^{-yw\cdot x})
-$$
-
 
 称为交叉熵错误。
 
 然后极大似然函数计算梯度：
 
 
-$$
-\dfrac{\partial L(w)}{\partial w_j}=\dfrac{\partial \displaystyle\sum_{i=1}^Nln(1+e^{-y^{(i)}w\cdot x^{(i)}})}{\partial w_j}
-$$
-
-
-
-$$
-=\displaystyle\sum_{i=1}^N\dfrac{\partial ln(1+e^{-y^{(i)}w\cdot x^{(i)}})}{\partial w_j}
-$$
-
-
-
-$$
-=\displaystyle\sum_{i=1}^N\big(\dfrac{1}{1+e^{-y^{(i)}w\cdot x^{(i)}}}\big) \big( e^{-y^{(i)}w\cdot x^{(i)}}     \big) \big(\dfrac{\partial -y^{(i)}w\cdot x^{(i)}}{\partial w_j}\big)
-$$
-
-
-
-$$
-=\displaystyle\sum_{i=1}^N\big(\dfrac{e^{-y^{(i)}w\cdot x^{(i)}}}{1+e^{-y^{(i)}w\cdot x^{(i)}}}\big) \big(\dfrac{\partial -y^{(i)}w\cdot x^{(i)}}{\partial w_j}\big)
-$$
-
-
-
-$$
-=\displaystyle\sum_{i=1}^N\big(\dfrac{e^{-y^{(i)}w\cdot x^{(i)}}}{1+e^{-y^{(i)}w\cdot x^{(i)}}}\big) \big(-y^{(i)}x^{(i)}_j\big)
-$$
-
-
-
-$$
-=\displaystyle\sum_{i=1}^N\theta(-y^{(i)}w\cdot x^{(i)})(-y^{(i)}x^{(i)}_j)
-$$
-
-
-于是
-
-### 
-
-
-$$
-    \nabla L(w)=\displaystyle\sum_{i=1}^N\theta(-y^{(i)}w\cdot x^{(i)})(-y^{(i)}x^{(i)})
-$$
-
 
 ### 六、梯度下降
 
 取$$\nabla L(w)=0$$没有有效的办法。
 
-![](/assets/logistic_tidu.PNG)
+
 
 梯度下降算法：
 
-![](/assets/logistic_gd.PNG)
+
 
 > 参考：
 >
