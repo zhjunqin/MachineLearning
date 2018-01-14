@@ -312,7 +312,7 @@ $$
 
 
 $$
-w^{(j+1)} \gets w^{(j)}+\eta \big(\theta(w\cdot x^{(i)})-y^{(i)}\big)x^{(i)}
+w^{(j+1)} \gets w^{(j)}+\eta \big(\theta(w^{(j)}\cdot x^{(i)})-y^{(i)}\big)x^{(i)}
 $$
 
 
@@ -326,9 +326,7 @@ $$
 >
 > [http://vividfree.github.io/机器学习/2015/12/13/understanding-logistic-regression-using-odds](http://vividfree.github.io/机器学习/2015/12/13/understanding-logistic-regression-using-odds)
 >
-> http://blog.csdn.net/bitcarmanlee/article/details/51473567
-
-
+> [http://blog.csdn.net/bitcarmanlee/article/details/51473567](http://blog.csdn.net/bitcarmanlee/article/details/51473567)
 
 
 
