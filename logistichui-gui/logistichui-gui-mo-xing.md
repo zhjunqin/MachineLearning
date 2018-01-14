@@ -266,8 +266,10 @@ $$
 
 
 $$
-\min_{w}\nabla L(w)= X^T\cdot \big(\theta(X\cdot w)-Y\big)
+\nabla L(w)= X^T\cdot \big(\theta(X\cdot w)-Y\big)
 $$
+
+
 
 
 将输入数据集中的Y改成
