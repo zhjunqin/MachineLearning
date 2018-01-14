@@ -36,7 +36,7 @@ class Logistic(object):
 
     def batch_gradient_descent(self, iter_num, iter_rate): #批量梯度下降
         (data_num, features) = np.shape(self._input_x)
-        w = np.ones(features)    #初始化w为全1向量
+        w = np.ones(features)      #初始化w为全1向量
         for i in range(iter_num):
             theta = self.sigmoid(self._input_x, w)
             delta = theta - self._input_y
