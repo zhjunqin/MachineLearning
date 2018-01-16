@@ -19,4 +19,5 @@
 * [数学基础](shu-xue-ji-chu.md)
   * [线性代数](shu-xue-ji-chu/xian-xing-dai-shu.md)
   * [概率统计](shu-xue-ji-chu/gai-lv-tong-ji.md)
+  * [微积分](shu-xue-ji-chu/wei-ji-fen.md)
 
