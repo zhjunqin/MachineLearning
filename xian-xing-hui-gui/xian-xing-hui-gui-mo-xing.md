@@ -210,7 +210,7 @@ $$
 
 ### 2.学习算法
 
-#### 2.1 Normal Equations
+#### 2.1 矩阵计算
 
 计算$$w=(X^T\cdot X)^{-1}\cdot X^T\cdot Y$$，直接得到模型$$f(x)=w^T\cdot x$$
 
