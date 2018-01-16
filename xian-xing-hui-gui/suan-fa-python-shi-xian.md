@@ -96,5 +96,53 @@ class LinearRegression(object):
         plt.show()
 ```
 
+#### 3.数据集测试
+
+> 数据集来自《机器学习实战》
+>
+> https://github.com/apachecn/MachineLearning/blob/python-2.7/input/8.Regression/data.txt
+
+**3.1 Normal Equations**
+
+```
+linear = LinearRegression()
+linear.load_input_data("test.txt")
+linear.normal_equations()
+title = "Normal Equations"
+linear.draw_result(title)
+```
+
+![](/assets/linear_normal_equations.png)
+
+**3.2 批量梯度下降**
+
+```
+linear = LinearRegression()
+linear.load_input_data("test.txt")
+linear.batch_gradient_descent(iter_num=100, iter_rate=0.001)
+title = "Batch Gradient Descent"
+linear.draw_result(title)
+linear.draw_cost_function(title)
+```
+
+![](/assets/linear_bgd_1.png)
+
+![](/assets/linear_bgd_2.png)
+
+**3.2 随机梯度下降**
+
+```
+linear = LinearRegression()
+linear.load_input_data("test.txt")
+linear.stochastic_gradient_descent(iter_num=5, iter_rate=0.001)
+title = "Stochastic Gradient Descent"
+linear.draw_result(title)
+linear.draw_cost_function(title)
+```
+
+![](/assets/linear_sgd_1.png)
+
+![](/assets/linear_sgd_2.png)
+
 
 
