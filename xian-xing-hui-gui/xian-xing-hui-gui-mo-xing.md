@@ -162,17 +162,17 @@ $$
 
 
 $$
-L(w)=(X\cdot w-Y)^T\cdot (X\cdot w-Y)
-$$
-
-
-
-$$
 \nabla L(w)=2 X^T\cdot (X\cdot w-Y )
 $$
+令一方面$$L(w)$$也可以表示成：
 
 
-欲求的最优解，令上式为0，
+$$
+L(w)=(X\cdot w-Y)^T\cdot (X\cdot w-Y)=(w^T X^TX w -2w^TX^TY+Y^T Y)
+$$
+对$$w$$求导，同样可以得到梯度。
+
+欲求的最优解，令梯度为0，
 
 
 $$
