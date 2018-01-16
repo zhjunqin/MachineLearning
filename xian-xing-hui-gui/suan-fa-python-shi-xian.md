@@ -92,6 +92,7 @@ class LinearRegression(object):
         plt.xlabel('x')
         plt.ylabel('Cost function')
         plt.title(title + ' Cost trend')
+        plt.ylim(-0.5, 100) #限定y轴显示的区间
         plt.legend()
         plt.show()
 ```
@@ -100,7 +101,7 @@ class LinearRegression(object):
 
 > 数据集来自《机器学习实战》
 >
-> https://github.com/apachecn/MachineLearning/blob/python-2.7/input/8.Regression/data.txt
+> [https://github.com/apachecn/MachineLearning/blob/python-2.7/input/8.Regression/data.txt](https://github.com/apachecn/MachineLearning/blob/python-2.7/input/8.Regression/data.txt)
 
 **3.1 Normal Equations**
 
@@ -143,6 +144,4 @@ linear.draw_cost_function(title)
 ![](/assets/linear_sgd_1.png)
 
 ![](/assets/linear_sgd_2.png)
-
-
 
