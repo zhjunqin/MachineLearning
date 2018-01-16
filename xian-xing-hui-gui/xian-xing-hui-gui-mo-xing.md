@@ -162,6 +162,12 @@ $$
 
 
 $$
+L(w)=(X\cdot w-Y)^T\cdot (X\cdot w-Y)
+$$
+
+
+
+$$
 \nabla L(w)=2 X^T\cdot (X\cdot w-Y )
 $$
 
