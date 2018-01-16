@@ -11,10 +11,8 @@ $$
 
 
 一般用向量写成：
-
-
 $$
-f(x)=w^T\cdot x+b
+f(x)=w^{\small T}\cdot x+b
 $$
 
 
