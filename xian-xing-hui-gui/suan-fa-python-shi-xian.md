@@ -67,5 +67,34 @@ class LinearRegression(object):
         return w
 ```
 
+#### 2. python数据显示
+
+在同一个类中添加如下代码
+
+```
+    def draw_result(self, title):
+        plt.figure(1)
+        x1 = [x[1] for x in self._input_x]
+        plt.scatter(x1, self._input_y, color='b', s=20, marker=".")
+        plt.xlabel('x')
+        plt.ylabel('x')
+        def f(x):
+            return (self._final_w[0] + self._final_w[1]*x)
+        x2 = np.array([self._input_x.min(axis=0)[1], self._input_x.max(axis=0)[1]])
+        plt.plot(x2, f(x2), 'b-', lw=1)
+        plt.title(title)
+        plt.show()
+
+    def draw_cost_function(self, title):
+        plt.figure(1)
+        x = np.arange(len(self._cost))
+        plt.scatter(x, self._cost, label='Cost', color='g', s=10, marker=".")
+        plt.xlabel('x')
+        plt.ylabel('Cost function')
+        plt.title(title + ' Cost trend')
+        plt.legend()
+        plt.show()
+```
+
 
 
