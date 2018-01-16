@@ -2,7 +2,7 @@
 
 #### 1.算法python代码
 
-包含Normal Equations，批量梯度下降和随机梯度下降，这里的代码跟Logistic回归的类似
+包含Normal Equations，批量梯度下降和随机梯度下降，这里的代码跟Logistic回归的代码类似
 
 ```
 # -*- coding: utf-8 -*-
