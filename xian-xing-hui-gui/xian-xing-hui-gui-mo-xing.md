@@ -214,7 +214,7 @@ $$
 
 计算$$w=(X^T\cdot X)^{-1}\cdot X^T\cdot Y$$，直接得到模型$$f(x)=w^T\cdot x$$
 
-但是计算矩阵的逆是非常费时的事情，因此当特征比较多时，偏向于用梯度下降法。
+但是计算矩阵的逆是非常费时的事情，$$X^T_{n\times m}\cdot X_{m\times n}=Z_{n\times n}$$，因此当特征数量比较多时，偏向于用梯度下降法。
 
 #### 2.2 批量梯度下降（Batch Gradient Descent）
 
