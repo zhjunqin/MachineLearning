@@ -16,6 +16,8 @@
   * [线性回归](xian-xing-hui-gui.md)
     * [线性回归模型](xian-xing-hui-gui/xian-xing-hui-gui-mo-xing.md)
     * [算法python实现](xian-xing-hui-gui/suan-fa-python-shi-xian.md)
+  * [K近邻法](kjin-lin-fa.md)
+    * [k近邻模型](kjin-lin-fa/kjin-lin-mo-xing.md)
 * [数学基础](shu-xue-ji-chu.md)
   * [线性代数](shu-xue-ji-chu/xian-xing-dai-shu.md)
   * [概率统计](shu-xue-ji-chu/gai-lv-tong-ji.md)
