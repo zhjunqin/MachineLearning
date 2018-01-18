@@ -18,7 +18,7 @@ L_p(x^{(i)},x^{(j)})=\big( \displaystyle\sum_{k=1}^n|x^{(i)}_k-x^{(j)}_k|^p\big)
 $$
 
 
-这里$$p    \geqslant 1$$。当$$p=2$$时，称为欧式距离（Euclidean distance），即
+这里$$p    \geqslant 1$$。当$$p=2$$时，称为**欧式距离**（Euclidean distance），即
 
 
 $$
@@ -26,7 +26,7 @@ L_2(x^{(i)},x^{(j)})=\big( \displaystyle\sum_{k=1}^n|x^{(i)}_k-x^{(j)}_k|^2\big)
 $$
 
 
-当$$p=1$$时，称为曼哈顿距离（Manhanttan distance），即
+当$$p=1$$时，称为**曼哈顿距离**（Manhanttan distance），即
 
 
 $$
@@ -40,9 +40,11 @@ $$
 $$
 L_\infty(x^{(i)},x^{(j)})=\max_k|x^{(i)}_k-x^{(j)}_k|
 $$
+下图给出了$$p$$取不同值时，与原点的$$L_p$$距离为$$1$$（$$L_p=1$$）的点图形。
 
+![](/assets/lp_distance_1.png)
 
-#### 2.k近邻算法
+#### 2. k近邻算法
 
 asd
 
