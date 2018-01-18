@@ -8,7 +8,7 @@ $$k$$近邻有个明显的不同之处：它似乎没有显示的训练过程。
 
 ![](/assets/knn-concept.png)
 
-> Source： https://helloacm.com/a-short-introduction-to-k-nearest-neighbors-algorithm/
+> pic Source： [https://helloacm.com/a-short-introduction-to-k-nearest-neighbors-algorithm/](https://helloacm.com/a-short-introduction-to-k-nearest-neighbors-algorithm/)
 
 #### 1.距离度量
 
@@ -53,9 +53,13 @@ $$
 #### 2. k近邻算法
 
 输入：训练集
+
+
 $$
 T=\{(x^{(1)},y^{(1)}),(x^{(2)},y^{(2)}),...,(x^{(m)},y^{(m)})\}
 $$
+
+
 其中$$x^{(i)}\in X= R^n$$为实例的特征向量，$$y^{(i)}\in Y=\{c_1, c_2, ...,c_t\}$$为实例的类别，$$i=1,2,...,m$$。某个实例特征向量$$x$$。
 
 输出：实例$$x$$的所属类别$$y$$
@@ -66,8 +70,10 @@ $$
 
 
 $$
-y=arg \max_{c_j} 	\displaystyle\sum_{x_i\in N_k (x)} I(y_i=c_j)
+y=arg \max_{c_j}     \displaystyle\sum_{x_i\in N_k (x)} I(y_i=c_j)
 $$
+
+
 其中$$i=1,2,...,m$$，$$j=1,2,...,t$$，$$I$$为指示函数，即当$$y_i=c_j$$时为$$1$$，否则为$$0$$。
 
 $$k$$近邻的特殊情况是$$k=1$$的情形，称为最近邻算法。对于输入的实例点$$x$$，最近邻算法将训练数据集中与$$x $$最近的类作为$$x $$的类。
@@ -85,6 +91,4 @@ $$k$$值的选择会对$$k$$近邻法的结果产生重大影响。
 k近邻法最简单的办法就是线性扫描（linear scan），这时要计算输入实例和每一个训练实例的距离，当训练集很大时，非常耗时，这种方法不可行。
 
 下面介绍$$kd$$树（$$kd$$ tree）方法。
-
-
 
