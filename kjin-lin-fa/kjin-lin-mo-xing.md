@@ -8,7 +8,7 @@ $$k$$近邻有个明显的不同之处：它似乎没有显示的训练过程。
 
 ![](/assets/knn-concept.png)
 
-> pic Source： [https://helloacm.com/a-short-introduction-to-k-nearest-neighbors-algorithm/](https://helloacm.com/a-short-introduction-to-k-nearest-neighbors-algorithm/)
+> pic source： [https://helloacm.com/a-short-introduction-to-k-nearest-neighbors-algorithm/](https://helloacm.com/a-short-introduction-to-k-nearest-neighbors-algorithm/)
 
 #### 1.距离度量
 
