@@ -1,6 +1,4 @@
-> Source: http://blog.codinglabs.org/articles/basic-statistics-calculate.html
-
-
+> Sourc
 
 ### 期望：
 
@@ -10,23 +8,13 @@
 
 
 $$
-E(x)=	\displaystyle\sum_{i=1}^n x_ip(x_i)
+E(x)=    \displaystyle\sum_{i=1}^n x_ip(x_i)
 $$
-
-
 
 
 样本方差：
 
-
-
 协方差
 
-
-
 协方差矩阵
-
-
-
-
 
