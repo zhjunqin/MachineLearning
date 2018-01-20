@@ -10,21 +10,47 @@
 $$
 \overline{X}=\frac{1}{n}\displaystyle\sum_{i=1}^{n} X_i
 $$
+
+
 **样本方差**：
+
+
 $$
 S^2=\frac{1}{n-1}\displaystyle\sum_{i=1}^{n} (X_i-\overline{X})^2=\frac{1}{n-1}(\displaystyle\sum_{i=1}^{n} X_i^2-n\overline{X}^2)
 $$
 **样本标准差**：
+
+
 $$
 S=\sqrt{S^2}=\sqrt{\frac{1}{n-1}\displaystyle\sum_{i=1}^{n} (X_i-\overline{X})^2}
 $$
+
+
 **样本**$$k$$**阶（原点）距**：
+
+
 $$
 A_k=\frac{1}{n}\displaystyle\sum_{i=1}^{n} X_i^k
 $$
+
+
 **样本**$$k$$**阶中心距**：
+
+
 $$
 A_k=\frac{1}{n}\displaystyle\sum_{i=1}^{n} (X_i-\overline{X})^k
 $$
+样本的协方差：
+
+
+
+
+
+> 为什么样本方差是除以$$n-1$$，而不是$$n$$
+>
+> “均值已经用了$$n$$个数的平均来做估计在求方差时，只有$$n-1$$个数和均值信息是不相关的。而第$$n$$个数已经可以由前$$n-1$$个数和均值来唯一确定，实际上没有信息量，所以在计算方差时，只除以$$n-1$$“
+>
+> （详细请参考 https://www.zhihu.com/question/20099757）
+
 
 
