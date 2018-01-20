@@ -48,9 +48,9 @@ $$kd$$树是一种对$$k$$维空间中的实例点进行存储以便对其进行
 
 如果实例点是随机分布的，则$$kd$$树搜索的平均计算复杂度是$$O(logN)$$。$$kd$$树更适用于训练实例数远大于空间维数的情况，如果训练实例数接近空间维数，则效率退化为线性扫描。
 
-![](/assets/kd-tree3.png)
+![](/assets/kd-tree3.png)![](/assets/kd-tree4.png)
 
-> pic source: http://blog.csdn.net/baimafujinji/article/details/52928203
+> pic source: [http://blog.csdn.net/baimafujinji/article/details/52928203](http://blog.csdn.net/baimafujinji/article/details/52928203)
 
 
 
