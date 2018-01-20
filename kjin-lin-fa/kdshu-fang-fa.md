@@ -50,3 +50,7 @@ $$kd$$树是一种对$$k$$维空间中的实例点进行存储以便对其进行
 
 ![](/assets/kd-tree3.png)
 
+> pic source: http://blog.csdn.net/baimafujinji/article/details/52928203
+
+
+
