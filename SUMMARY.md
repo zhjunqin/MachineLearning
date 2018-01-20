@@ -25,6 +25,7 @@
     * [随机变量的特征](shu-xue-ji-chu/gai-lv-tong-ji/tong-ji-liang.md)
     * [样本统计量](shu-xue-ji-chu/gai-lv-tong-ji/yang-ben-tong-ji-liang.md)
   * [微积分](shu-xue-ji-chu/wei-ji-fen.md)
+    * [方向导数和梯度](shu-xue-ji-chu/wei-ji-fen/ti-du.md)
   * [信息论](shu-xue-ji-chu/xin-xi-lun.md)
     * 熵
 
