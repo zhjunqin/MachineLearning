@@ -23,6 +23,7 @@
   * [线性代数](shu-xue-ji-chu/xian-xing-dai-shu.md)
   * [概率统计](shu-xue-ji-chu/gai-lv-tong-ji.md)
     * [随机变量的特征](shu-xue-ji-chu/gai-lv-tong-ji/tong-ji-liang.md)
+    * [样本统计量](shu-xue-ji-chu/gai-lv-tong-ji/yang-ben-tong-ji-liang.md)
   * [微积分](shu-xue-ji-chu/wei-ji-fen.md)
   * [信息论](shu-xue-ji-chu/xin-xi-lun.md)
     * 熵
