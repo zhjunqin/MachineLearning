@@ -63,6 +63,15 @@ $$
 c_{ij}=Cov(X_{i},X_{j})=\frac{1}{n-1}\displaystyle\sum_{k=1}^{n} (X_{ik}-\overline{X_i})(X_{jk}-\overline{X_j})
 $$
 
+$$
+C=\begin{bmatrix}
+   c_{11} & c_{12} & ... & c_{1n}  \\
+   c_{21} & c_{22} & ... & c_{2n} \\
+   \vdots & \vdots & & \vdots \\
+   c_{n1} & c_{n2} & ... & c_{nn} 
+\end{bmatrix}
+$$
+
 
 > 为什么样本方差是除以$$n-1$$，而不是$$n$$？
 >
