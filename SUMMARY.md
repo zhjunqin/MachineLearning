@@ -19,6 +19,7 @@
   * [K近邻法](kjin-lin-fa.md)
     * [k近邻模型](kjin-lin-fa/kjin-lin-mo-xing.md)
     * [kd树方法](kjin-lin-fa/kdshu-fang-fa.md)
+    * [kd树python实现](kjin-lin-fa/kdshu-python-shi-xian.md)
 * [数学基础](shu-xue-ji-chu.md)
   * [线性代数](shu-xue-ji-chu/xian-xing-dai-shu.md)
   * [概率统计](shu-xue-ji-chu/gai-lv-tong-ji.md)
