@@ -1,6 +1,6 @@
 ### kd树python实现
 
-#### 1. 首先在构造kd树的时候需要寻找中位数，因此采用快速排序来获取一个list中的中位数
+#### 1. 首先在构造kd树的时需要寻找中位数，因此用快速排序来获取一个list中的中位数
 
 ```
 import matplotlib.pyplot as plt
