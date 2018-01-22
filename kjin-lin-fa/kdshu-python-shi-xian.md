@@ -98,7 +98,8 @@ class KDTree(object):
         right_data = np.array(right_data)
         left = self._construct_kd_tree(depth+1, (axes+1)% self._axes_num, left_data)
         right = self._construct_kd_tree(depth+1, (axes+1)% self._axes_num, right_data)
-        root = [depth, axes, medium, data_list, left, right] #[树的深度，轴，中位数，该节点的数据，左子树，右子树]
+        #[树的深度，轴，中位数，该节点的数据，左子树，右子树]
+        root = [depth, axes, medium, data_list, left, right] 
         return root
 
     def print_kd_tree(self, root): #打印kd树
