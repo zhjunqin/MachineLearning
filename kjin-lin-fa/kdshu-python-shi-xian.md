@@ -225,5 +225,18 @@ kd.search_kd_tree(tree, [6, 2])
         return farthest
 ```
 
+测试代码：
+
+```
+kd.search_kd_tree(tree, [7.1, 4.1], k=2)
+> [[array([7, 2]), 2.1023796041628633], [array([6, 4]), 1.1045361017187258]]
+
+kd.search_kd_tree(tree, [9, 2], k=2)
+> [[array([8, 1]), 1.4142135623730951], [array([7, 2]), 2.0]]
+
+kd.search_kd_tree(tree, [6, 2], k=2)
+> [[array([6, 4]), 2.0], [array([7, 2]), 1.0]]
+```
+
 
 
