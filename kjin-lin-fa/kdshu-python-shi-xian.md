@@ -197,5 +197,33 @@ kd.search_kd_tree(tree, [6, 2])
 
 #### 4. 寻找k个最近节点
 
-如果要寻找k个最近节点，则需要保存k个元素的数组，并在函数`_check_nearest`中个k个元素做比较，然后在标记`<*>`的地方跟k个元素的最大值比较。
+如果要寻找k个最近节点，则需要保存k个元素的数组，并在函数`_check_nearest`中与k个元素做比较，然后在标记`<*>`的地方跟k个元素的最大值比较。其他代码略。
+
+```
+    def _check_nearest(self, current, target, k):
+        d = self._get_distance(current, target)
+        #print current, d
+        l = len(self._nearest)
+        if l < k:
+            self._nearest.append([current, d])
+        else:
+            farthest = self._get_farthest()[1]
+            if farthest > d:
+                # 将最远的节点移除
+                new_nearest = [i for i in self._nearest if i[1]<farthest ]
+                new_nearest.append([current, d])
+                self._nearest = new_nearest
+
+    def _get_farthest(self): #获取list中最远的节点
+        farthest = None
+        for i in self._nearest:
+            if not farthest:
+                farthest = i
+            else:
+                if farthest[1] < i[1]:
+                    farthest = i
+        return farthest
+```
+
+
 
