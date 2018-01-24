@@ -4,6 +4,8 @@
 
 本书github地址：[https://github.com/zhjunqin/MachineLearning](https://github.com/zhjunqin/MachineLearning)
 
+本书gitbook地址：https://www.gitbook.com/book/zhjunqin/machinelearning/details
+
 本书参考了：
 
 《统计学习方法》，李航 著
