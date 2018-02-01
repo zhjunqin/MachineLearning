@@ -21,11 +21,13 @@
     * [kd树方法](kjin-lin-fa/kdshu-fang-fa.md)
     * [kd树python实现](kjin-lin-fa/kdshu-python-shi-xian.md)
     * [knn实例](kjin-lin-fa/knnshi-li.md)
+  * 朴素贝叶斯法
 * [数学基础](shu-xue-ji-chu.md)
   * [线性代数](shu-xue-ji-chu/xian-xing-dai-shu.md)
   * [概率统计](shu-xue-ji-chu/gai-lv-tong-ji.md)
     * [随机变量的特征](shu-xue-ji-chu/gai-lv-tong-ji/tong-ji-liang.md)
     * [样本统计量](shu-xue-ji-chu/gai-lv-tong-ji/yang-ben-tong-ji-liang.md)
+    * [先验后验概率](shu-xue-ji-chu/gai-lv-tong-ji/xian-yan-hou-yan-gai-lv.md)
   * [微积分](shu-xue-ji-chu/wei-ji-fen.md)
     * [方向导数和梯度](shu-xue-ji-chu/wei-ji-fen/ti-du.md)
   * [信息论](shu-xue-ji-chu/xin-xi-lun.md)
