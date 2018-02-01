@@ -1,14 +1,14 @@
 ### 先验概率、后验概率、似然函数
 
 > 参考
-
-> https://zh.wikipedia.org/wiki/%E5%85%88%E9%AA%8C%E6%A6%82%E7%8E%87
+>
+> [https://zh.wikipedia.org/wiki/先验概率](https://zh.wikipedia.org/wiki/先验概率)
 >
 > [https://zh.wikipedia.org/wiki/后验概率](https://zh.wikipedia.org/wiki/后验概率)
 >
-> https://www.zhihu.com/question/24261751
+> [https://zh.wikipedia.org/wiki/似然函数](https://zh.wikipedia.org/wiki/似然函数)
 >
-> https://zh.wikipedia.org/wiki/%E4%BC%BC%E7%84%B6%E5%87%BD%E6%95%B0
+> [https://www.zhihu.com/question/24261751](#)
 
 #### 先验概率：
 
@@ -21,8 +21,4 @@
 ##### 似然函数：
 
 在数理统计学中，似然函数是一种关于统计模型中的参数的函数，表示模型参数中的似然性。似然函数在统计推断中有重大作用，如在最大似然估计和费雪信息之中的应用等等。“似然性”与“或然性”或“概率”意思相近，都是指某种事件发生的可能性，但是在统计学中，“似然性”和“或然性”或“概率”又有明确的区分。概率用于在已知一些参数的情况下，预测接下来的观测所得到的结果，而似然性则是用于在已知某些观测所得到的结果时，对有关事物的性质的参数进行估计。
-
-
-
-
 
