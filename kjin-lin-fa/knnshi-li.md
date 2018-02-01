@@ -39,7 +39,7 @@
 00000000000000111110000000000000
 ```
 
-数据源 https://github.com/apachecn/MachineLearning/tree/python-2.7/input/2.KNN
+数据源 [https://github.com/apachecn/MachineLearning/tree/python-2.7/input/2.KNN](https://github.com/apachecn/MachineLearning/tree/python-2.7/input/2.KNN)
 
 数据源被分成两个部分，一部分是训练数据，一部分是测试数据
 
@@ -89,7 +89,7 @@ class KNN(object):
             lable = int(i.split('_')[0])
             input_y.append(lable)
             input_x.append(img_to_vector('{}/{}'.format(train_dir,i)))
-        
+
         input_x = np.array(input_x)
         input_y = np.array(input_y)
         test_files = os.listdir(test_dir)
