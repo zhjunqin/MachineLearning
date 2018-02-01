@@ -14,10 +14,16 @@
 $$
 P(Y=c_k|X=x)=\dfrac{P(Y=c_k, X=x)}{P(X=x)}=\dfrac{P(X=x|Y=c_k)P(Y=c_k)}{\displaystyle\sum_{k=1}^KP(X=x|Y=c_k)P(Y=c_k)}
 $$
+
+
 可以看到分母对于所有的类标记$$c_k$$都是相同的，则可以得到输出
+
+
 $$
 y=\arg \max_{c_k}P(X=x|Y=c_k)P(Y=c_k)
 $$
+
+
 其中
 
 
@@ -40,11 +46,17 @@ $$
 $$
 P(X=x|Y=c_k)=\prod_{j=1}^n P(X_j=x_j|Y=c_k)
 $$
+
+
 这一假设使得朴素贝叶斯法变得简单，但是会牺牲一定的分类准确率。
 
 于是代入，可以得到：
+
+
 $$
-y=\arg \max_{c_k}P(X=x|Y=c_k)P(Y=c_k)=\arg \max_{c_k}\prod_{j=1}^n P(X_j=x_j|Y=c_k)P(Y=c_k)
+y=\arg \max_{c_k}\prod_{j=1}^n P(X_j=x_j|Y=c_k)P(Y=c_k)
 $$
+
+
 朴素贝叶斯法属于**生成模型**（模型给定了输入$$X$$产生输出$$Y$$的生成关系，区别于**判别模型**）
 
