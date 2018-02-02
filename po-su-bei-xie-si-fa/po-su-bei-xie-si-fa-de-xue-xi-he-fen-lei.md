@@ -54,9 +54,38 @@ $$
 
 
 $$
-y=\arg \max_{c_k}\prod_{j=1}^n P(X_j=x_j|Y=c_k)P(Y=c_k)
+y=f(x)=\arg \max_{c_k}\prod_{j=1}^n P(X_j=x_j|Y=c_k)P(Y=c_k)
 $$
 
 
 朴素贝叶斯法属于**生成模型**（模型给定了输入$$X$$产生输出$$Y$$的生成关系，区别于**判别模型**）
+
+#### 模型的原理
+
+首先，定义0-1损失函数：
+$$
+L(Y,f(X)) = \begin{cases}
+   1, &\text{if } Y\not=f(X)  \\
+   0, &\text{if } Y=f(X)
+\end{cases}
+$$
+其中$$f(X)$$是分类决策函数的**预测值**，$$Y$$是**真实值**。这时，损失函数的期望是
+$$
+R_{exp}(f)=E[L(Y,f(X))]
+$$
+对于输入$$X=x$$，计算$$X=x$$条件下的期望损失函数，即条件期望
+$$
+E[L(Y,f(X=x))|X=x]=\displaystyle\sum_{k=1}^KL(c_k, f(X=x))P(c_k|X=x)
+$$
+当$$Y=f(X=x)$$时，$$L(c_k, f(X=x))=0$$，则：
+$$
+\displaystyle\sum_{k=1}^KL(c_k, f(X=x))P(c_k|X=x)=\displaystyle\sum_{Y\not=f(X=x)}P(Y|X=x)
+$$
+则在$$X=x$$条件下，为了使得期望风险最小化，
+$$
+f(x)=\arg\max_{y\in \mathcal{Y}}\displaystyle\sum_{k=1}^KL(c_k, f(X=x))P(c_k|X=x)
+$$
+
+
+对于
 
