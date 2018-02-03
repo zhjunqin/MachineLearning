@@ -18,7 +18,7 @@ $$
 
 
 $$
-P(Y=c_k)=\dfrac{\displaystyle\sum_{i=1}^mI(y_i=c_k)}{m},\ \ \  k=1,2,...,K
+P(Y=c_k)=\dfrac{\displaystyle\sum_{i=1}^mI(y^{(i)}=c_k)}{m},\ \ \  k=1,2,...,K
 $$
 
 
@@ -28,7 +28,17 @@ $$
 
 
 $$
-P(X_j=x_{jl}|Y=c_k)=\dfrac{\displaystyle\sum_{i=1}^mI(x_j^{(i)}=x_{jl},y_i=c_k)}{\displaystyle\sum_{i=1}^mI(y_i=c_k)}
+P(X_j=x_{jl}|Y=c_k)=\dfrac{\displaystyle\sum_{i=1}^mI(x_j^{(i)}=x_{jl},y^{(i)}=c_k)}{\displaystyle\sum_{i=1}^mI(y^{(i)}=c_k)}
 $$
+
+$$
+j=1,2,...,n;\  l=1,2,...,s_j;\  k=1,2,...,K
+$$
+
+
+其中$$x_j^{(i)}$$是第$$i$$个样本的第$$j$$个特征可能取的第$$l$$个值；$$I$$为指示函数。
+
+这里证明一下先验概率$$P(Y=c_k)$$的极大似然估计（参考 https://www.zhihu.com/question/33959624）。
+
 
 
