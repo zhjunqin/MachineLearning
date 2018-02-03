@@ -18,7 +18,7 @@ $$
 
 
 $$
-P(Y=c_k)=\dfrac{\displaystyle\sum_{i=1}^mI(y^{(i)}=c_k)}{m},\ \ \  k=1,2,...,K
+P(Y=c_k)=\dfrac{\displaystyle\sum_{i=1}^mI(y^{(i)}=c_k)}{m},\  k=1,2,...,K
 $$
 
 
@@ -42,7 +42,7 @@ $$
 
 这里证明一下先验概率$$P(Y=c_k)$$的极大似然估计（参考 [https://www.zhihu.com/question/33959624](https://www.zhihu.com/question/33959624）。) ）。
 
-令参数$$P(Y=c_k)=\theta_k，\ k=1,2,...,K$$。则随机变量$$Y$$的概率可以用参数来表示为$$P(Y)=\displaystyle\sum_{k=1}^K\theta_kI(Y=c_k)$$，其中$$I$$是指示函数。极大似然函数
+令参数$$P(Y=c_k)=\theta_k,\ k=1,2,...,K$$。则随机变量$$Y$$的概率可以用参数来表示为$$P(Y)=\displaystyle\sum_{k=1}^K\theta_kI(Y=c_k)$$，其中$$I$$是指示函数。极大似然函数
 
 
 $$
@@ -97,16 +97,24 @@ $$
 用极大似然估计可能出现所要估计的参数值为0的情况，这会影响到连乘时的值直接为0，使分类结果产生偏差。解决这一问题的方法是采用贝叶斯估计。
 
 **条件概率**的贝叶斯估计是
+
+
 $$
 P_{\lambda}(X_j=x_{jl}|Y=c_k)=\dfrac{\displaystyle\sum_{i=1}^mI(x_j^{(i)}=x_{jl},y^{(i)}=c_k)+\lambda}{\displaystyle\sum_{i=1}^mI(y^{(i)}=c_k)+s_j\lambda}
 $$
-式中$$\lambda	\geqslant0$$，$$s_j$$是特征向量的第$$j$$维可能的取值数量。显然$$P_{\lambda}(X_j=x_{jl}|Y=c_k)>0$$，且$$\displaystyle\sum_{l=1}^{s_j}P_{\lambda}(X_j=x_{jl}|Y=c_k)=1$$。
+
+
+式中$$\lambda    \geqslant0$$，$$s_j$$是特征向量的第$$j$$维可能的取值数量。显然$$P_{\lambda}(X_j=x_{jl}|Y=c_k)>0$$，且$$\displaystyle\sum_{l=1}^{s_j}P_{\lambda}(X_j=x_{jl}|Y=c_k)=1$$。
 
 这等价于在随机变量各个取值的频数上赋予一个正数$$\lambda>0$$。当$$\lambda=0$$时，就是极大似然估计。常取$$\lambda=1$$，这时称为**拉布普拉斯平滑**（Laplace smoothing）。
 
 先验概率的贝叶斯估计是
+
+
 $$
 P_{\lambda}(Y=c_k)=\dfrac{\displaystyle\sum_{i=1}^mI(y^{(i)}=c_k)+\lambda}{m+K\lambda}
 $$
-同样$$\lambda	\geqslant0$$。
+
+
+同样$$\lambda    \geqslant0$$。
 
