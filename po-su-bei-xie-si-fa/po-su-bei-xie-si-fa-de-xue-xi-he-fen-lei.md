@@ -103,7 +103,7 @@ $$
 
 
 $$
-f(x)=\arg\min_{y\in \mathcal{Y}}\displaystyle\sum_{c_k≠y}P(c_k|X=x)
+f(x)=\arg\min_{y\in \mathcal{Y}}\displaystyle\sum_{c_k\neq y}P(c_k|X=x)
 $$
 
 
