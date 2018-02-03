@@ -67,8 +67,8 @@ $$
 
 $$
 L(Y,f(X)) = \begin{cases}
-   1, &\text{if } Y{\not=}f(X)  \\
-   0, &\text{if } Y{=}f(X)
+   1, &\text{if } {Y\not=f(X)}  \\
+   0, &\text{if } {Y=f(X)}
 \end{cases}
 $$
 
