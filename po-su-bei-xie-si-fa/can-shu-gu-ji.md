@@ -43,16 +43,44 @@ $$
 这里证明一下先验概率$$P(Y=c_k)$$的极大似然估计（参考 [https://www.zhihu.com/question/33959624](https://www.zhihu.com/question/33959624）。) ）。
 
 令参数$$P(Y=c_k)=\theta_k，\ k=1,2,...,K$$。则随机变量$$Y$$的概率可以用参数来表示为$$P(Y)=\displaystyle\sum_{k=1}^K\theta_kI(Y=c_k)$$，其中$$I$$是指示函数。极大似然函数
+
+
 $$
 L(\theta_k;y^{(1)},y^{(2)},...,y^{(m)})=\displaystyle\prod_{i=1}^mp(y^{(i)})=\displaystyle\prod_{k=1}^K\theta_k^{t_k}
 $$
-其中$$m$$是样本总数，$$t_k$$为样本中$$Y=c_k$$的样本数目。取对数得到
+
+
+其中$$m$$是样本总数，$$t_k$$为样本中$$Y=c_k$$的样本数目，满足$$\displaystyle\sum_{k=1}^Kt_k=m$$。取对数得到
+
+
 $$
 ln(L(\theta_k))=\displaystyle\sum_{k=1}^Kt_kln\theta_k
 $$
+
+
 要求该函数的最大值，同时有约束条件$$\displaystyle\sum_{k=1}^K\theta_k=1$$。利用拉格朗日乘子法，
+
+
 $$
 l(\theta_k,\lambda)=\displaystyle\sum_{k=1}^Kt_kln\theta_k+\lambda(\displaystyle\sum_{k=1}^K\theta_k-1)
 $$
+
+
 求导可以得到
+$$
+\dfrac{\partial l(\theta_k,\lambda)}{\partial \theta_k}=\dfrac{t_k}{\theta_k}+\lambda=0
+$$
+得到：
+$$
+t_k=-\lambda{\theta_k},\ k=1,2,...,K
+$$
+
+
+将所有的$$K$$个式子加起来，得到$$\displaystyle\sum_{k=1}^Kt_k=-\displaystyle\sum_{k=1}^K\lambda{\theta_k}$$，同时结合约束条件$$\displaystyle\sum_{k=1}^K\theta_k=1$$，可得$$\lambda=-m$$。最终可得
+$$
+P(Y=c_k)=\theta_k=\dfrac{t_k}{m}
+$$
+证明完毕。其他更多的详细证明请参考以上链接。
+
+
 
