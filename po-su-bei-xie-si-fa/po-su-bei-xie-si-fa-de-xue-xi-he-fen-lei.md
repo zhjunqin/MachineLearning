@@ -87,25 +87,41 @@ $$
 $$
 E[L(Y,f(X=x))|X=x]=\displaystyle\sum_{k=1}^KL(c_k, f(X=x))P(c_k|X=x)
 $$
+
+
 则在$$X=x$$条件下，求得期望风险最小化，
 
 
 $$
 f(x)=\arg\min_{y\in \mathcal{Y}}\displaystyle\sum_{k=1}^KL(c_k, y)P(c_k|X=x)
 $$
+
+
 也就是计算每一个$$y\in \mathcal{Y}$$，计算其条件期望，并找出其中的最小值时的$$y$$作为输出。
 
 同时$$y=c_k$$时，$$L(c_k, y)=0$$，则
+
+
 $$
 f(x)=\arg\min_{y\in \mathcal{Y}}\displaystyle\sum_{c_k\not=y}P(c_k|X=x)
 $$
+
+
 然后条件概率对于所有可能的类标签总和为1，即$$\displaystyle\sum_{k=1}^KP(c_k|X=x)=1$$，于是得到：
+
+
 $$
 f(x)=\arg\min_{c_k\in \mathcal{Y}}\big(1-P(c_k|X=x)\big)
 $$
+
+
 转换成求最大：
+
+
 $$
 f(x)=\arg\max_{c_k\in \mathcal{Y}}P(c_k|X=x)
 $$
-这样便是在0-1损失函数的情况下，期望风险最小化准则得到了后验概率最大化准则，即朴素贝叶斯法的原理。
+
+
+这样便是在0-1损失函数的情况下，期望风险最小化准则得到了**后验概率最大化**准则，即朴素贝叶斯法的原理。
 
