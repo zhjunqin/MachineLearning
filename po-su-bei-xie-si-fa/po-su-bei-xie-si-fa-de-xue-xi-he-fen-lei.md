@@ -67,7 +67,7 @@ $$
 
 $$
 L(Y,f(X)) = \begin{cases}
-   1, &\text{if } Y=f(X)  \\
+   1, &\text{if } Y≠f(X)  \\
    0, &\text{if } Y=f(X)
 \end{cases}
 $$
@@ -103,7 +103,7 @@ $$
 
 
 $$
-f(x)=\arg\min_{y\in \mathcal{Y}}\displaystyle\sum_{c_k\not=y}P(c_k|X=x)
+f(x)=\arg\min_{y\in \mathcal{Y}}\displaystyle\sum_{c_k≠y}P(c_k|X=x)
 $$
 
 
