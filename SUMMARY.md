@@ -24,6 +24,7 @@
   * [朴素贝叶斯法](po-su-bei-xie-si-fa.md)
     * [模型和原理](po-su-bei-xie-si-fa/po-su-bei-xie-si-fa-de-xue-xi-he-fen-lei.md)
     * [参数估计](po-su-bei-xie-si-fa/can-shu-gu-ji.md)
+    * [算法和实现](po-su-bei-xie-si-fa/suan-fa-he-shi-xian.md)
 * [数学基础](shu-xue-ji-chu.md)
   * [线性代数](shu-xue-ji-chu/xian-xing-dai-shu.md)
   * [概率统计](shu-xue-ji-chu/gai-lv-tong-ji.md)
