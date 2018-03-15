@@ -37,5 +37,5 @@
   * [微积分](shu-xue-ji-chu/wei-ji-fen.md)
     * [方向导数和梯度](shu-xue-ji-chu/wei-ji-fen/ti-du.md)
   * [信息论](shu-xue-ji-chu/xin-xi-lun.md)
-    * 熵
+    * [熵](shu-xue-ji-chu/xin-xi-lun/shang.md)
 
