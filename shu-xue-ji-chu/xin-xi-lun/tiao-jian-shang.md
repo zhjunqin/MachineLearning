@@ -14,7 +14,7 @@ $$H(Y|X=x)$$为随机变量$$Y$$在$$X$$取特定值$$x $$下的熵，那么$$H(
 
 
 $$
-H(X|Y)=\displaystyle\sum_{x\in \mathcal{X}}p(x)H(Y|X=x)
+H(Y|X)=\displaystyle\sum_{x\in \mathcal{X}}p(x)H(Y|X=x)
 $$
 
 
@@ -52,5 +52,5 @@ $$
 $$
 =H(X,Y)-H(X)
 $$
-
+即$$H(Y|X)=H(X,Y)-H(X)$$，同样$$H(X|Y)=H(X,Y)-H(Y)$$
 
