@@ -18,6 +18,14 @@ $$
 
 关于[熵](/shu-xue-ji-chu/xin-xi-lun/shang.md)、[[条件熵](/shu-xue-ji-chu/xin-xi-lun/shang.md)](/shu-xue-ji-chu/xin-xi-lun/tiao-jian-shang.md)、[互信息](/shu-xue-ji-chu/xin-xi-lun/hu-xin-xi.md)参考链接。关于信息增益和互信息之间的差别，参考[https://www.zhihu.com/question/39436574](https://www.zhihu.com/question/39436574。)。
 
+在给定训练数据集$$D$$和特征$$A$$，经验熵$$H(D)$$表示对数据集$$D$$进行分类的不确定性。而经验条件熵$$H(D|A)$$表示在特征$$A$$给定的条件下对数据集$$D$$进行分类的不确定性，那么它们的差就表示由于特征$$A$$而使得对数据集$$D$$的分类的不确定性减少的程度。信息增益大的特征具有更强的分类能力。
+
+#### 信息增益的算法
+
+输入：训练数据集$$D$$和特征$$A$$
+
+输出：特征$$A$$对训练数据集$$D$$的信息增益$$g(D,A)$$
+
 示例：
 
 贷款申请样本数据表：
