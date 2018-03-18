@@ -38,4 +38,5 @@
     * [方向导数和梯度](shu-xue-ji-chu/wei-ji-fen/ti-du.md)
   * [信息论](shu-xue-ji-chu/xin-xi-lun.md)
     * [熵](shu-xue-ji-chu/xin-xi-lun/shang.md)
+    * [条件熵](shu-xue-ji-chu/xin-xi-lun/tiao-jian-shang.md)
 
