@@ -7,14 +7,16 @@
 信息增益（information gain）表示得知特征$$X$$的信息而使得类$$Y$$的信息不确定性减少称。
 
 特征$$A$$对训练数据集$$D$$的信息增益$$g(D,A)$$，定义为集合$$D$$的经验熵$$H(D)$$与特征$$A$$在给定条件下$$D$$的经验条件熵$$H(D|A)$$之差，即
+
+
 $$
 g(D,A)=H(D)-H(D|A)
 $$
+
+
 一般地，熵$$H(X)$$与条件熵$$H(Y|X)$$之差称为互信息\(mutual information\)。
 
-关于[熵](/shu-xue-ji-chu/xin-xi-lun/shang.md)、[[条件熵](/shu-xue-ji-chu/xin-xi-lun/shang.md)](/shu-xue-ji-chu/xin-xi-lun/tiao-jian-shang.md)、[互信息](/shu-xue-ji-chu/xin-xi-lun/hu-xin-xi.md)参考链接。关于信息增益和互信息之间的差别，参考https://www.zhihu.com/question/39436574。
-
-
+关于[熵](/shu-xue-ji-chu/xin-xi-lun/shang.md)、[[条件熵](/shu-xue-ji-chu/xin-xi-lun/shang.md)](/shu-xue-ji-chu/xin-xi-lun/tiao-jian-shang.md)、[互信息](/shu-xue-ji-chu/xin-xi-lun/hu-xin-xi.md)参考链接。关于信息增益和互信息之间的差别，参考[https://www.zhihu.com/question/39436574](https://www.zhihu.com/question/39436574。)。
 
 示例：
 
