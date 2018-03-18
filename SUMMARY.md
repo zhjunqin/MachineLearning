@@ -39,4 +39,5 @@
   * [信息论](shu-xue-ji-chu/xin-xi-lun.md)
     * [熵](shu-xue-ji-chu/xin-xi-lun/shang.md)
     * [条件熵](shu-xue-ji-chu/xin-xi-lun/tiao-jian-shang.md)
+    * [互信息](shu-xue-ji-chu/xin-xi-lun/hu-xin-xi.md)
 

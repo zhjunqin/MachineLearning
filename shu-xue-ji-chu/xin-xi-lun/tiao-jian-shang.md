@@ -1,4 +1,4 @@
-条件熵
+### 条件熵
 
 > 参考 [https://zh.wikipedia.org/wiki/条件熵](https://zh.wikipedia.org/wiki/条件熵)
 
@@ -52,5 +52,7 @@ $$
 $$
 =H(X,Y)-H(X)
 $$
+
+
 即$$H(Y|X)=H(X,Y)-H(X)$$，同样$$H(X|Y)=H(X,Y)-H(Y)$$
 
