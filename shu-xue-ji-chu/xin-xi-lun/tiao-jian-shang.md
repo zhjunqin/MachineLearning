@@ -23,14 +23,20 @@ $$
 =-\displaystyle\sum_{x\in \mathcal{X}}p(x)\displaystyle\sum_{y\in \mathcal{Y}}p(y|x)\mathrm{log}p(y|x)
 $$
 
+
+
 $$
 =-\displaystyle\sum_{x\in \mathcal{X}}\displaystyle\sum_{y\in \mathcal{Y}}p(x,y)\mathrm{log}p(y|x)
 $$
 
+
+
 $$
 =-\displaystyle\sum_{x\in \mathcal{X},y\in \mathcal{Y}}p(x,y)\mathrm{log}\dfrac{p(x,y)}{p(x)}
 $$
 
+
+
 $$
 =-\displaystyle\sum_{x\in \mathcal{X},y\in \mathcal{Y}}p(x,y)\mathrm{log}\dfrac{p(x,y)}{p(x)}
 $$
@@ -38,8 +44,10 @@ $$
 
 
 $$
-=-\displaystyle\sum_{x\in \mathcal{X},y\in \mathcal{Y}}p(x,y)\mathrm{log}p(x,y)--\displaystyle\sum_{x\in \mathcal{X},y\in \mathcal{Y}}p(x,y)\mathrm{log}p(x)
+=\displaystyle\sum_{x\in \mathcal{X},y\in \mathcal{Y}}-p(x,y)\mathrm{log}p(x,y)-\displaystyle\sum_{x\in \mathcal{X}}-p(x)\mathrm{log}p(x)
 $$
+
+
 
 $$
 =H(X,Y)-H(X)
