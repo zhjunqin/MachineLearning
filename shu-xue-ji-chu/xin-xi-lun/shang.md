@@ -1,6 +1,6 @@
 ### 熵
 
-> 参考：https://zh.wikipedia.org/wiki/%E7%86%B5\_\(%E4%BF%A1%E6%81%AF%E8%AE%BA\)
+> 参考：[https://zh.wikipedia.org/wiki/熵\_\(信息论\](https://zh.wikipedia.org/wiki/熵_%28信息论%29\)
 
 在信息论中**熵**（entropy）是接收的每条消息中包含的信息的平均量，又被称为**信息熵**、**信源熵**、**平均自信息量**。
 
@@ -55,6 +55,4 @@ $$P(X=1)=p$$，$$P(X=0)=1-p$$，$$0\leqslant p \leqslant 1$$
 ![](/assets/Binary_entropy_plot.svg.png)
 
 #### 
-
-
 
