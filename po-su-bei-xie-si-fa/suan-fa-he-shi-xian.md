@@ -26,7 +26,13 @@ $$
 
 > 数据源：[https://github.com/apachecn/MachineLearning/tree/python-2.7/input/4.NaiveBayes/email](https://github.com/apachecn/MachineLearning/tree/python-2.7/input/4.NaiveBayes/email)
 
-例子里面是将
+例子里面中的基本步骤如下：
+
+1. 将数据集切分称训练数据集和测试数据集。
+2. 预先提取出所有的数据里面单词构成单词向量。
+3. 然后分别将训练数据集和测试数据集的输入，分词，并转换称单词向量。
+4. 然后进行训练，训练时计算各个单词的数量，然后除以总单词树，并使用lamda=1。
+5. 然后进行测试，采样log的加和来使得避免连乘溢出。
 
 ```
 # -*- coding: utf-8 -*-
@@ -46,7 +52,7 @@ class NativeBayes(object):
         self._test_y = []   # 测试数据y
         self._all_words = None # 所有的单词
         self._all_words_num = 0 # 所以单词数量
-    
+
     def split_to_word(self, text): # 将文本切分称单词
         words = re.split(r'\W*', text)
         #return [word.lower() for word in words if len(word) > 2]
@@ -80,7 +86,7 @@ class NativeBayes(object):
                 input_x.append(words)
                 all_input_x.extend(words)
                 input_y.append(-1)
-        
+
         self._all_words = list(set(all_input_x)) # 获得数据里面所有的单词列表
         self._all_words_num = len(self._all_words) # 单词列表里面的单词数量
 
@@ -110,7 +116,7 @@ class NativeBayes(object):
         for i in range(test_num): # 将测试数据单词列表转换称单词向量
             vector = self.words_to_vector(test_x[i])
             self._test_x.append(vector)
-        
+
     def train(self):
         train_data_num = len(self._train_y)
         p_positive = np.ones(self._all_words_num) # 贝叶斯估计，所有单词初始化lamda=1
@@ -157,7 +163,7 @@ bayes = NativeBayes()
 postive = "/path_to/input/4.NaiveBayes/email/ham/"
 nagative = "/path_to/input/4.NaiveBayes/email/spam/"
 bayes.load_data(postive, nagative)
-bayes.test_data()   
+bayes.test_data()
 ```
 
 
