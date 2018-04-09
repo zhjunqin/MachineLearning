@@ -38,14 +38,20 @@ $$
 $$
 H(D)=-\displaystyle\sum_{k=1}^K    \dfrac{|C_k|}{|D|}\mathrm{log}_2 {\dfrac{|C_k|}{|D|}}
 $$
+
+
 2）计算特征$$A$$对数据集$$D$$的经验条件熵$$H(D|A)$$
 
 
 $$
-H(D|A)=-\displaystyle\sum_{k=1}^K    \dfrac{|C_k|}{|D|}\mathrm{log}_2 {\dfrac{|C_k|}{|D|}}
+H(D|A)=\displaystyle\sum_{i=1}^n \dfrac{|D_i|}{|D|}H(D_i)=-\displaystyle\sum_{i=1}^n \dfrac{|D_i|}{|D|}\displaystyle\sum_{k=1}^K \dfrac{|D_{ik}|}{|D_i|}\mathrm{log}_2 {\dfrac{|D_{ik}|}{|D_i|}}
 $$
+3）计算信息增益
 
 
+$$
+g(D,A)=H(D)-H(D|A)
+$$
 示例：
 
 贷款申请样本数据表：
