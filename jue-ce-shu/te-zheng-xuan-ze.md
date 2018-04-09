@@ -34,7 +34,17 @@ $$
 
 1）计算数据集$$D$$的经验熵$$H(D)$$
 
-$$H(D)=-\displaystyle\sum_{i=1}^n    \dfrac{|C_k|}{|D|}$$
+
+$$
+H(D)=-\displaystyle\sum_{k=1}^K    \dfrac{|C_k|}{|D|}\mathrm{log}_2 {\dfrac{|C_k|}{|D|}}
+$$
+2）计算特征$$A$$对数据集$$D$$的经验条件熵$$H(D|A)$$
+
+
+$$
+H(D|A)=-\displaystyle\sum_{k=1}^K    \dfrac{|C_k|}{|D|}\mathrm{log}_2 {\dfrac{|C_k|}{|D|}}
+$$
+
 
 示例：
 
