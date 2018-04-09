@@ -4,7 +4,7 @@
 
 本书github地址：[https://github.com/zhjunqin/MachineLearning](https://github.com/zhjunqin/MachineLearning)
 
-本书gitbook地址：[https://www.gitbook.com/book/zhjunqin/machinelearning/details](https://www.gitbook.com/book/zhjunqin/machinelearning/details)
+本书gitbook地址：https://zhjunqin.gitbooks.io/machinelearning/content/
 
 本书参考了：
 
