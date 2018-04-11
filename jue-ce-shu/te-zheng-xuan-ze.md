@@ -176,7 +176,7 @@ $$
 
 $$A_1$$：年龄（1，2，3分别表示青，中，老年），
 
-$$Gini(D,A_1=1)=\dfrac{5}{15}(2\cdot\dfrac{2}{5}×  (1-\dfrac{2}{5}))+\dfrac{10}{15}(2×\dfrac{7}{10}× (1-\dfrac{7}{10}))=0.44$$
+$$Gini(D,A_1=1)=\dfrac{5}{15}(2\cdot\dfrac{2}{5}\cdot  (1-\dfrac{2}{5}))+\dfrac{10}{15}(2\cdot\dfrac{7}{10}\cdot (1-\dfrac{7}{10}))=0.44$$
 
 $$Gini(D,A_1=2)=0.48$$
 
