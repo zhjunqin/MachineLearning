@@ -28,6 +28,7 @@
   * [决策树](jue-ce-shu.md)
     * [模型与学习](jue-ce-shu/mo-xing-yu-xue-xi.md)
     * [特征选择](jue-ce-shu/te-zheng-xuan-ze.md)
+    * [生成算法和剪枝](jue-ce-shu/jue-ce-shu-sheng-cheng-he-jian-zhi.md)
 * [数学基础](shu-xue-ji-chu.md)
   * [线性代数](shu-xue-ji-chu/xian-xing-dai-shu.md)
   * [概率统计](shu-xue-ji-chu/gai-lv-tong-ji.md)
