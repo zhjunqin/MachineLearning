@@ -1,10 +1,10 @@
 # Machine Learning
 
-本书是个人学习机器学习基础的笔记，包含算法原理，公式推导，python代码实现。
+本书是个人机器学习基础的笔记，包含算法原理，公式推导，python代码实现。
 
 本书github地址：[https://github.com/zhjunqin/MachineLearning](https://github.com/zhjunqin/MachineLearning)
 
-本书gitbook地址：https://zhjunqin.gitbooks.io/machinelearning/content/
+本书gitbook地址：[https://zhjunqin.gitbooks.io/machinelearning/content/](https://zhjunqin.gitbooks.io/machinelearning/content/)
 
 本书参考了：
 
