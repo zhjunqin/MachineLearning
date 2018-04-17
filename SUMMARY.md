@@ -30,10 +30,10 @@
     * [特征选择](jue-ce-shu/te-zheng-xuan-ze.md)
     * [生成算法和剪枝](jue-ce-shu/jue-ce-shu-sheng-cheng-he-jian-zhi.md)
     * [python实现](jue-ce-shu/pythonshi-xian.md)
-  * 支持向量机
+  * [支持向量机](zhi-chi-xiang-liang-ji.md)
 * [数学基础](shu-xue-ji-chu.md)
   * [线性代数](shu-xue-ji-chu/xian-xing-dai-shu.md)
-    * 特征值和特征向量
+    * [特征值和特征向量](shu-xue-ji-chu/xian-xing-dai-shu/te-zheng-zhi-he-te-zheng-xiang-liang.md)
   * [概率统计](shu-xue-ji-chu/gai-lv-tong-ji.md)
     * [随机变量的特征](shu-xue-ji-chu/gai-lv-tong-ji/tong-ji-liang.md)
     * [样本统计量](shu-xue-ji-chu/gai-lv-tong-ji/yang-ben-tong-ji-liang.md)
