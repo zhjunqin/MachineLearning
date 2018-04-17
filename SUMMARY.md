@@ -4,7 +4,7 @@
 
 * [前言](README.md)
   * [符号表](fu-hao-biao.md)
-* 监督式学习
+* [监督式学习](jian-du-shi-xue-xi.md)
   * [感知机](gan-zhi-ji.md)
     * [感知机模型](gan-zhi-xue-xi-ji.md)
     * [感知机学习算法](gan-zhi-ji-xue-xi-suan-fa.md)
@@ -33,6 +33,7 @@
   * 支持向量机
 * [数学基础](shu-xue-ji-chu.md)
   * [线性代数](shu-xue-ji-chu/xian-xing-dai-shu.md)
+    * 特征值和特征向量
   * [概率统计](shu-xue-ji-chu/gai-lv-tong-ji.md)
     * [随机变量的特征](shu-xue-ji-chu/gai-lv-tong-ji/tong-ji-liang.md)
     * [样本统计量](shu-xue-ji-chu/gai-lv-tong-ji/yang-ben-tong-ji-liang.md)
