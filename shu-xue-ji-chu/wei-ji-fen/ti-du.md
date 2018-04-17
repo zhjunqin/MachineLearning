@@ -1,6 +1,6 @@
 ### 方向导数
 
-定义：若二元函数$$z=f(x,y)$$在点$$P(x_0,y_0)$$处沿着$$\overrightarrow{l}$$（方向角为$$\alpha$$，$$\beta$$）存在下列极限
+定义：若二元函数$$z=f(x,y)$$在点$$P(x_0,y_0)$$处沿着$$\vec{l}$$（方向角为$$\alpha$$，$$\beta$$）存在下列极限
 
 
 $$
@@ -14,7 +14,7 @@ $$
 $$
 
 
-其中$$\rho=\sqrt{(\Delta x)^2+(\Delta y)^2}$$，$$\Delta x=\rho\cos\alpha$$，$$\Delta y=\rho\cos\beta$$，则称$$\dfrac{\partial f}{\partial l}$$为函数在点$$P$$处沿着方向$$\overrightarrow{l}$$的方向导数。方向导数$$\dfrac{\partial f}{\partial l}$$也就是函数$$z=f(x,y)$$在点$$P$$上沿着$$\overrightarrow{l}$$的变化率。
+其中$$\rho=\sqrt{(\Delta x)^2+(\Delta y)^2}$$，$$\Delta x=\rho\cos\alpha$$，$$\Delta y=\rho\cos\beta$$，则称$$\dfrac{\partial f}{\partial l}$$为函数在点$$P$$处沿着方向$$\overrightarrow{l}$$的方向导数。方向导数$$\dfrac{\partial f}{\partial l}$$也就是函数$$z=f(x,y)$$在点$$P$$上沿着$$\vec{l}$$的变化率。
 
 ### 梯度
 
