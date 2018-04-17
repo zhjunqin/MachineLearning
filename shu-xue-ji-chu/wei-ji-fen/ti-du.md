@@ -18,7 +18,7 @@ $$
 
 ### 梯度
 
-方向导数公式$$\dfrac{\partial f}{\partial l}=\dfrac{\partial f}{\partial x}\cos \alpha+\dfrac{\partial f}{\partial y}cos\beta$$，令向量$$\overrightarrow{G}=(\dfrac{\partial f}{\partial x}, \dfrac{\partial f}{\partial y})$$，向量$$\vec{l}=(\cos\alpha, \cos\beta)$$
+方向导数公式$$\dfrac{\partial f}{\partial l}=\dfrac{\partial f}{\partial x}\cos \alpha+\dfrac{\partial f}{\partial y}cos\beta$$，令向量$$\vec{G}=(\dfrac{\partial f}{\partial x}, \dfrac{\partial f}{\partial y})$$，向量$$\vec{l}=(\cos\alpha, \cos\beta)$$
 
 则$$\dfrac{\partial f}{\partial l}=\vec{G}\cdot\vec{l} =\vec{l} \cos(\vec{G}, \vec{l})$$，当$$\vec{G}$$与$$\vec{l}$$方向一致时，方向导数取最大值。
 
