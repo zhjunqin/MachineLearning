@@ -1,32 +1,32 @@
 ### ID3算法python实现
 
-数据集来源《机器学习实战》：https://github.com/apachecn/MachineLearning/blob/master/input/3.DecisionTree/lenses.txt
+数据集来源《机器学习实战》：[https://github.com/apachecn/MachineLearning/blob/master/input/3.DecisionTree/lenses.txt](https://github.com/apachecn/MachineLearning/blob/master/input/3.DecisionTree/lenses.txt)
 
 ```
-young	myope	no	reduced	no lenses
-young	myope	no	normal	soft
-young	myope	yes	reduced	no lenses
-young	myope	yes	normal	hard
-young	hyper	no	reduced	no lenses
-young	hyper	no	normal	soft
-young	hyper	yes	reduced	no lenses
-young	hyper	yes	normal	hard
-pre	myope	no	reduced	no lenses
-pre	myope	no	normal	soft
-pre	myope	yes	reduced	no lenses
-pre	myope	yes	normal	hard
-pre	hyper	no	reduced	no lenses
-pre	hyper	no	normal	soft
-pre	hyper	yes	reduced	no lenses
-pre	hyper	yes	normal	no lenses
-presbyopic	myope	no	reduced	no lenses
-presbyopic	myope	no	normal	no lenses
-presbyopic	myope	yes	reduced	no lenses
-presbyopic	myope	yes	normal	hard
-presbyopic	hyper	no	reduced	no lenses
-presbyopic	hyper	no	normal	soft
-presbyopic	hyper	yes	reduced	no lenses
-presbyopic	hyper	yes	normal	no lenses
+young    myope    no    reduced    no lenses
+young    myope    no    normal    soft
+young    myope    yes    reduced    no lenses
+young    myope    yes    normal    hard
+young    hyper    no    reduced    no lenses
+young    hyper    no    normal    soft
+young    hyper    yes    reduced    no lenses
+young    hyper    yes    normal    hard
+pre    myope    no    reduced    no lenses
+pre    myope    no    normal    soft
+pre    myope    yes    reduced    no lenses
+pre    myope    yes    normal    hard
+pre    hyper    no    reduced    no lenses
+pre    hyper    no    normal    soft
+pre    hyper    yes    reduced    no lenses
+pre    hyper    yes    normal    no lenses
+presbyopic    myope    no    reduced    no lenses
+presbyopic    myope    no    normal    no lenses
+presbyopic    myope    yes    reduced    no lenses
+presbyopic    myope    yes    normal    hard
+presbyopic    hyper    no    reduced    no lenses
+presbyopic    hyper    no    normal    soft
+presbyopic    hyper    yes    reduced    no lenses
+presbyopic    hyper    yes    normal    no lenses
 ```
 
 数据集的特征从左到右为 \['age', 'prescript', 'astigmatic', 'tearRate'\]，最后一个为类别，类别包含三种类型\['no lenses', 'hard', 'soft' \]。
@@ -118,7 +118,7 @@ class DecisionTree(object):
 
 train_data = "*/input/3.DecisionTree/lenses.txt"
 with open(train_data) as f:
-    lenses = [line.strip().split('\t') for line in f.readlines()]
+    lenses = [line.strip().split('\t') for line in f.readlines()] # 特征之间用tab键隔离开
     labels = ['age', 'prescript', 'astigmatic', 'tearRate']
 
 #[['young', 'myope', 'no', 'reduced', 'no lenses'], 
@@ -147,7 +147,5 @@ print(dTree.create_decision_tree(lenses, labels))
 
 ![](/assets/lenses_decision_tree.png)
 
-树形结构代码参考：https://github.com/apachecn/MachineLearning/blob/master/src/py3.x/3.DecisionTree/decisionTreePlot.py
-
-
+树形结构代码参考：[https://github.com/apachecn/MachineLearning/blob/master/src/py3.x/3.DecisionTree/decisionTreePlot.py](https://github.com/apachecn/MachineLearning/blob/master/src/py3.x/3.DecisionTree/decisionTreePlot.py)
 
