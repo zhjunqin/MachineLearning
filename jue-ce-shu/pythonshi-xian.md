@@ -1,10 +1,6 @@
-python实现
+### ID3算法python实现
 
-基本思路：构建一个树形结构的输出，非叶子节点都是特征，用特征将数据集分成
-
-1首先计算
-
-
+基本思路：构建一个树形结构的输出，选择信息增益最大的特征作为节点，非叶子节点都是特征，节点上的特征将数据集分成各个子集，然后再递归。
 
 ```
 # -*- coding: utf-8 -*-
@@ -15,12 +11,12 @@ from collections import Counter
 class DecisionTree(object):
     def __init__(self, input_data, labels):
         pass
-    
-    def create_decision_tree(self, data_set, labels):
+
+    def create_decision_tree(self, data_set, labels): # 输出树形结构
         class_list = [data[-1] for data in data_set]
-        if class_list.count(class_list[0]) == len(class_list):
+        if class_list.count(class_list[0]) == len(class_list): # 如果剩下的数据集的类别都一样
             return class_list[0]
-        if len(data_set[0]) == 1:
+        if len(data_set[0]) == 1:                              # 如果数据集没有特征，只剩下类别，选择类别最多的输出
             major_label = Counter(data_set).most_common(1)[0]
             return major_label
 
@@ -40,7 +36,7 @@ class DecisionTree(object):
             #print(i, new_data_list)
             new_lables = labels[:]
             decision_tree[feature_name][i] = self.create_decision_tree(new_data_list, new_lables)
-        
+
         return decision_tree
 
     def cal_data_set_entropy(self, data_set):
@@ -50,7 +46,7 @@ class DecisionTree(object):
         for i in class_list:
             ck_num = class_dict.get(i, 0)
             class_dict[i] = ck_num + 1
-        
+
         entropy = 0
         for k in class_dict:
             ck_rate = float(class_dict[k])/total_num
@@ -86,19 +82,17 @@ class DecisionTree(object):
             entropy = self.cal_data_set_entropy(feature_data_set)
             condition_entropy += feature_rate * entropy
         return condition_entropy
-       
 
 
-
-train_data = "/mnt/D/Learning/machineLearning/MachineLearning-python-2.7/input/3.DecisionTree/lenses.txt"
+train_data = "*/input/3.DecisionTree/lenses.txt"
 with open(train_data) as f:
     lenses = [line.strip().split('\t') for line in f.readlines()]
     labels = ['age', 'prescript', 'astigmatic', 'tearRate']
+
 #[['young', 'myope', 'no', 'reduced', 'no lenses'], 
 # ['young', 'myope', 'no', 'normal',  'soft']
 dTree = DecisionTree(lenses, labels)
 print(dTree.create_decision_tree(lenses, labels))
-
 ```
 
 ```
