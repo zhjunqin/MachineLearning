@@ -1,4 +1,8 @@
+python实现
 
+基本思路：构建一个树形结构的输出，非叶子节点都是特征，用特征将数据集分成
+
+1首先计算
 
 
 
@@ -20,7 +24,7 @@ class DecisionTree(object):
             major_label = Counter(data_set).most_common(1)[0]
             return major_label
 
-        feature_index = self.get_feature_with_biggest_gain(data_set, labels)
+        feature_index = self.get_feature_with_biggest_gain(data_set, labels) #获取最大信息增益的特征
         feature_name = labels[feature_index]
         del labels[feature_index]
 
@@ -53,7 +57,7 @@ class DecisionTree(object):
             entropy -= ck_rate * log(ck_rate, 2)
         return entropy
 
-    def get_feature_with_biggest_gain(self, data_set, labels):
+    def get_feature_with_biggest_gain(self, data_set, labels): #获取最大信息增益的特征
         feature_num = len(labels)
         data_entropy = self.cal_data_set_entropy(data_set)
         biggest_gain_index = None
@@ -96,10 +100,6 @@ dTree = DecisionTree(lenses, labels)
 print(dTree.create_decision_tree(lenses, labels))
 
 ```
-
-
-
-
 
 ```
 {'tearRate': {'reduced': 'no lenses', 
