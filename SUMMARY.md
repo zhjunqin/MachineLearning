@@ -40,7 +40,7 @@
     * [先验后验概率](shu-xue-ji-chu/gai-lv-tong-ji/xian-yan-hou-yan-gai-lv.md)
   * [微积分](shu-xue-ji-chu/wei-ji-fen.md)
     * [方向导数和梯度](shu-xue-ji-chu/wei-ji-fen/ti-du.md)
-    * 梯度下降法
+    * [梯度下降法](shu-xue-ji-chu/wei-ji-fen/ti-du-xia-jiang-fa.md)
   * [信息论](shu-xue-ji-chu/xin-xi-lun.md)
     * [熵](shu-xue-ji-chu/xin-xi-lun/shang.md)
     * [条件熵](shu-xue-ji-chu/xin-xi-lun/tiao-jian-shang.md)
