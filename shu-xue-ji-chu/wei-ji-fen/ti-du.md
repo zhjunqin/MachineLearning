@@ -18,7 +18,7 @@ $$
 
 ![](/assets/方向导数2.png)
 
-> pic source: http://www.cnblogs.com/hithink/p/7380838.html
+> pic source: [http://www.cnblogs.com/hithink/p/7380838.html](http://www.cnblogs.com/hithink/p/7380838.html)
 
 ### 梯度
 
@@ -40,5 +40,15 @@ $$
 
 函数在点$$P$$处的沿着梯度向量的方向导数取最大值，那么也就是该方向的变化率最大，增长速度最快。
 
+为什么梯度的方向是函数增长最快的方向？个人理解这要从导数（或偏导数）的定义开始。
 
+![](/assets/538px-Derivative_-_geometric_meaning.svg.png)
+
+> pic source: 
+>
+> https://commons.wikimedia.org/w/index.php?curid=21999275
+>
+> https://zh.wikipedia.org/wiki/%E5%AF%BC%E6%95%B0
+
+函数在某一点的可导，得到的切线的斜率为导数，而切线的导数的定义为切线的斜率，而
 
