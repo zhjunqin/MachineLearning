@@ -42,7 +42,9 @@ $$
 
 ![](/assets/Gradient_descent.png)
 
-> pic source: https://zh.wikipedia.org/wiki/%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E6%B3%95
+> pic source: [https://zh.wikipedia.org/wiki/梯度下降法](https://zh.wikipedia.org/wiki/梯度下降法)
+
+图片示例了这一过程，这里假设函数$$F$$定义在平面上，并且函数图像是一个碗形。蓝色的曲线是等高线（水平集），即函数 $$F$$为常数的集合构成的曲线。红色的箭头指向该点梯度的反方向。（一点处的梯度方向与通过该点的等高线垂直）。沿着梯度下降方向，将最终到达碗底，即函数$$F$$值最小的点。
 
 
 
