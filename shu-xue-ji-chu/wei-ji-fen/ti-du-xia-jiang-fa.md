@@ -40,3 +40,9 @@ $$
 
 当目标函数是凸函数时，梯度下降法的解是全局最优解，一般情况下，其解不能保证是全局最优解。
 
+![](/assets/Gradient_descent.png)
+
+> pic source: https://zh.wikipedia.org/wiki/%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E6%B3%95
+
+
+
