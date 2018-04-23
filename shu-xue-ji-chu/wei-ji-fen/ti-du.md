@@ -16,6 +16,10 @@ $$
 
 其中$$\rho=\sqrt{(\Delta x)^2+(\Delta y)^2}$$，$$\Delta x=\rho\cos\alpha$$，$$\Delta y=\rho\cos\beta$$，则称$$\dfrac{\partial f}{\partial l}$$为函数在点$$P$$处沿着方向$$\vec{l}$$的方向导数。方向导数$$\dfrac{\partial f}{\partial l}$$也就是函数$$z=f(x,y)$$在点$$P$$上沿着$$\vec{l}$$的变化率。
 
+![](/assets/方向导数2.png)
+
+> pic source: http://www.cnblogs.com/hithink/p/7380838.html
+
 ### 梯度
 
 方向导数公式$$\dfrac{\partial f}{\partial l}=\dfrac{\partial f}{\partial x}\cos \alpha+\dfrac{\partial f}{\partial y}cos\beta$$，令向量$$\vec{G}=(\dfrac{\partial f}{\partial x}, \dfrac{\partial f}{\partial y})$$，向量$$\vec{l}=(\cos\alpha, \cos\beta)$$
@@ -32,5 +36,9 @@ $$
 
 其中$$\nabla=(\dfrac{\partial }{\partial x}, \dfrac{\partial }{\partial y})$$，称为向量微分算子或Nabla算子。
 
-梯度的几何意义：函数在点$$P$$处的沿着梯度向量的方向导数取最大值，那么也就是该方向的变化率最大，增长速度最快。
+### 梯度的几何意义
+
+函数在点$$P$$处的沿着梯度向量的方向导数取最大值，那么也就是该方向的变化率最大，增长速度最快。
+
+
 
