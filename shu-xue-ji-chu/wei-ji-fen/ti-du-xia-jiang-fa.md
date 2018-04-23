@@ -3,8 +3,10 @@
 梯度下降法（Gradient descent）或最速下降法（steepest descent）是求解无约束最优化问题的一种常用方法。
 
 假设$$f(x)$$是$$R^n$$上具有一阶连续偏导数的函数。要求解的无约束最优化问题是：
+
+
 $$
-min f(x)
+\mathrm{min} f(x)
 $$
 
 
