@@ -12,7 +12,7 @@ f(x)=sign(w\cdot x+b)
 $$
 
 
-称为感知机。其中，$$w$$和$$b$$为感知模型参数，$$w\in R^n$$叫做权值\(weight\)或权值向量\(weight vector\)，$$b\in R$$叫做偏置，$$w\cdot x$$表示向量$$w$$和向量$$x$$的内积。$$sign$$是符号函数，即
+称为感知机。其中，$$w$$和$$b$$为感知模型参数，$$w\in R^n$$叫做权值\(weight\)或权值向量\(weight vector\)，$$b\in R$$ 叫做偏置，$$w\cdot x$$表示向量$$w$$和向量$$x$$的内积。$$sign$$是符号函数，即
 
 
 $$
