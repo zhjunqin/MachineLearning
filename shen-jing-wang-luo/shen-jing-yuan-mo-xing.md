@@ -51,3 +51,5 @@
 
 多层网络可以完成对更复杂函数的模拟。
 
+![](/assets/peception-xo2r.PNG)
+
