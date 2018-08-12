@@ -4,7 +4,9 @@
 
 本书github地址：[https://github.com/zhjunqin/MachineLearning](https://github.com/zhjunqin/MachineLearning)
 
-本书gitbook地址：[https://zhjunqin.gitbooks.io/machinelearning/content/](https://zhjunqin.gitbooks.io/machinelearning/content/)
+本书legacy gitbook地址：[https://zhjunqin.gitbooks.io/machinelearning/content/](https://zhjunqin.gitbooks.io/machinelearning/content/)
+
+本书新的gitbook地址：https://zhjunqin.gitbook.io/machine-learning/
 
 本书参考了：
 
@@ -17,6 +19,8 @@
 《机器学习基石》课程，林轩田
 
 《机器学习》课程，Andrew ng
+
+《神经网络与机器学习》， Michael Nielsen 著， Xiaohu Zhu 和 Freeman Zhang 译
 
 《概率论与数理统计》 ，高等教育出版社
 
