@@ -8,11 +8,11 @@
 
 **代数定义：**
 
-两个向量 $$overrightarrow{a}=[a_1, a_2, ..., a_n]$$ 和 $$overrightarrow{b}=[b_1, b_2, ..., b_n]$$ 的点积定义为：
+两个向量 $${a}=[a_1, a_2, ..., a_n]$$ 和 $${b}=[b_1, b_2, ..., b_n]$$ 的点积定义为：
 
 
 $$
-\overrightarrow{a} \cdot \overrightarrow{b} = \displaystyle\sum_{i=1}^n a_ib_i= a_1b_1+a_2b_2+...+ a_nb_n
+{a} \cdot {b} = \displaystyle\sum_{i=1}^n a_ib_i= a_1b_1+a_2b_2+...+ a_nb_n
 $$
 
 
@@ -22,7 +22,7 @@ $$
 
 
 $$
-\overrightarrow{a} \cdot \overrightarrow{b} =|\overrightarrow{a}||\overrightarrow{b} | \mathrm{cos}\theta
+{a} \cdot {b} =|{a}||{b} | \mathrm{cos}\theta
 $$
 
 
@@ -36,7 +36,7 @@ $$
 
 
 $$
-\mathrm{cos} \theta=\frac{\overrightarrow{a}\cdot \overrightarrow{b} }{|\overrightarrow{a}||\overrightarrow{b} |}
+\mathrm{cos} \theta=\frac{{a}\cdot {b} }{|{a}||{b} |}
 $$
 
 
