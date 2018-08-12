@@ -56,6 +56,14 @@ $$kd$$树是一种对$$k$$维空间中的实例点进行存储以便对其进行
 
 ![](/assets/kd-tree3.png)
 
+![](/assets/kd-tree4.png)
+
+![](/assets/kd-tree5.png)
+
+![](/assets/kd-tree6.png)
+
+
+
 **示例2：**
 
 维基百科上的一个动画例子（[https://en.wikipedia.org/wiki/K-d\_tree）](https://en.wikipedia.org/wiki/K-d_tree）)
