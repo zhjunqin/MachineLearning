@@ -12,7 +12,7 @@
 
 
 $$
-{a} \cdot {b} = \displaystyle\sum_{i=1}^n a_ib_i= a_1b_1+a_2b_2+...+ a_nb_n
+\vec{a} \cdot \vec{b} = \displaystyle\sum_{i=1}^n a_ib_i= a_1b_1+a_2b_2+...+ a_nb_n
 $$
 
 
@@ -22,11 +22,11 @@ $$
 
 
 $$
-{a} \cdot {b} =|{a}||{b} | \mathrm{cos}\theta
+\vec{a} \cdot \vec{b} =|{a}||{b} | \mathrm{cos}\theta
 $$
 
 
-这里$$|{x}|$$表示向量$${x}$$的模的长度，$$\theta$$表示两个向量的角度。
+这里$$|\vec{x}|$$表示向量$$\vec{x}$$的模的长度，$$\theta$$表示两个向量的角度。
 
 当两个向量互相垂直时点积总是为零。因为$$\mathrm{cos} 90 = 0$$。当两个向量方向相同时，角度为$$0$$，内积为正的最大；当两个向量方向相反时，角度为$$180$$，内积为负的最大。
 
@@ -36,7 +36,7 @@ $$
 
 
 $$
-\mathrm{cos} \theta =\frac{ {a} \cdot {b} }{ |{a}| |{b}|}
+\mathrm{cos} \theta =\frac{ \vec{a} \cdot \vec{b} }{ |{a}| |{b}|}
 $$
 
 
