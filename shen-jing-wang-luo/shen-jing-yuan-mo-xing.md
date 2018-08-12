@@ -53,7 +53,23 @@
 
 ![](/assets/peception-xo2r.PNG)
 
-S
+### S 型神经元
 
-s
+上面的感知机中一个权重或偏置的微小改动有时候会引起那个感知机的输出完全翻转，比如0变到1，那样的翻转可能接下来引起其余网络的行为以极其复杂的方式改变。因此在调整网络的参数的时候，有些输出被正确分类，其他的行为很可能以一些很难控制的方式被完全改变。
+
+我们引入一种称之为S型神经元来克服这个问题。 S型神经元和感知机类似，但是被修改的权重和偏置只会引起输出的微小变化，这对让神经元网络学习起来很关键。
+
+正如一个感知机，S型神经元有多个输入，$$x_1,x_2,...x_n$$。对每个输入有权重，$$w_1,w_2,...,w_n$$和一个总的偏置$$b$$。但是它的输出不是0或1，它现在是$$\sigma( w \cdot x +b)$$，这里$$\sigma$$被称之为S型函数。定义为：
+$$
+\sigma(z) = \frac{1}{1+e^{-z}}
+$$
+也就是：
+$$
+\sigma(z) = \frac{1}{1+\mathrm{exp}(-\displaystyle\sum_{i=1}^nw_ix_i-b)}
+$$
+$$\sigma$$的平滑特性意味着权重和偏置的微小变化，即$$\Delta w_i$$和$$\Delta b$$，会从神经元产生一个微小的输出变化$$\Delta \mathrm{output}$$，实际上，微积分告诉我们输出变化可以很好的近似表示为（一阶泰勒展开）：
+$$
+\Delta \mathrm{output} \approx \displaystyle\sum_{i=1}\frac{\partial \mathrm{output}}{\partial w_i} + \frac{\partial \mathrm{output}}{\partial b}\Delta b
+$$
+
 
