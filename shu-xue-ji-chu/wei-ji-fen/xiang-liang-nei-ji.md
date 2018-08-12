@@ -16,7 +16,7 @@ $$
 $$
 
 
-几何定义：
+**几何定义**：
 
 在欧几里德空间中，点积可以直观的定义为：
 
@@ -43,8 +43,6 @@ $$
 ![](/assets/Scalarproduct.gif)
 
 向量的内积可以理解为向量A在向量B上的投影跟向量B的长度的乘积。
-
-
 
 > source: [https://zh.wikipedia.org/wiki/点积](https://zh.wikipedia.org/wiki/点积)
 
