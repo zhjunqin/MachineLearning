@@ -1,0 +1,42 @@
+### 向量内积
+
+在数学中，点积（Dot Product）又称数量积，是一个接受两个等长度的数字序列（通常是向量坐标），然后返回单个数字的代数运算。在欧几里德几何中，两个笛卡尔坐标向量的点积常称为内积（Inner Product）。
+
+从代数的角度看，先对两个数字序列中的每组对应元素求积，再对所有积求和，结果即为点积。
+
+从几何角度看，点积则是两个向量的长度与它们的夹角的余弦的积。
+
+**代数定义：**
+
+两个向量$$\overrightarrow{a}=[a_1, a_2, ..., a_n]$$和$$\overrightarrow{b}=[b_1, b_2, ..., b_n]$$的点积定义为：
+
+
+$$
+\overrightarrow{a} \cdot \overrightarrow{b} = \displaystyle\sum_{i=1}^n a_ib_i= a_1b_1+a_2b_2+...+ a_nb_n
+$$
+
+
+几何定义：
+
+在欧几里德空间中，点积可以直观的定义为：
+
+
+$$
+\overrightarrow{a} \cdot \overrightarrow{b} =|\overrightarrow{a}||\overrightarrow{b} | \mathrm{cos}\theta
+$$
+
+
+这里$$|\overrightarrow{x}|$$表示向量$$\overrightarrow{x}$$的模的长度，$$\theta$$表示两个向量的角度。
+
+这样，两个互相垂直的向量的点积总是为零。若$$\overrightarrow{a}$$和$$\overrightarrow{b}$$都是单位向量（长度为1），它们的点积就是它们的夹角的余弦。那么给定两个向量，它们之间的夹角可以通过下列公式得到：
+$$
+\mathrm{cos} \theta=\frac{\overrightarrow{a}\cdot \overrightarrow{b} }{|\overrightarrow{a}||\overrightarrow{b} |}
+$$
+![](/assets/Scalarproduct.gif)
+
+
+
+> source: https://zh.wikipedia.org/wiki/%E7%82%B9%E7%A7%AF
+
+
+
