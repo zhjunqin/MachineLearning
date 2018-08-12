@@ -28,15 +28,25 @@ $$
 
 这里$$|\overrightarrow{x}|$$表示向量$$\overrightarrow{x}$$的模的长度，$$\theta$$表示两个向量的角度。
 
-这样，两个互相垂直的向量的点积总是为零。若$$\overrightarrow{a}$$和$$\overrightarrow{b}$$都是单位向量（长度为1），它们的点积就是它们的夹角的余弦。那么给定两个向量，它们之间的夹角可以通过下列公式得到：
+当两个向量互相垂直时点积总是为零。因为$$\mathrm{cos} 90 = 0$$。当两个向量方向相同时，角度为$$0$$，内积为正的最大；当两个向量方向相反时，角度为$$180$$，内积为负的最大。
+
+![](/assets/cos-functionGIF.GIF)
+
+若$$\overrightarrow{a}$$和$$\overrightarrow{b}$$都是单位向量（长度为1），它们的点积就是它们的夹角的余弦。那么给定两个向量，它们之间的夹角可以通过下列公式得到：
+
+
 $$
 \mathrm{cos} \theta=\frac{\overrightarrow{a}\cdot \overrightarrow{b} }{|\overrightarrow{a}||\overrightarrow{b} |}
 $$
+
+
 ![](/assets/Scalarproduct.gif)
 
+向量的内积可以理解为向量A在向量B上的投影跟向量B的长度的乘积。
 
 
-> source: https://zh.wikipedia.org/wiki/%E7%82%B9%E7%A7%AF
+
+> source: [https://zh.wikipedia.org/wiki/点积](https://zh.wikipedia.org/wiki/点积)
 
 
 
