@@ -8,7 +8,7 @@
 
 **代数定义：**
 
-两个向量 $$\overrightarrow{a}=[a_1, a_2, ..., a_n]$$ 和 $$\overrightarrow{b}=[b_1, b_2, ..., b_n]$$ 的点积定义为：
+两个向量 $$overrightarrow{a}=[a_1, a_2, ..., a_n]$$ 和 $$overrightarrow{b}=[b_1, b_2, ..., b_n]$$ 的点积定义为：
 
 
 $$
