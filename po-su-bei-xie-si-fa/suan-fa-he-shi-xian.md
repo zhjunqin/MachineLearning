@@ -15,8 +15,6 @@ $$
 y=f(x)=\arg \max_{c_k}ln\big(\prod_{j=1}^n P(X_j=x_j|Y=c_k)P(Y=c_k)\big)
 $$
 
-
-
 $$
 =\arg \max_{c_k}\big(lnP(Y=c_k)+\displaystyle\sum_{i=1}^nln(P(X_j=x_j|Y=c_k)\big)
 $$
