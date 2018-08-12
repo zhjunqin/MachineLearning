@@ -24,7 +24,7 @@ $$
 
 方向导数公式$$\dfrac{\partial f}{\partial l}=\dfrac{\partial f}{\partial x}\cos \alpha+\dfrac{\partial f}{\partial y}cos\beta$$，令向量$$\vec{G}=(\dfrac{\partial f}{\partial x}, \dfrac{\partial f}{\partial y})$$，向量$$\vec{l}=(\cos\alpha, \cos\beta)$$
 
-则$$\dfrac{\partial f}{\partial l}=\vec{G}\cdot\vec{l} =\vec{l} \cos(\vec{G}, \vec{l})$$，当$$\vec{G}$$与$$\vec{l}$$方向一致时，方向导数取最大值。
+则$$\dfrac{\partial f}{\partial l}=\vec{G}\cdot\vec{l} =\vec{l} \cos(\vec{G}, \vec{l})$$，当$$\vec{G}$$与$$\vec{l}$$方向一致时，内积最大，方向导数取最大值。
 
 定义**向量**$$\vec{G}$$为函数$$f(P)$$在$$P$$处的**梯度**（gradient）记作$$\mathrm{grad}f(P)$$，或$$\nabla f(P)$$，即
 
@@ -55,4 +55,6 @@ $$
 一条直线与某平面直角坐标系横轴正半轴方向的夹角的正切值即该直线相对于该坐标系的斜率。 （[https://baike.baidu.com/item/直线的斜率）](https://baike.baidu.com/item/直线的斜率）)
 
 斜率是标量，没有方向，但是如果以斜率的大小作为方向的一个分量，上面图中斜率的方向为$$(\Delta x, \alpha \Delta x)$$，其中$$\alpha > 0$$，则因此沿着斜率的方向是函数增长的方向。偏导数同理，因此偏导数构成的向量是函数增长的方向。
+
+
 

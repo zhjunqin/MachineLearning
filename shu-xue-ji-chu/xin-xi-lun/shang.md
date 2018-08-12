@@ -56,3 +56,5 @@ $$P(X=1)=p$$，$$P(X=0)=1-p$$，$$0\leqslant p \leqslant 1$$
 
 #### 
 
+
+
