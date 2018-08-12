@@ -36,7 +36,7 @@ $$
 
 
 $$
-\mathrm{cos} \theta=\frac{{a}\cdot {b} }{|{a}||{b}|}
+\mathrm{cos} \theta =\frac{ {a} \cdot {b} }{ |{a}| |{b}|}
 $$
 
 
