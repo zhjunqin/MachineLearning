@@ -45,7 +45,9 @@ $$
 
 当出现误分类点时，则调整$$w,b$$，更正超平面的方向，使其稍微转向正确的方向。
 
-#### ![](/assets/PLA.PNG)1.3 算法的收敛性
+#### ![](/assets/PLA.PNG)
+
+#### 1.3 算法的收敛性
 
 可以证明，对于**线性可分**的数据集，感知机学习算法经过**有限次迭代**可以得到一个将训练数据集完全正确划分的分离超平面及感知机模型。
 
@@ -103,8 +105,6 @@ $$
 
 
 则关于$$\displaystyle\sum_{j=1}^m\alpha_jy^{(j)}x^{(j)}\cdot x^{(i)}$$的计算，$$\displaystyle\sum_{j=1}^m\alpha_jy^{(j)}x^{(j)}\cdot x^{(i)} = \displaystyle\sum_{j=1}^m\alpha_jy^{(j)}G[i,j]= \sum \alpha     \circ y     \circ G[i]$$，即三个向量中每个元素相乘再做和运算。
-
-
 
 > 参考：林轩田，机器学习基石
 
