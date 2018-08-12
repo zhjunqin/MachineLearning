@@ -6,11 +6,15 @@
 
 ![](/assets/mp-neuron.png)
 
-> pic source:https://www.jianshu.com/p/c46b6d890790
+> pic source:[https://www.jianshu.com/p/c46b6d890790](https://www.jianshu.com/p/c46b6d890790)
 
 在这个模型中，神经元接收到来自$$n$$个其他神经元传递过来的输入信号，这些输入信号通过带权重的连接（connection）进行传递，神经元接收到总输入将与神经元的阈值进行比较，然后通过“激活函数”（activation function）处理以产生神经元的输出。
 
 理想中的激活函数是如图a的阶跃函数，它将输入值映射为输出值为“0”或“1”，“1”对应于神经元兴奋，“0”对应于神经元抑制。但是阶跃函数具有不连续、不光滑等不太好的性质，因此实际常用$$Sigmoid$$函数作为激活函数。
 
 ![](/assets/activation-function.png)
+
+> pic source:[https://www.jianshu.com/p/c46b6d890790](https://www.jianshu.com/p/c46b6d890790)
+
+
 
