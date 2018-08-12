@@ -1,6 +1,6 @@
 ### 先验概率、后验概率、似然函数
 
-> 参考
+> 参考：
 >
 > [https://zh.wikipedia.org/wiki/先验概率](https://zh.wikipedia.org/wiki/先验概率)
 >
@@ -51,6 +51,4 @@ $$p(\theta)$$：先验
 $$p(\theta|x)$$：后验
 
 $$p(x|\theta)$$：似然
-
-
 
