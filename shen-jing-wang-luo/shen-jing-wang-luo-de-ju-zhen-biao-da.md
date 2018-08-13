@@ -12,5 +12,13 @@
 
 ![](/assets/network-definition.png)
 
+上面的图中 $$a_3^2 = \sigma(w_{31}^2 \cdot x_1 + w_{32}^2 \cdot x_2 + w_{33}^2 \cdot x_3 + b_3^2)$$。 也就是
+$$
+a_l^j = \sigma(\displaystyle\sum_{k} w_{jk} \cdot a_k^{l-1}+ b_j^l)
+$$
+其求和是在第$$(l-1)^{th}$$上的所有$$k$$个神经元上进行。
+
+
+
 
 
