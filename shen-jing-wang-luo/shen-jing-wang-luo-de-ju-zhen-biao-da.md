@@ -25,23 +25,23 @@ $$
 我们先将每一层用矩阵表达，假定第$$(l-1)^{th}$$有$$m$$个神经元，第$$l^{th}$$层有$$n$$个神经元，那么从第$$(l-1)^{th}$$到第$$l^{th}$$层的权重个数有$$m \times n$$个，偏置个数有$$n$$个。则：
 
 第$$(l-1)^{th}$$的神经元向量为：$$a^{l-1}= \begin{bmatrix}
-   a_1 \\
-   a_2 \\
-   a_3 \\
+   a_1^{l-1} \\
+   a_2^{l-1} \\
+   a_3^{l-1} \\
      ... \\
-   a_m 
+   a_m^{l-1} 
 \end{bmatrix}$$，第$$l^{th}$$层的神经元向量为$$a^{l}= \begin{bmatrix}
-   a_1 \\
-   a_2 \\
-   a_3 \\
+   a_1^{l} \\
+   a_2^{l} \\
+   a_3^{l} \\
      ... \\
-   a_n 
+   a_n^{l} 
 \end{bmatrix}$$，偏置向量为$$b^{l}= \begin{bmatrix}
-   b_1 \\
-   b_2 \\
-   b_3 \\
+   b_1^{l} \\
+   b_2^{l} \\
+   b_3^{l} \\
      ... \\
-   b_n 
+   b_n^{l} 
 \end{bmatrix}$$
 
 权重矩阵为：
@@ -55,11 +55,31 @@ W^l= \begin{bmatrix}
                                  ... \\
    w_{n1} & w_{n2} & w_{n3} & ... & w_{nm} 
 \end{bmatrix} = \begin{bmatrix}
-   w_1 \\
-   w_2 \\
-   w_3 \\
+   w_1^{l} \\
+   w_2^{l} \\
+   w_3^{l} \\
      ... \\
-   w_n 
+   w_n^{l} 
+\end{bmatrix}
+$$
+于是：
+$$
+\sigma(W^l \cdot a^{l-1} + b^l )= a^l
+$$
+也就是：
+$$
+a^{l}= \begin{bmatrix}
+   a_1^{l} \\
+   a_2^{l} \\
+   a_3^{l} \\
+     ... \\
+   a_n^{l} 
+\end{bmatrix}= \begin{bmatrix}
+   \sigma(w_1^l \cdot  a^{l-1} + b_1^l) \\
+   \sigma(w_2^l \cdot  a^{l-1} + b_2^l) \\
+   \sigma(w_3^l \cdot  a^{l-1} + b_3^l) \\
+     ... \\
+  \sigma(w_n^l \cdot  a^{l-1} + b_n^l)
 \end{bmatrix}
 $$
 
