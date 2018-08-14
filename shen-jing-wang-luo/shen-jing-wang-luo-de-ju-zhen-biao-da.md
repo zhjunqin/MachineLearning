@@ -16,9 +16,11 @@
 
 
 $$
-a_l^j = \sigma(\displaystyle\sum_{k} w_{jk} \cdot a_k^{l-1}+ b_j^l)
+a_j^l = \sigma(\displaystyle\sum_{k} w_{jk}^l \cdot a_k^{l-1}+ b_j^l)=\sigma(w_{j}^l \cdot a^{l-1} + b_j^l)
 $$
 
 
-其求和是在第$$(l-1)^{th}$$上的所有$$k$$个神经元上进行。
+其求和是在第$$(l-1)^{th}$$上的所有$$k$$个神经元上进行，其中$$w_{j}^l$$表示的是第$$(l-1)^{th}$$层到第$$l^{th}$$层的第$$j$$个神经元的权重向量。
+
+
 
