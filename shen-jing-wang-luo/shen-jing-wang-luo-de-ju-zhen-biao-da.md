@@ -24,7 +24,7 @@ $$
 
 我们先将每一层用矩阵表达，假定第$$(l-1)^{th}$$有$$m$$个神经元，第$$l^{th}$$层有$$n$$个神经元，那么从第$$(l-1)^{th}$$到第$$l^{th}$$层的权重个数有$$m \times n$$个，偏置个数有$$n$$个。则：
 
-第$$(l-1)^{th}$$的神经元向量为：$$a^{l-1}= \begin{bmatrix}
+第$$(l-1)^{th}$$的神经元向量为$$a^{l-1}= \begin{bmatrix}
    a_1^{l-1} \\
    a_2^{l-1} \\
    a_3^{l-1} \\
@@ -36,19 +36,15 @@ $$
    a_3^{l} \\
      ... \\
    a_n^{l} 
-\end{bmatrix}$$，偏置向量为$$b^{l}= \begin{bmatrix}
+\end{bmatrix}$$，
+
+偏置向量为$$b^{l}= \begin{bmatrix}
    b_1^{l} \\
    b_2^{l} \\
    b_3^{l} \\
      ... \\
    b_n^{l} 
-\end{bmatrix}$$
-
-权重矩阵为：
-
-
-$$
-W^l= \begin{bmatrix}
+\end{bmatrix}$$，权重矩阵为：$$W^l= \begin{bmatrix}
    w_{11} & w_{12} & w_{13} & ... & w_{1m} \\
    w_{21} & w_{22} & w_{23} & ... & w_{1m} \\
    w_{31} & w_{12} & w_{13} & ... & w_{1m} \\
@@ -60,13 +56,19 @@ W^l= \begin{bmatrix}
    w_3^{l} \\
      ... \\
    w_n^{l} 
-\end{bmatrix}
-$$
+\end{bmatrix}$$
+
 于是：
+
+
 $$
 \sigma(W^l \cdot a^{l-1} + b^l )= a^l
 $$
+
+
 也就是：
+
+
 $$
 a^{l}= \begin{bmatrix}
    a_1^{l} \\
