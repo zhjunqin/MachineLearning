@@ -79,7 +79,9 @@ $$\sigma$$的平滑特性意味着权重和偏置的微小变化，即$$\Delta w
 
 
 $$
-\Delta \mathrm{output} \approx \displaystyle\sum_{i=1}\frac{\partial \mathrm{output}}{\partial w_i} + \frac{\partial \mathrm{output}}{\partial b}\Delta b
+\Delta \mathrm{output} \approx \displaystyle\sum_{i=1}\frac{\partial \mathrm{output}}{\partial w_i}\Delta w_i + \frac{\partial \mathrm{output}}{\partial b}\Delta b
 $$
+
+
 上面的式子表明，$$\Delta \mathrm{output}$$是一个反映权重和偏置变化（$$\Delta w_i$$和$$\Delta b$$）的线性函数，这一线性使得选择权重和偏置的微小变化来达到输出的微小变化变得很容易。
 
