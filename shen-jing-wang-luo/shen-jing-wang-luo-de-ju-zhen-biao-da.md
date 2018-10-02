@@ -58,14 +58,6 @@ $$
    w_n^{l} 
 \end{bmatrix}$$
 
-于是：
-
-
-$$
-\sigma(W^l \cdot a^{l-1} + b^l )= a^l
-$$
-
-
 也就是：
 
 
@@ -84,5 +76,9 @@ a^{l}= \begin{bmatrix}
   \sigma(w_n^l \cdot  a^{l-1} + b_n^l)
 \end{bmatrix}
 $$
-
+最后可以得到：
+$$
+a^l = \sigma(W^l \cdot a^{l-1} + b^l )
+$$
+这个表达式给出了一个更加全局的思考每层的激活值和前一层激活值的关联方式，我们仅仅用权重矩阵作用在激活值上，然后加上一个偏置向量，最后作用$$\sigma$$函数。
 
