@@ -42,16 +42,16 @@ Hadamard 乘积是按元素乘法的运算
 $$
 \begin{bmatrix}
    1 \\
-   2 \\
+   2 
 \end{bmatrix} \odot \begin{bmatrix}
    3 \\
-   4 \\
+   4 
 \end{bmatrix}=\begin{bmatrix}
    1*3 \\
-   2*4 \\
+   2*4 
 \end{bmatrix} =\begin{bmatrix}
    3 \\
-   8 \\
+   8 
 \end{bmatrix}
 $$
 
