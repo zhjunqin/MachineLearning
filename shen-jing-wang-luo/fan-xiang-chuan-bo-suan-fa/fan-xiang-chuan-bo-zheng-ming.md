@@ -106,7 +106,7 @@ $$
 
 举例来说，如下图：
 
-![](/assets/network-bp-pic.png)
+
 
 当我们已经计算得到了第$$3$$层的误差向量$$\delta^{3}= \begin{bmatrix}
    \delta^3_{1} \\
