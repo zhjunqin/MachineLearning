@@ -37,6 +37,8 @@ $$
 #### Hadamard乘积
 
 Hadamard 乘积是按元素乘法的运算
+
+
 $$
 \begin{bmatrix}
    1 \\
@@ -52,6 +54,8 @@ $$
    8 \\
 \end{bmatrix}
 $$
+
+
 假设$$s$$和$$t$$是两个相同维度的向量，那么我们使用$$s \odot t $$来表示按元素的乘积。所以$$s \odot t $$的元素就是$$(s \odot t )_j=s_jt_j$$。
 
 #### 反向传播的四个基本方程
@@ -61,20 +65,14 @@ $$
 假定在$$l^{th}$$层的第$$j^{th}$$神经元上，对神经元的带权输入增加很小的变化$$\Delta z^l_j$$，这使得神经元的输出由$$\sigma(z^l_j)$$变成$$\sigma(z^l_j+\Delta z^l_j)$$，这个变化会向网络后的层进行传播，最终导致整个代价产生$$\frac{\partial C}{\partial z^l_j} \Delta z^l_j$$的改变。 假如$$\frac{\partial C}{\partial z^l_j}$$是一个很大的值（或正或负），那么可以通过选择与其相反的符号的$$\Delta z^l_j$$来降低代价。相反如果$$\frac{\partial C}{\partial z^l_j}$$是一个接近于$$0$$的值，这时候并不能通过调整输入$$z^l_j$$来改善多少代价。所以这里有个启发式的认识，$$\frac{\partial C}{\partial z^l_j}$$是神经元的误差度量。
 
 按照上面的描述，我们定义$$l^{th}$$层的第$$j^{th}$$个神经元的上的误差$$\delta^l_j$$为
+
+
 $$
 \delta^l_j=\frac{\partial C}{\partial z^l_j}
 $$
-我们使用$$\delta^l$$表示关联于$$l$$层的误差向量。
+
+
+我们使用$$\delta^l$$表示关联于$$l$$层的误差向量。![](/assets/network-delta-z.png)
 
 接下来我们介绍四个基本方程。
-
-
-
-
-
-
-
-
-
-
 
