@@ -79,16 +79,45 @@ $$
 
 
 这里我们将最后一个式子交换了两边的项，并用$$\delta^{l+1}_k$$代入。然后
+
+
 $$
 z^{l+1}_k=\displaystyle\sum_{j}w^{l+1}_{kj}a^l_j+b^{l+1}_k=\displaystyle\sum_{j}w^{l+1}_{kj}\sigma(z^{l}_j)+b^{l+1}_k
 $$
+
+
 做微分，我们得到
+
+
 $$
 \frac{\partial z^{l+1}_k}{\partial z^l_j}=w^{l+1}_{kj}\sigma'(z^{l}_j)
 $$
+
+
 代入上式，得到
+
+
 $$
 \delta^l_j=\displaystyle\sum_{k}w^{l+1}_{kj}\sigma'(z^{l}_j)\delta^{l+1}_k=(\displaystyle\sum_{k}w^{l+1}_{kj}\delta^{l+1}_k) \sigma'(z^{l}_j)
 $$
+
+
 将公式进行矩阵化，最后得到第一个公式。
+
+举例来说，如下图：
+
+![](/assets/network-bp-pic.png)当我们已经计算得到了第$$3$$层的误差向量$$\delta^{3}= \begin{bmatrix}
+   \delta^3_{1} \\
+   \delta^3_{2} \\
+\end{bmatrix}$$，这时计算第$$2$$层的误差向量$$\delta^2$$，我们先计算$$\delta^2_3$$，根据上面的公式可以得到
+$$
+\delta^2_3=(\displaystyle\sum_{k}w^{3}_{k3}\delta^3_k) \sigma'(z^{3}_3)=(w^{3}_{13}\delta^3_1+w^{3}_{23}\delta^3_2) \sigma'(z^{2}_3)=(\begin{bmatrix}
+   w^3_{13} \\
+   w^3_{23} \\
+\end{bmatrix}^T \cdot \begin{bmatrix}
+   \delta^3_{1} \\
+   \delta^3_{2} \\
+\end{bmatrix})\sigma'(z^{2}_3)
+$$
+也就是图中两条绿色的线所标识的权重与误差的乘积和。
 
