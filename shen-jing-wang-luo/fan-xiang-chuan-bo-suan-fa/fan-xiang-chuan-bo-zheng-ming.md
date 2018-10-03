@@ -70,9 +70,25 @@ $$
 
 根据该公式，我们可以首先根据第一个公式得到输出层的误差$$\delta^L$$，然后得到第$$(L-1)^{th}$$层的误差，如此一步步地方向传播完整个网络。
 
-证明：根据链式法则，我们可以将$$\delta^L_j= \frac{\partial C}{\partial z^L_j}$$写成：
+证明：根据链式法则，我们可以将$$\delta^l_j= \frac{\partial C}{\partial z^l_j}$$写成：
+
+
 $$
-\delta^L_j= \frac{\partial C}{\partial z^L_j}=\displaystyle\sum_{k}\frac{\partial C}{\partial z^{l+1}_{k}}\frac{\partial z^{l+1}_k}{\partial z^l_j}=\displaystyle\sum_{k}\frac{\partial z^{l+1}_k}{\partial z^l_j}\delta^{l+1}_k
+\delta^l_j= \frac{\partial C}{\partial z^l_j}=\displaystyle\sum_{k}\frac{\partial C}{\partial z^{l+1}_{k}}\frac{\partial z^{l+1}_k}{\partial z^l_j}=\displaystyle\sum_{k}\frac{\partial z^{l+1}_k}{\partial z^l_j}\delta^{l+1}_k
 $$
-这里我们将最后一个式子交换了两边的项，并用$$\delta^{l+1}_k$$代入。
+
+
+这里我们将最后一个式子交换了两边的项，并用$$\delta^{l+1}_k$$代入。然后
+$$
+z^{l+1}_k=\displaystyle\sum_{j}w^{l+1}_{kj}a^l_j+b^{l+1}_k=\displaystyle\sum_{j}w^{l+1}_{kj}\sigma(z^{l}_j)+b^{l+1}_k
+$$
+做微分，我们得到
+$$
+\frac{\partial z^{l+1}_k}{\partial z^l_j}=w^{l+1}_{kj}\sigma'(z^{l}_j)
+$$
+代入上式，得到
+$$
+\delta^l_j=\displaystyle\sum_{k}w^{l+1}_{kj}\sigma'(z^{l}_j)\delta^{l+1}_k=(\displaystyle\sum_{k}w^{l+1}_{kj}\delta^{l+1}_k) \sigma'(z^{l}_j)
+$$
+将公式进行矩阵化，最后得到第一个公式。
 
