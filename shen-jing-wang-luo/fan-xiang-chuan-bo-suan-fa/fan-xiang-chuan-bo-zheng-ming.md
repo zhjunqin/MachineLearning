@@ -171,7 +171,7 @@ $$
 
 举例来说：
 
-![](/assets/network-bp-w.png)
+
 
 上面图中，想要计算$$\frac{\partial C}{\partial w^3_{13}}$$，则$$\frac{\partial C}{\partial w^3_{13}}=a^2_3\delta^3_1$$。也可以理解成：
 
