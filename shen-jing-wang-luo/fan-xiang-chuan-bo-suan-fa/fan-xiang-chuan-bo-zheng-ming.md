@@ -127,7 +127,7 @@ $$
 
 也就是图中两条绿色的线所标识的权重与误差的乘积和。
 
-1. 代价函数关于网络中任意偏置的改变率：
+### 3. 代价函数关于网络中任意偏置的改变率
 
 
 $$
@@ -137,11 +137,11 @@ $$
 
 也就是误差$$\delta^l_j$$和$$\frac{\partial C}{\partial b^l_j}$$完全一致。
 
-证明：根据链式法则，其中$$z^l_j = \displaystyle\sum_{k}w$$
+证明：根据链式法则，其中$$z^l_j = \displaystyle\sum_{k}w^l_{jk} a^{l-1}_k + b^l_j$$，最终可以得到
 
 
 $$
-\frac{\partial C}{\partial b^l_j} = \frac{\partial C}{\partial z^l_{j}}\frac{\partial z^l_j}{\partial b^l_j}=\displaystyle\sum_{k}\frac{\partial z^{l+1}_k}{\partial z^l_j}\delta^{l+1}_k
+\frac{\partial C}{\partial b^l_j} = \frac{\partial C}{\partial z^l_{j}}\frac{\partial z^l_j}{\partial b^l_j}=\frac{\partial C}{\partial z^l_{j}}
 $$
 
 
