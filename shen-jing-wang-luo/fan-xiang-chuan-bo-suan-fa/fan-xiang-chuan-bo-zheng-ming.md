@@ -1,6 +1,6 @@
 下面介绍反向传播基于的四个方程。
 
-### 输出层误差的方程
+### 1. 输出层误差的方程
 
 第$$L$$层为输出层，该层得分误差向量$$\delta^L$$中每一个元素定义如下：
 
@@ -56,7 +56,7 @@ $$
 $$
 
 
-### 使用下一层的误差$$\delta^{l+1}$$来表示当前层误差$$\delta^l$$
+### 2. 使用下一层的误差$$\delta^{l+1}$$来表示当前层误差$$\delta^l$$
 
 特别的，
 
@@ -108,8 +108,6 @@ $$
 
 ![](/assets/network-bp-pic.png)
 
-
-
 当我们已经计算得到了第$$3$$层的误差向量$$\delta^{3}= \begin{bmatrix}
    \delta^3_{1} \\
    \delta^3_{2}
@@ -128,4 +126,22 @@ $$
 
 
 也就是图中两条绿色的线所标识的权重与误差的乘积和。
+
+1. 代价函数关于网络中任意偏置的改变率：
+
+
+$$
+\frac{\partial C}{\partial b^l_j}=\delta^l_j
+$$
+
+
+也就是误差$$\delta^l_j$$和$$\frac{\partial C}{\partial b^l_j}$$完全一致。
+
+证明：根据链式法则，其中$$z^l_j = \displaystyle\sum_{k}w$$
+
+
+$$
+\frac{\partial C}{\partial b^l_j} = \frac{\partial C}{\partial z^l_{j}}\frac{\partial z^l_j}{\partial b^l_j}=\displaystyle\sum_{k}\frac{\partial z^{l+1}_k}{\partial z^l_j}\delta^{l+1}_k
+$$
+
 
