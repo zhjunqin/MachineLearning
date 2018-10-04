@@ -145,3 +145,57 @@ $$
 $$
 
 
+用矩阵表示，可以表示成：
+
+
+$$
+\frac{\partial C}{\partial b^l}=\delta^l
+$$
+
+
+### 4. 代价函数关于任何一个权重的改变率
+
+
+$$
+\frac{\partial C}{\partial w^l_{jk}}=a^{l-1}_k\delta^l_j
+$$
+
+
+证明：根据链式法则，其中$$z^l_j = \displaystyle\sum_{k}w^l_{jk} a^{l-1}_k + b^l_j$$，最终可以得到
+
+
+$$
+\frac{\partial C}{\partial w^l_{jk}} = \frac{\partial C}{\partial z^l_{j}}\frac{\partial z^l_j}{\partial b^l_j}=\frac{\partial C}{\partial z^l_{j}} a^{l-1}_j=a^{l-1}_j\delta^l_j
+$$
+
+
+举例来说：
+
+![](/assets/network-bp-w.png)
+
+上面图中，想要计算$$\frac{\partial C}{\partial w^3_{13}}$$，则$$\frac{\partial C}{\partial w^3_{13}}=a^2_3\delta^3_1$$。也可以理解成：
+$$
+\frac{\partial C}{\partial w}=a_{in}\delta_{out}
+$$
+其中$$a_{in}$$是输入给权重$$w$$的神经元的激活值，$$\delta_{out}$$是输出自权重$$w$$的神经元的误差。
+
+用矩阵表示，可以表示成
+
+
+$$
+\frac{\partial C}{\partial w^l}=\begin{bmatrix}
+   \frac{\partial C}{\partial w^l_1} \\
+   \frac{\partial C}{\partial w^l_2} \\
+   \frac{\partial C}{\partial w^l_3}  \\
+     ... \\
+   \frac{\partial C}{\partial w^l_n} 
+\end{bmatrix}=\begin{bmatrix}
+   a^{l-1}\delta^l_1 \\
+   a^{l-1}\delta^l_2 \\
+   a^{l-1}\delta^l_3  \\
+     ... \\
+   a^{l-1}\delta^l_n 
+\end{bmatrix}
+$$
+其中$$a^{l-1}$$是向量。
+
