@@ -174,9 +174,13 @@ $$
 ![](/assets/network-bp-w.png)
 
 上面图中，想要计算$$\frac{\partial C}{\partial w^3_{13}}$$，则$$\frac{\partial C}{\partial w^3_{13}}=a^2_3\delta^3_1$$。也可以理解成：
+
+
 $$
 \frac{\partial C}{\partial w}=a_{in}\delta_{out}
 $$
+
+
 其中$$a_{in}$$是输入给权重$$w$$的神经元的激活值，$$\delta_{out}$$是输出自权重$$w$$的神经元的误差。
 
 用矩阵表示，可以表示成
@@ -197,5 +201,7 @@ $$
    a^{l-1}\delta^l_n 
 \end{bmatrix}
 $$
+
+
 其中$$a^{l-1}$$是向量。
 

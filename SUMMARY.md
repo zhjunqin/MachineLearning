@@ -37,6 +37,7 @@
   * [神经网络的矩阵表达](shen-jing-wang-luo/shen-jing-wang-luo-de-ju-zhen-biao-da.md)
   * [反向传播算法](shen-jing-wang-luo/fan-xiang-chuan-bo-suan-fa.md)
     * [算法证明](shen-jing-wang-luo/fan-xiang-chuan-bo-suan-fa/fan-xiang-chuan-bo-zheng-ming.md)
+    * [算法代码](shen-jing-wang-luo/fan-xiang-chuan-bo-suan-fa/suan-fa-dai-ma.md)
 * [数学基础](shu-xue-ji-chu.md)
   * [线性代数](shu-xue-ji-chu/xian-xing-dai-shu.md)
     * [特征值和特征向量](shu-xue-ji-chu/xian-xing-dai-shu/te-zheng-zhi-he-te-zheng-xiang-liang.md)
