@@ -201,11 +201,21 @@ $$
    a^{l-1}_1 \delta^l_n & a^{l-1}_2 \delta^l_n & a^{l-1}_3 \delta^l_n & ... & a^{l-1}_m \delta^l_n
 \end{bmatrix}
 $$
+
+
 于是得到：
+
+
 $$
-\frac{\partial C}{\partial w^l}=[\delta^l_1, \delta^l_2, ..., \delta^l_n] \cdot  [a^{l-1}_1, a^{l-1}_2, ..., a^{l-1}_m]^T 
+\frac{\partial C}{\partial w^l}= \begin{bmatrix}
+   \delta_1^{l} \\
+   \delta_2^{l} \\
+   \delta_3^{l} \\
+     ... \\
+   \delta_n^{l} 
+\end{bmatrix}\cdot  [a^{l-1}_1, a^{l-1}_2, ..., a^{l-1}_m]
 $$
 
 
-其中$$[\delta^l_1, \delta^l_2, ..., \delta^l_n]$$是$$n * 1$$，$$[a^{l-1}_1, a^{l-1}_2, ..., a^{l-1}_m]^T$$是$$1 * m$$，最终得到$$n*m$$的权重矩阵。
+其中$$[\delta^l_1, \delta^l_2, ..., \delta^l_n]$$是$$n * 1$$，$$[a^{l-1}_1, a^{l-1}_2, ..., a^{l-1}_m]$$是$$1 * m$$，最终得到$$n*m$$的权重矩阵。
 
