@@ -118,6 +118,8 @@ def vectorized_result(j):
 
 然后是
 
+    #!/usr/bin/env python
+    # -*- coding: utf-8 -*-
     """
     network.py
     ~~~~~~~~~~
@@ -149,16 +151,22 @@ def vectorized_result(j):
             layer is assumed to be an input layer, and by convention we
             won't set any biases for those neurons, since biases are only
             ever used in computing the outputs from later layers."""
-            # sizes 是一个 list，表示的是神经网络在各个层的神经元个数
-            # 举例来说
+            # size 是一个 list ，该长度表示了神经网络的总层数
+            # list 里面每一个元素的值表示的是神经元的个数
+            # 举例来说，输入 size=[784, 30, 10]，则神经网络层数有3层
+            # 第一层有 784 个神经元，第二层有 30 个，第三层有 10 个
             self.num_layers = len(sizes)
             self.sizes = sizes
+            # biases 是一个 list，每个元素是 (n * 1) 的向量，表示的神经网络对应层的偏置个数
+            # 第一层输入，所以偏置从第二层开始
+            # 举例来说，输入 size=[784, 30, 10]
+            # 则，biases list 有两个元素，第一个元素是 (30 * 1 )，第二个元素是 (10 * 1)
             self.biases = [np.random.randn(y, 1) for y in sizes[1:]]
-
-            self.weights = [np.random.randn(y, x)
-                            for x, y in zip(sizes[:-1], sizes[1:])]
-            for i in self.weights:
-                print(i.shape)
+            # weights 是一个list， 每个元素是 (n * m)的矩阵，
+            # 其中 n 是下一层网络的神经元个数，m 是上一层网络的神经元个数
+            # 举例来说，输入 size=[784, 30, 10]
+            # 则， weights 有两个元素，第一个元素是 (30 * 784)的矩阵，第二个元素是 (10 * 30)的矩阵
+            self.weights = [np.random.randn(y, x) for x, y in zip(sizes[:-1], sizes[1:])]
 
         def feedforward(self, a):
             """Return the output of the network if ``a`` is input."""
@@ -166,8 +174,7 @@ def vectorized_result(j):
                 a = sigmoid(np.dot(w, a)+b)
             return a
 
-        def SGD(self, training_data, epochs, mini_batch_size, eta,
-                test_data=None):
+        def SGD(self, training_data, epochs, mini_batch_size, eta, test_data=None):
             """Train the neural network using mini-batch stochastic
             gradient descent.  The ``training_data`` is a list of tuples
             ``(x, y)`` representing the training inputs and the desired
@@ -180,14 +187,12 @@ def vectorized_result(j):
             n = len(training_data)
             for j in xrange(epochs):
                 random.shuffle(training_data)
-                mini_batches = [
-                    training_data[k:k+mini_batch_size]
-                    for k in xrange(0, n, mini_batch_size)]
+                mini_batches = [training_data[k:k+mini_batch_size] 
+                                for k in xrange(0, n, mini_batch_size)]
                 for mini_batch in mini_batches:
                     self.update_mini_batch(mini_batch, eta)
                 if test_data:
-                    print "Epoch {0}: {1} / {2}".format(
-                        j, self.evaluate(test_data), n_test)
+                    print "Epoch {0}: {1} / {2}".format(j, self.evaluate(test_data), n_test)
                 else:
                     print "Epoch {0} complete".format(j)
 
@@ -196,16 +201,18 @@ def vectorized_result(j):
             gradient descent using backpropagation to a single mini batch.
             The ``mini_batch`` is a list of tuples ``(x, y)``, and ``eta``
             is the learning rate."""
+            # 初始化梯度值矩阵为 0
             nabla_b = [np.zeros(b.shape) for b in self.biases]
             nabla_w = [np.zeros(w.shape) for w in self.weights]
             for x, y in mini_batch:
+                # 迭代计算梯度矩阵和
+                # 获取当前样本通过反向传播算法得到的 delta 梯度值
                 delta_nabla_b, delta_nabla_w = self.backprop(x, y)
                 nabla_b = [nb+dnb for nb, dnb in zip(nabla_b, delta_nabla_b)]
                 nabla_w = [nw+dnw for nw, dnw in zip(nabla_w, delta_nabla_w)]
-            self.weights = [w-(eta/len(mini_batch))*nw
-                            for w, nw in zip(self.weights, nabla_w)]
-            self.biases = [b-(eta/len(mini_batch))*nb
-                           for b, nb in zip(self.biases, nabla_b)]
+            # 把梯度值取平均，并乘以系数 eta，然后更新权重和偏置矩阵
+            self.weights = [w-(eta/len(mini_batch))*nw for w, nw in zip(self.weights, nabla_w)]
+            self.biases = [b-(eta/len(mini_batch))*nb for b, nb in zip(self.biases, nabla_b)]
 
         def backprop(self, x, y):
             """Return a tuple ``(nabla_b, nabla_w)`` representing the
@@ -218,15 +225,22 @@ def vectorized_result(j):
             activation = x
             activations = [x] # list to store all the activations, layer by layer
             zs = [] # list to store all the z vectors, layer by layer
+            # 通过前向传播，计算神经网络所有层的线性输入值和激活输出
             for b, w in zip(self.biases, self.weights):
                 z = np.dot(w, activation)+b
                 zs.append(z)
                 activation = sigmoid(z)
                 activations.append(activation)
             # backward pass
-            delta = self.cost_derivative(activations[-1], y) * \
-                sigmoid_prime(zs[-1])
+            # 计算最后一层的输出误差
+            # cost_derivative 是二次代价函数的导数
+            # sigmoid_prime 是 sigmode 激活函数的导数
+            # * 运算是按照每个元素的 Hadamard 乘积
+            # 结果的 delta 是一个向量，大小为 (最后一层的神经元个数, 1)
+            delta = self.cost_derivative(activations[-1], y) * sigmoid_prime(zs[-1])
+            # 偏置的改变率和偏差值相同
             nabla_b[-1] = delta
+            # 权重的改变率是下一层的偏差和前一层的激活值向量內积
             nabla_w[-1] = np.dot(delta, activations[-2].transpose())
             # Note that the variable l in the loop below is used a little
             # differently to the notation in Chapter 2 of the book.  Here,
@@ -237,6 +251,8 @@ def vectorized_result(j):
             for l in xrange(2, self.num_layers):
                 z = zs[-l]
                 sp = sigmoid_prime(z)
+                # 计算第 l-1 层的误差向量
+                # 权重矩阵和误差的矩阵乘积
                 delta = np.dot(self.weights[-l+1].transpose(), delta) * sp
                 nabla_b[-l] = delta
                 nabla_w[-l] = np.dot(delta, activations[-l-1].transpose())
@@ -247,13 +263,15 @@ def vectorized_result(j):
             network outputs the correct result. Note that the neural
             network's output is assumed to be the index of whichever
             neuron in the final layer has the highest activation."""
-            test_results = [(np.argmax(self.feedforward(x)), y)
-                            for (x, y) in test_data]
+            # np.argmax 获取到神经网络输出的向量中最大值的 index，也就是 0-9
+            test_results = [(np.argmax(self.feedforward(x)), y) for (x, y) in test_data]
+            # 计算所有输出和测试数据相同的样本数量
             return sum(int(x == y) for (x, y) in test_results)
 
         def cost_derivative(self, output_activations, y):
             """Return the vector of partial derivatives \partial C_x /
             \partial a for the output activations."""
+            # 二次代价函数的导数
             return (output_activations-y)
 
     #### Miscellaneous functions
@@ -264,6 +282,7 @@ def vectorized_result(j):
     def sigmoid_prime(z):
         """Derivative of the sigmoid function."""
         return sigmoid(z)*(1-sigmoid(z))
+
 
 
 

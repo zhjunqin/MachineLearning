@@ -165,15 +165,13 @@ $$
 
 
 $$
-\frac{\partial C}{\partial w^l_{jk}} = \frac{\partial C}{\partial z^l_{j}}\frac{\partial z^l_j}{\partial b^l_j}=\frac{\partial C}{\partial z^l_{j}} a^{l-1}_j=a^{l-1}_j\delta^l_j
+\frac{\partial C}{\partial w^l_{jk}} = \frac{\partial C}{\partial z^l_{j}}\frac{\partial z^l_j}{\partial b^l_j}=\frac{\partial C}{\partial z^l_{j}} a^{l-1}_j=a^{l-1}_k\delta^l_j
 $$
 
 
 举例来说：
 
 ![](/assets/network-bp-w.png)
-
-
 
 上面图中，想要计算$$\frac{\partial C}{\partial w^3_{13}}$$，则$$\frac{\partial C}{\partial w^3_{13}}=a^2_3\delta^3_1$$。也可以理解成：
 
