@@ -183,25 +183,29 @@ $$
 
 其中$$a_{in}$$是输入给权重$$w$$的神经元的激活值，$$\delta_{out}$$是输出自权重$$w$$的神经元的误差。
 
-用矩阵表示，可以表示成
+用矩阵表示，可以表示成（其中第$$(l-1)^{th}$$层神经元有$$m$$个，第$$l^{th}$$层神经元有$$n$$个）
 
 
 $$
-\frac{\partial C}{\partial w^l}=\begin{bmatrix}
-   \frac{\partial C}{\partial w^l_1} \\
-   \frac{\partial C}{\partial w^l_2} \\
-   \frac{\partial C}{\partial w^l_3}  \\
-     ... \\
-   \frac{\partial C}{\partial w^l_n} 
+\frac{\partial C}{\partial w^l} = \partial C/\partial \begin{bmatrix}
+   w^l_{11} & w^l_{12} & w^l_{13} & ... & w^l_{1m} \\
+   w^l_{21} & w^l_{22} & w^l_{23} & ... & w^l_{1m} \\
+   w^l_{31} & w^l_{12} & w^l_{13} & ... & w^l_{1m} \\
+                                 ... \\
+   w^l_{n1} & w^l_{n2} & w^l_{n3} & ... & w^l_{nm} 
 \end{bmatrix}=\begin{bmatrix}
-   a^{l-1}\delta^l_1 \\
-   a^{l-1}\delta^l_2 \\
-   a^{l-1}\delta^l_3  \\
-     ... \\
-   a^{l-1}\delta^l_n 
+   a^{l-1}_1 \delta^l_1 & a^{l-1}_2 \delta^l_1 & a^{l-1}_3 \delta^l_1 & ... & a^{l-1}_m \delta^l_1 \\
+   a^{l-1}_1 \delta^l_2 & a^{l-1}_2 \delta^l_2 & a^{l-1}_3 \delta^l_2 & ... & a^{l-1}_m \delta^l_2 \\
+   a^{l-1}_1 \delta^l_3 & a^{l-1}_2 \delta^l_3 & a^{l-1}_3 \delta^l_3 & ... & a^{l-1}_m \delta^l_3 \\
+                                 ... \\
+   a^{l-1}_1 \delta^l_n & a^{l-1}_2 \delta^l_n & a^{l-1}_3 \delta^l_n & ... & a^{l-1}_m \delta^l_n
 \end{bmatrix}
 $$
+于是得到：
+$$
+\frac{\partial C}{\partial w^l}=[\delta^l_1, \delta^l_2, ..., \delta^l_n] \cdot  [a^{l-1}_1, a^{l-1}_2, ..., a^{l-1}_m]^T 
+$$
 
 
-其中$$a^{l-1}$$是向量。
+其中$$[\delta^l_1, \delta^l_2, ..., \delta^l_n]$$是$$n * 1$$，$$[a^{l-1}_1, a^{l-1}_2, ..., a^{l-1}_m]^T$$是$$1 * m$$，最终得到$$n*m$$的权重矩阵。
 

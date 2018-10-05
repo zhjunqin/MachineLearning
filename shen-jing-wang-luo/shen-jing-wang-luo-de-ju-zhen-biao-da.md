@@ -9,15 +9,19 @@
 **偏置**：$$b_j^l$$表示在$$l^{th}$$层的第$$j^{th}$$个神经元的偏置。
 
 **激活值的输入**：$$z^l_j$$表示在第$$l^{th}$$的第$$j^{th}$$神经元激活值的输入。也就是
+
+
 $$
 z^l_j=\displaystyle\sum_{k}w^l_{jk} a^{l-1}_k + b^l_j
 $$
+
+
 **激活值**：$$a_j^l$$表示在$$l^{th}$$层的第$$j^{th}$$个神经元的激活值。也就是
+
+
 $$
 a^l_j=\sigma(z^l_j)=\sigma(\displaystyle\sum_{k}w^l_{jk} a^{l-1}_k + b^l_j)
 $$
-
-
 
 
 ![](/assets/network-definition.png)
