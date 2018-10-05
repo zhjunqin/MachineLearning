@@ -12,6 +12,8 @@
 
 3. **梯度下降**：对于每一个$$l=L-1, L-2, ..., 2$$根据$$w^l\to w^l - \frac{\eta}{m}\displaystyle\sum_{x}\delta^{x,l} (a^{x,l-1})^T$$和$$b^l\to b^l - \frac{\eta}{m}\displaystyle\sum_{x}\delta^{x,l} $$更新权重和偏置。
 
+#### 二次代价函数及sigmoid函数
+
 如果使用二次代价函数，则每个训练样本的成本函数是$$C_x=\frac{1}{2}||y(x)-a^L(x)||^2$$，则$$\nabla_a C_x = y(x)-a(x)$$
 
 sigmoid 激活函数$$\sigma(z) = \frac{1}{1+e^{-z}}$$的导数$$\sigma'(z) = \frac{1}{1+e^{-z}}(1-\frac{1}{1+e^{-z}})=\sigma(z) (1-\sigma(z))$$
