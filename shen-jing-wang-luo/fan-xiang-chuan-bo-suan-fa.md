@@ -64,6 +64,10 @@ $$
 
 假定在$$l^{th}$$层的第$$j^{th}$$神经元上，对神经元的带权输入增加很小的变化$$\Delta z^l_j$$，这使得神经元的输出由$$\sigma(z^l_j)$$变成$$\sigma(z^l_j+\Delta z^l_j)$$，这个变化会向网络后的层进行传播，最终导致整个代价产生$$\frac{\partial C}{\partial z^l_j} \Delta z^l_j$$的改变。 假如$$\frac{\partial C}{\partial z^l_j}$$是一个很大的值（或正或负），那么可以通过选择与其相反的符号的$$\Delta z^l_j$$来降低代价。相反如果$$\frac{\partial C}{\partial z^l_j}$$是一个接近于$$0$$的值，这时候并不能通过调整输入$$z^l_j$$来改善多少代价。所以这里有个启发式的认识，$$\frac{\partial C}{\partial z^l_j}$$是神经元的误差度量。
 
+![](/assets/network-delta-z.png)
+
+
+
 按照上面的描述，我们定义$$l^{th}$$层的第$$j^{th}$$个神经元的上的误差$$\delta^l_j$$为
 
 
@@ -73,8 +77,6 @@ $$
 
 
 我们使用$$\delta^l$$表示关联于$$l$$层的误差向量。
-
-
 
 接下来我们介绍四个基本方程。
 
