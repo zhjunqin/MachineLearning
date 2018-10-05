@@ -66,8 +66,6 @@ $$
 
 ![](/assets/network-delta-z.png)
 
-
-
 按照上面的描述，我们定义$$l^{th}$$层的第$$j^{th}$$个神经元的上的误差$$\delta^l_j$$为
 
 
