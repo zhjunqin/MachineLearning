@@ -116,8 +116,6 @@ def vectorized_result(j):
     return e
 ```
 
-然后是
-
     #!/usr/bin/env python
     # -*- coding: utf-8 -*-
     """
@@ -282,7 +280,6 @@ def vectorized_result(j):
     def sigmoid_prime(z):
         """Derivative of the sigmoid function."""
         return sigmoid(z)*(1-sigmoid(z))
-
 
 
 
