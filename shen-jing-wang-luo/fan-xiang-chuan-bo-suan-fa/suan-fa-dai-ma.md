@@ -281,5 +281,27 @@ def vectorized_result(j):
         """Derivative of the sigmoid function."""
         return sigmoid(z)*(1-sigmoid(z))
 
+执行算法：
+
+```
+import mnist_loader
+training_data, validation_data, test_data = mnist_loader.load_data_wrapper()
+import network
+net = network.Network([784, 30, 10])
+from datetime import datetime as datetime
+print(datetime.now())
+net.SGD(training_data, 30, 10, 3.0, test_data=test_data);
+print(datetime.now())
+```
+
+输出：
+
+```
+Epoch 0: 9040 / 10000
+Epoch 1: 9156 / 10000
+Epoch 2: 9256 / 10000
+...
+```
+
 
 
