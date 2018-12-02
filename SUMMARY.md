@@ -52,6 +52,7 @@
     * [梯度下降法](shu-xue-ji-chu/wei-ji-fen/ti-du-xia-jiang-fa.md)
   * [信息论](shu-xue-ji-chu/xin-xi-lun.md)
     * [熵](shu-xue-ji-chu/xin-xi-lun/shang.md)
+    * [相对熵和交叉熵](shu-xue-ji-chu/xin-xi-lun/xiang-dui-shang-he-jiao-cha-shang.md)
     * [条件熵](shu-xue-ji-chu/xin-xi-lun/tiao-jian-shang.md)
     * [互信息](shu-xue-ji-chu/xin-xi-lun/hu-xin-xi.md)
 

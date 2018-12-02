@@ -20,7 +20,7 @@
             self.weights = [w-(eta/len(mini_batch))*nw for w, nw in zip(self.weights, nabla_w)]
             self.biases = [b-(eta/len(mini_batch))*nb for b, nb in zip(self.biases, nabla_b)]
 
-这里介绍一下如何通过矩阵的方式直接计算一个 mini batch 的梯度值向量。代码来源：https://github.com/hindSellouk/Matrix-Based-Backpropagation/blob/master/Network1.py
+这里介绍一下如何通过矩阵的方式直接计算一个 mini batch 的梯度值向量。代码来源：[https://github.com/hindSellouk/Matrix-Based-Backpropagation/blob/master/Network1.py](https://github.com/hindSellouk/Matrix-Based-Backpropagation/blob/master/Network1.py)
 
 ```
 import random
@@ -161,7 +161,6 @@ Epoch 0: 9061 / 10000
 Epoch 1: 9177 / 10000
 --- 3.00676393509 seconds elapsed---
 Epoch 2: 9261 / 10000
-
 ```
 
 不基于矩阵运算的算法一个 Epoch 大约为 11 秒:
