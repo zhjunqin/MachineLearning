@@ -39,6 +39,10 @@
     * [算法证明](shen-jing-wang-luo/fan-xiang-chuan-bo-suan-fa/fan-xiang-chuan-bo-zheng-ming.md)
     * [算法代码](shen-jing-wang-luo/fan-xiang-chuan-bo-suan-fa/suan-fa-dai-ma.md)
     * [基于矩阵的计算](shen-jing-wang-luo/fan-xiang-chuan-bo-suan-fa/ji-yu-ju-zhen-de-bp-ji-suan.md)
+  * [改进神经网络的学习方法](shen-jing-wang-luo/gai-jin-shen-jing-wang-luo-de-xue-xi-fang-fa.md)
+    * [交叉熵代价函数](shen-jing-wang-luo/gai-jin-shen-jing-wang-luo-de-xue-xi-fang-fa/jiao-cha-shang-dai-jia-han-shu.md)
+    * [softmax](shen-jing-wang-luo/gai-jin-shen-jing-wang-luo-de-xue-xi-fang-fa/softmax.md)
+    * regularization
 * [数学基础](shu-xue-ji-chu.md)
   * [线性代数](shu-xue-ji-chu/xian-xing-dai-shu.md)
     * [特征值和特征向量](shu-xue-ji-chu/xian-xing-dai-shu/te-zheng-zhi-he-te-zheng-xiang-liang.md)

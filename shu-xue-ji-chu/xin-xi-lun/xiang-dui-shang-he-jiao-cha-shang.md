@@ -27,13 +27,19 @@ $$
 
 
 特别地，当随机变量只取两个值时，$$P(X=1)=p$$，$$P(X=0)=1-p$$，$$0\leqslant p \leqslant 1$$，则
+
+
 $$
 H(p,q)=-\displaystyle\sum_{x\in \mathcal{X}}p(x)\mathrm{log}q(x)
 $$
 
+
+
 $$
 = -[P_p(x=1)\mathrm{log}P_q(x=1) + P_p(x=0)\mathrm{log}P_q(x=0)]
 $$
+
+
 
 $$
 = -[p\mathrm{log}q + (1-p)\mathrm{log}q]
