@@ -42,7 +42,7 @@
   * [改进神经网络的学习方法](shen-jing-wang-luo/gai-jin-shen-jing-wang-luo-de-xue-xi-fang-fa.md)
     * [交叉熵代价函数](shen-jing-wang-luo/gai-jin-shen-jing-wang-luo-de-xue-xi-fang-fa/jiao-cha-shang-dai-jia-han-shu.md)
     * [softmax](shen-jing-wang-luo/gai-jin-shen-jing-wang-luo-de-xue-xi-fang-fa/softmax.md)
-    * regularization
+    * [regularization](shen-jing-wang-luo/gai-jin-shen-jing-wang-luo-de-xue-xi-fang-fa/regularization.md)
 * [数学基础](shu-xue-ji-chu.md)
   * [线性代数](shu-xue-ji-chu/xian-xing-dai-shu.md)
     * [特征值和特征向量](shu-xue-ji-chu/xian-xing-dai-shu/te-zheng-zhi-he-te-zheng-xiang-liang.md)

@@ -40,13 +40,19 @@ $$
 
 交叉熵有一个比代价函数更好的特性就是它避免了学习速度下降的问题。  
 我们来计算交叉熵函数的偏导数，将$$a = \sigma(z)$$ 代入上式，并求偏导数
+
+
 $$
 \frac{\partial C}{\partial w_j}= -\frac{1}{n}\displaystyle\sum_{x}\big(\frac{y}{\sigma(z)}-\frac{1-y}{1-\sigma(z)}\big)\frac{\partial \sigma(z)}{\partial w_j}
 $$
 
+
+
 $$
 =-\frac{1}{n}\displaystyle\sum_{x}\big(\frac{y}{\sigma(z)}-\frac{1-y}{1-\sigma(z)}\big)\sigma'(z)x_j
 $$
+
+
 
 $$
 =-\frac{1}{n}\displaystyle\sum_{x}\frac{\sigma(z)-y}{\sigma(z)(1-\sigma(z))}\sigma'(z)x_j
@@ -54,24 +60,34 @@ $$
 
 
 其中$$\sigma(z)=\frac{1}{1+e^{-x}}$$，计算可得$$\sigma'(z)=\sigma(z)(1-\sigma(z))$$，于是得到
+
+
 $$
 \frac{\partial C}{\partial w_j}=-\frac{1}{n}\displaystyle\sum_{x}(\sigma(z)-y)x_j
 $$
+
+
 这里权重的学习速度受到$$\sigma(z)-y$$的影响，也就是输出中的误差的控制。更大的误差会有更大的学习速度。
 
 同样的，我们可以得到关于偏置的偏导数
+
+
 $$
 \frac{\partial C}{\partial b}=-\frac{1}{n}\displaystyle\sum_{x}(\sigma(z)-y)
 $$
+
+
 **交叉熵函数扩展到多神经元的多层神经网络上**
 
 假设$$y=y1,y2,...$$是输出神经元上的目标值，而$$a^L_1,a^L_2,...$$时实际的输出值，那么我们定义交叉熵如下
+
+
 $$
 C= -\frac{1}{n}\displaystyle\sum_{x}\displaystyle\sum_{y}[y_j\mathrm{ln}a^L_j+(1-y_j)\mathrm{ln}(1-a^L_j))]
 $$
+
+
 **那么我们应该在什么时候用交叉熵来替换二次代价函数？**
 
 实际上，如果输出神经元是S型时，交叉熵函数一般都是更好的选择。为什么？考虑一下我们初始化网络的权重和偏置时，通常使用某种随机方法。可能会发生这样的情况，这些初始选择会对某些训练输入的误差相当明显，比如说，目标输出是1，而实际值是0，或者完全反过来。如果使用二次代价函数，那么就会导致学习速度下降。
-
-
 
