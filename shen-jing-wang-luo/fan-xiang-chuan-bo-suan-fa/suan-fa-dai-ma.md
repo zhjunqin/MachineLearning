@@ -214,10 +214,15 @@ def vectorized_result(j):
             self.biases = [b-(eta/len(mini_batch))*nb for b, nb in zip(self.biases, nabla_b)]
 
         def backprop(self, x, y):
-            """Return a tuple ``(nabla_b, nabla_w)`` representing the
+            """
+            返回一个 tuple，里面包含 (nabla_b, nabla_w)
+            其中 nabla_b 是一个 list，每一个元素又是一个 arrays，包含的是网络中每一个 Layer 的 b 梯度值
+            其中 nabla_w 是一个 list，每一个元素又是一个 arrays，包含的是网络中每一个 Layer 的 w 梯度值
+            Return a tuple ``(nabla_b, nabla_w)`` representing the
             gradient for the cost function C_x.  ``nabla_b`` and
             ``nabla_w`` are layer-by-layer lists of numpy arrays, similar
-            to ``self.biases`` and ``self.weights``."""
+            to ``self.biases`` and ``self.weights``.
+            """
             nabla_b = [np.zeros(b.shape) for b in self.biases]
             nabla_w = [np.zeros(w.shape) for w in self.weights]
             # feedforward
