@@ -206,6 +206,7 @@ def vectorized_result(j):
                 # 迭代计算梯度矩阵和
                 # 获取当前样本通过反向传播算法得到的 delta 梯度值
                 delta_nabla_b, delta_nabla_w = self.backprop(x, y)
+                # 把 mini_batch 里面每个数据算出来的梯度做加和，后面再取平均
                 nabla_b = [nb+dnb for nb, dnb in zip(nabla_b, delta_nabla_b)]
                 nabla_w = [nw+dnw for nw, dnw in zip(nabla_w, delta_nabla_w)]
             # 把梯度值取平均，并乘以系数 eta，然后更新权重和偏置矩阵
