@@ -33,38 +33,74 @@ $$
 其中$$C_0$$就是原始的代价函数。
 
 计算对网络中所有权重和偏置的偏导数
+
+
 $$
 \frac{\partial C}{\partial w }=\frac{\partial C_0}{\partial w}+\frac{\lambda}{n} w
 $$
 
+
+
 $$
 \frac{\partial C}{\partial b }=\frac{\partial C_0}{\partial b}
 $$
+
+
 在反向传播中，梯度下降的偏置学习规则不会发生变化，权重的学习规则发生了变化。
+
+
 $$
 b \rightarrow b - \eta \frac{\partial C_0}{\partial b}
 $$
+
+
 
 $$
 w \rightarrow w - \eta \frac{\partial C_0}{\partial w} -\eta \frac{\lambda}{n} w
 $$
 
+
+
 $$
-= (1- \eta \frac{\lambda}{n} )w - \eta \frac{\partial C_0}{\partial w} 
+= (1- \eta \frac{\lambda}{n} )w - \eta \frac{\partial C_0}{\partial w}
 $$
+
+
 这个和通常的梯度下降学习规则相同，除了通过一个因子$$ (1- \eta \frac{\lambda}{n} )$$重新调整了权重，这种调整有时候被称为权重衰减，因为它使权重变小。
 
 如果使用平均$$m$$个训练样本的小批量的数据来估计权重，则为了随机梯度下降的规范化学习规则就变成了
-$$
-w \rightarrow (1- \eta \frac{\lambda}{n} )w -\frac{ \eta}{m} \displaystyle\sum_{x} \frac{\partial C_x}{\partial w} 
-$$
+
 
 $$
-b \rightarrow b - \frac{ \eta}{m} \displaystyle\sum_{x} \frac{\partial C_x}{\partial b} 
+w \rightarrow (1- \eta \frac{\lambda}{n} )w -\frac{ \eta}{m} \displaystyle\sum_{x} \frac{\partial C_x}{\partial w}
 $$
+
+
+
+$$
+b \rightarrow b - \frac{ \eta}{m} \displaystyle\sum_{x} \frac{\partial C_x}{\partial b}
+$$
+
+
 其中后一项是在训练样本的小批量数据上进行的。
 
-L1 规范化
+#### L1 规范化
 
+这个方法是在非规范化的代价函数上加一个权重绝对值的和：
+$$
+C= C_0 + \frac{\lambda}{n} \displaystyle\sum_{w} |w|
+$$
+凭直觉的看，这个和L2规范化相似，惩罚大的权重，倾向于让网络优先选择小的权重，当然，L1规范化和L2规范化并不相同，所以我们不应该期望从L1规范化得到完全相同的行为，让我们试着理解使用L1规范化训练的网络和L2规范化训练的网络所不同的行为。
 
+求代价函数的偏导数，我们得到
+$$
+\frac{\partial C}{\partial w }=\frac{\partial C_0}{\partial w}+\frac{\lambda}{n} \mathrm{sign}(w)
+$$
+其中$$\mathrm{sign}(w)$$就是$$w$$的正负号，即$$w$$为正时为$$+1$$，为负数时为$$-1$$，得到随机梯队下降的学习规则
+$$
+w \rightarrow  w - \eta \frac{\lambda}{n} \mathrm{sign}(w)  -\frac{ \eta}{m} \displaystyle\sum_{x} \frac{\partial C_x}{\partial w}
+$$
+对比L2的更新规则可以发现，两者权重缩小的方式不同。在L1规范化中，权重通过一个常量向$$0$$进行缩小，在L2规范化中，权重通过一个和$$w$$成比例的量进行缩小。所以当一个特定的权重绝对值$$|w|$$很大时，L1规范化的权重缩小的要比L2规范化小的多。相反，当yi个特定的权重绝对值$$|w|$$很小时，L1规范化的权重缩小得要比L2规范化大得多。最终的结果是：L1规范化倾向于聚集网络的权重在相对少量的高重要度连接上，而其他权重就会被驱使向$$0$$接近。
+
+在$$w=0$$时，偏导数$$\frac{\partial C}{\partial w }$$未定义，原因在于函数$$|w|$$在$$0$$时，是一个直角，我们约定这时$$\frac{\partial C}{\partial w }=0$$。
 
