@@ -82,6 +82,8 @@ $$
 $$
 C=-\displaystyle\sum_{k}y_k \mathrm{log}a_k
 $$
+
+
 其中$$a_k$$为第$$k$$个神经元的输出值，$$y_k$$表示第$$k$$个神经元的真实值，取值为$$0$$或$$1$$。
 
 这个代价的简单含义是：只有一个神经元对应了该样本的正确分类，若这个神经元的输出概率越高，则其产出的代价越小，反之则代价越高。
@@ -99,29 +101,43 @@ $$
 = \frac{\partial C }{\partial z_j^L}\cdot \frac{\partial \displaystyle\sum_{k}(w_{jk}^L a_k^{L-1}) + b_j^L }{\partial b_j^L} = \frac{\partial C }{\partial z_j^L}
 $$
 
+
+
 $$
 = \frac{\partial}{\partial z_j^L}( -\displaystyle\sum_{k}y_k \mathrm{log}a_k^L )
 $$
+
+
 
 $$
 =-\displaystyle\sum_{k}y_k \cdot \frac{1 }{a_k^L} \cdot \frac{\partial a_k^L}{\partial z_j^L}
 $$
 
+
+
 $$
 =-y_j \cdot \frac{1 }{a_j^L} \cdot \frac{\partial a_j^L}{\partial z_j^L}-\displaystyle\sum_{k\not=j}y_k \cdot \frac{1 }{a_k^L} \cdot \frac{\partial a_k^L}{\partial z_j^L}
 $$
+
+
 
 $$
 =-y_j \cdot \frac{1 }{a_j^L} \cdot a_j^L (1-a_j^L)-\displaystyle\sum_{k\not=j}y_k \cdot \frac{1 }{a_k^L} \cdot -a_j^L a_k^L
 $$
 
+
+
 $$
 =-y_j + y_j a_j^L +\displaystyle\sum_{k\not=j}y_k \cdot  a_j^L
 $$
 
+
+
 $$
 =a_j^L-y_j
 $$
+
+
 同样可得：
 
 
@@ -132,5 +148,5 @@ $$
 
 因此可以确保不会遇到学习缓慢的问题。事实上把一个具有对数似然代价的柔性最大值输出层，看作与一个具有交叉熵代价函数的S型输出层非常相似。在很多应用场景中，这两种方式的效果都不错。
 
-参考：https://blog.csdn.net/niuniuyuh/article/details/61926561
+参考：[https://blog.csdn.net/niuniuyuh/article/details/61926561](https://blog.csdn.net/niuniuyuh/article/details/61926561)
 
