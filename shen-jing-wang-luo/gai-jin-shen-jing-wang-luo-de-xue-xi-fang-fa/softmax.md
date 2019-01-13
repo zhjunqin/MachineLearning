@@ -116,19 +116,19 @@ $$
 
 
 $$
-=-y_j \cdot \frac{1 }{a_j^L} \cdot \frac{\partial a_j^L}{\partial z_j^L}-\displaystyle\sum_{k\not=j}y_k \cdot \frac{1 }{a_k^L} \cdot \frac{\partial a_k^L}{\partial z_j^L}
+=-y_j \cdot \frac{1 }{a_j^L} \cdot \frac{\partial a_j^L}{\partial z_j^L}-\displaystyle\sum_{k \neq j}y_k \cdot \frac{1 }{a_k^L} \cdot \frac{\partial a_k^L}{\partial z_j^L}
 $$
 
 
 
 $$
-=-y_j \cdot \frac{1 }{a_j^L} \cdot a_j^L (1-a_j^L)-\displaystyle\sum_{k\not=j}y_k \cdot \frac{1 }{a_k^L} \cdot -a_j^L a_k^L
+=-y_j \cdot \frac{1 }{a_j^L} \cdot a_j^L (1-a_j^L)-\displaystyle\sum_{k \neq j}y_k \cdot \frac{1 }{a_k^L} \cdot -a_j^L a_k^L
 $$
 
 
 
 $$
-=-y_j + y_j a_j^L +\displaystyle\sum_{k\not=j}y_k \cdot  a_j^L
+=-y_j + y_j a_j^L +\displaystyle\sum_{k \neq j}y_k \cdot  a_j^L
 $$
 
 
