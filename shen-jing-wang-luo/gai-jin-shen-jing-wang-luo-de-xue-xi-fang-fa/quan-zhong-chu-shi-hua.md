@@ -85,7 +85,3 @@ $$
 
 其中 large\_weight\_initializer 是改进前，default\_weight\_initializer 是改进后，只是多了除以 np.sqrt\(x\)
 
-
-
-
-
