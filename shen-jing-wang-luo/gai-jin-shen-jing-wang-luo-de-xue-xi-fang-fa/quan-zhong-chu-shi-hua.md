@@ -40,3 +40,52 @@ $$
 
 ![](/assets/nn-initial-weight-compare.png)
 
+### 
+
+### 改进后的权重初始化代码对比
+
+```
+    def default_weight_initializer(self):
+        """Initialize each weight using a Gaussian distribution with mean 0
+        and standard deviation 1 over the square root of the number of
+        weights connecting to the same neuron.  Initialize the biases
+        using a Gaussian distribution with mean 0 and standard
+        deviation 1.
+
+        Note that the first layer is assumed to be an input layer, and
+        by convention we won't set any biases for those neurons, since
+        biases are only ever used in computing the outputs from later
+        layers.
+
+        """
+        self.biases = [np.random.randn(y, 1) for y in self.sizes[1:]]
+        self.weights = [np.random.randn(y, x)/np.sqrt(x)
+                        for x, y in zip(self.sizes[:-1], self.sizes[1:])]
+
+    def large_weight_initializer(self):
+        """Initialize the weights using a Gaussian distribution with mean 0
+        and standard deviation 1.  Initialize the biases using a
+        Gaussian distribution with mean 0 and standard deviation 1.
+
+        Note that the first layer is assumed to be an input layer, and
+        by convention we won't set any biases for those neurons, since
+        biases are only ever used in computing the outputs from later
+        layers.
+
+        This weight and bias initializer uses the same approach as in
+        Chapter 1, and is included for purposes of comparison.  It
+        will usually be better to use the default weight initializer
+        instead.
+
+        """
+        self.biases = [np.random.randn(y, 1) for y in self.sizes[1:]]
+        self.weights = [np.random.randn(y, x)
+                        for x, y in zip(self.sizes[:-1], self.sizes[1:])]
+```
+
+其中 large\_weight\_initializer 是改进前，default\_weight\_initializer 是改进后，只是多了除以 np.sqrt\(x\)
+
+
+
+
+

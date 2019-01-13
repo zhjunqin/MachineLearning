@@ -126,3 +126,26 @@ $$
 
 通过不断地重复，我们的网络学习到一个权重和偏置的集合。当然这些权重和偏置也是在一半的隐藏神经元被弃权的情况下学习到的。当我们实际运行整个网络时，两倍的隐藏神经元被激活，为了补偿这个，我们将隐藏神经元的出去的权重进行减半处理。
 
+### L2 改进前后代码对比：
+
+        def update_mini_batch(self, mini_batch, eta, lmbda, n):
+            """Update the network's weights and biases by applying gradient
+            descent using backpropagation to a single mini batch.  The
+            ``mini_batch`` is a list of tuples ``(x, y)``, ``eta`` is the
+            learning rate, ``lmbda`` is the regularization parameter, and
+            ``n`` is the total size of the training data set.
+
+            """
+            nabla_b = [np.zeros(b.shape) for b in self.biases]
+            nabla_w = [np.zeros(w.shape) for w in self.weights]
+            for x, y in mini_batch:
+                delta_nabla_b, delta_nabla_w = self.backprop(x, y)
+                nabla_b = [nb+dnb for nb, dnb in zip(nabla_b, delta_nabla_b)]
+                nabla_w = [nw+dnw for nw, dnw in zip(nabla_w, delta_nabla_w)]
+            self.weights = [(1-eta*(lmbda/n))*w-(eta/len(mini_batch))*nw
+                            for w, nw in zip(self.weights, nabla_w)]
+            self.biases = [b-(eta/len(mini_batch))*nb
+                           for b, nb in zip(self.biases, nabla_b)]
+
+改进后的代码只是在梯度下降更新权重的时候多加了' \(1-eta\*\(lmbda/n\)\)\*w'
+
