@@ -44,6 +44,8 @@
     * [softmax](shen-jing-wang-luo/gai-jin-shen-jing-wang-luo-de-xue-xi-fang-fa/softmax.md)
     * [regularization](shen-jing-wang-luo/gai-jin-shen-jing-wang-luo-de-xue-xi-fang-fa/regularization.md)
     * [权重初始化](shen-jing-wang-luo/gai-jin-shen-jing-wang-luo-de-xue-xi-fang-fa/quan-zhong-chu-shi-hua.md)
+  * [卷积神经网络](shen-jing-wang-luo/juan-ji-shen-jing-wang-luo.md)
+    * [基本介绍](shen-jing-wang-luo/juan-ji-shen-jing-wang-luo/ji-ben-jie-shao.md)
 * [数学基础](shu-xue-ji-chu.md)
   * [线性代数](shu-xue-ji-chu/xian-xing-dai-shu.md)
     * [特征值和特征向量](shu-xue-ji-chu/xian-xing-dai-shu/te-zheng-zhi-he-te-zheng-xiang-liang.md)
